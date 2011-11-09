@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<root>
+<section name="icy">
+
+<section name="general">
+<key name="sequencePersistence" value="false"/>
+<key name="autoUpdate" value="false"/>
+<key name="autoCheckUpdate" value="false"/>
+<key name="alwaysOnTop" value="false"/>
+</section>
+
+<section name="repositories">
+<section name="repos0">
+<key name="name" value="default"/>
+<key name="location" value="http://www.bioimageanalysis.org/icy/repository/"/>
+<key name="enabled" value="true"/>
+<section name="authentication">
+<key name="login" value=""/>
+<key name="password" value=""/>
+<key name="enabled" value="false"/>
+</section>
+</section>
+</section>
+
+<section name="plugin">
+<key name="autoUpdate" value="false"/>
+<key name="autoCheckUpdate" value="false"/>
+<key name="allowBeta" value="false"/>
+</section>
+</section>
+
+</root>
