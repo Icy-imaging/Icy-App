@@ -3,7 +3,7 @@
 <elements>
 <element>
 <name>ICY Kernel</name>
-<version>1.1.2.0</version>
+<version>1.1.3.0</version>
 <files>
 <file>
 <localpath>icy.jar</localpath>
@@ -27,7 +27,7 @@
 </element>
 <element>
 <name>ICY Updater</name>
-<version>1.1.7.0</version>
+<version>1.1.8.0</version>
 <files>
 <file>
 <localpath>updater.jar</localpath>
