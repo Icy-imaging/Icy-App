@@ -1,0 +1,9 @@
+// The macro demonstrates how to count cells
+// using the Process>Binary>Find Maxima command.
+
+  run("Select None");
+  run("Cell Colony (31K)");
+  getRawStatistics(nPixels, mean, min, max, std, histogram);
+  run("Find Maxima...", "noise=&std output=[Point Selection] light");
+  getSelectionCoordinates(xCoordinates, yCoordinates);
+  print("count="+ xCoordinates.length);

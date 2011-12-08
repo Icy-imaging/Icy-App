@@ -1,0 +1,6 @@
+// This macro sets the Over/Under threshold colors to yellow and cyan.
+// Add these two lines to the "AutoRun" macro in StartupMacros.txt
+// to have the Image>Adjust>Threshold tool always use these colors.
+
+    call("ij.process.ImageProcessor.setUnderColor", 0,255,255);
+    call("ij.process.ImageProcessor.setOverColor", 255,255,0);
