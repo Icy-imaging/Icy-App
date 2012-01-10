@@ -1,0 +1,34 @@
+ICY 1.2.0.0 - 10/01/2012
+------------------------
+
+* ImageJ integration : you can now use ImageJ directly from Icy !
+  This is still in beta stage and you may experiences some problems.
+  You will see some errors messages coming from the ImageJ GUI construction, this is normal, just ignore them.
+  We can remove completly these messages but we want to avoid bad practices with GUI creation and modification.
+* Canvas2D : added new synchronization method.
+* Canvas3D : severals fixes and improvements.
+* Better meta data handling (compatible with OME).
+* Fixed double image loading.
+* Improved colormap handling for multi channel image.
+* Colormap can be disabled.
+* Optimization in colormap rendering.
+* Can now disable colormap channel.
+* Improved GUI update in general (faster).
+* Reworked online plugins loader (simpler and faster).
+* many internals changes and improvements.
+* added JAI ImageIO library for JPEG2000 image.
+* updater improvements.
+
+
+ICY 1.1.3.0 - 14/11/2011
+------------------------
+
+* fixed bug with files restoring on update processing.
+* minor changes on cropper tool.
+
+
+ICY 1.1.2.0 - 08/01/2011
+------------------------
+
+* fixed a bug with unsigned short data type image.
+* improved update processing.
