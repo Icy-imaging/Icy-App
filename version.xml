@@ -23,6 +23,15 @@
 				<file>
 					<localpath>icy.app/Contents/Info.plist</localpath>
 				</file>
+				<file>
+					<localpath>CHANGELOG.TXT</localpath>
+				</file>
+				<file>
+					<localpath>COPYING.TXT</localpath>
+				</file>
+				<file>
+					<localpath>README.TXT</localpath>
+				</file>
 			</files>
 		</element>
 		<element>
