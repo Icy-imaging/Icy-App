@@ -1,0 +1,12 @@
+// This macro creates an array from all the
+// pixels in an image then sorts the array.
+
+   requires ("1.42j");
+   w = getWidth;
+   h = getHeight;
+   a = newArray(w*h);
+   i = 0;
+   for (y=0; y<h; y++)
+      for (x=0; x<w; x++)
+          a[i++] = getPixel(x,y);
+   Array.sort(a);

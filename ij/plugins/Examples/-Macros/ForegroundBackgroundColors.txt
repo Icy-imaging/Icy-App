@@ -1,0 +1,17 @@
+// This macro demonstrates how to use
+// the getValue("foreground.color") and
+// getValue("background.color") functions.
+
+  fg = getValue("foreground.color");
+  show("forground", fg);
+  bg = getValue("background.color");
+  show("background", bg);
+  
+  function show(label, color) {
+      print(label+" color");
+      print("  hex: "+toHex(color));
+      red=(color>>16)&0xff;
+      green=(color>>8)&0xff;
+      blue=color&0xff;
+      print("  rgb: "+red+","+green+","+blue);
+  }

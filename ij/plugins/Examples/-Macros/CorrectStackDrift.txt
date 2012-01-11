@@ -1,0 +1,10 @@
+// This macro demonstrates how to correct a constant horizontal 
+// drift of 1/30 of a pixel between frames in a stack.
+
+  requires("1.42l");
+  setBatchMode(true);
+  drift = 0.0333;
+  for (i=1; i<=nSlices; i++) {
+     setSlice(i);
+     run("Translate...", "interpolation=Bicubic slice y=0 x="+drift*i);
+  }
