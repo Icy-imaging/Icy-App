@@ -1,3 +1,34 @@
+ICY 1.2.1.0 - 02/02/2012
+------------------------
+
+Application :
+
+* Added support for "multi windows mode" (à la GIMP or ImageJ).
+* Added internal chat so users can discuss together easily :)
+* Canvas2D :
+ - fixed zoom centering when using '+' / '-' buttons.
+ - added invert mouse wheel axis option.
+* Cascade and Tile windows organization now work on multi screen.
+* Fixed plugin installation from private repository protected by password.
+* Some others minors fixes and improvements.
+
+
+Developers :
+
+* Improved ExternalizablePanel component, it now uses an IcyFrame for its frame form.
+* Added overlay support to IcyDesktopPane (easy drawing on application DesktopPane).
+* Added DateUtil (Data utilities) class.
+* Added ExtTabbedPane component (JTabbedPane with ExternalizablePanel support).
+* More access to Viewer and IcyCanvas object.
+* T and Z navigation panel moved to IcyCanvas.
+  So now when you override IcyCanvas you have to take care about panels
+configurations.
+* added authentification support for NetworkUtil.download(...) method.
+* Added WeakListener abstract class for easy weak listener implementation.
+* some refactoring.
+
+
+
 ICY 1.2.0.0 - 10/01/2012
 ------------------------
 
