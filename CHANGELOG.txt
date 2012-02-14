@@ -1,3 +1,23 @@
+ICY 1.2.2.0 - 14/02/2012
+------------------------
+
+Application :
+
+* Improved / fixed sequence image ordering from filename.
+* Many improvements on Chat :
+  - faster desktop rendering (fix lag issue on OSX).
+  - support style & coloring from IRC.
+  - support multi channels chat.
+  - preferences panel.
+* Some others minors fixes and improvements.
+
+Developers :
+
+* Added CloseTabbedPane component (basically a JTabbedPane with closable tabs).
+* Added IRCUtil class (IRC utilities).
+* Minors changes in Pixel/Band/ImagePosition classes.
+
+
 ICY 1.2.1.1 - 03/02/2012
 ------------------------
 
