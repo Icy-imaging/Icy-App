@@ -185,11 +185,18 @@
 			</files>
 		</element>
 		<element>
-			<name>JTransforms</name>
-			<version>2.4.0.0</version>
+			<name>Parallel Colt</name>
+			<version>0.9.4.0</version>
 			<files>
 				<file>
+					<localpath>lib/arpack-combo.jar</localpath>
+					<localpath>lib/csparsej.jar</localpath>
+					<localpath>lib/jplasma.jar</localpath>
 					<localpath>lib/jtransforms.jar</localpath>
+					<localpath>lib/junit.jar</localpath>
+					<localpath>lib/netlib-java.jar</localpath>
+					<localpath>lib/optimization.jar</localpath>
+					<localpath>lib/parallelcolt.jar</localpath>
 				</file>
 			</files>
 		</element>
