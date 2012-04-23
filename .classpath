@@ -2,4 +2,8 @@
 <classpath>
 	<classpathentry kind="lib" path="icy.jar"/>
 	<classpathentry kind="output" path="bin"/>
+	<referencedentry kind="lib" path="lib/substance.jar" sourcepath="/insubstantial"/>
+	<referencedentry kind="lib" path="lib/substance-flamingo.jar" sourcepath="D:/Stephane/Documents/dev/GIT/insubstantial"/>
+	<referencedentry kind="lib" path="lib/loci-common.jar" sourcepath="D:/Stephane/Documents/dev/GIT/bio-formats"/>
+	<referencedentry kind="lib" path="lib/ome-xml.jar" sourcepath="D:/Stephane/Documents/dev/GIT/bio-formats"/>
 </classpath>
