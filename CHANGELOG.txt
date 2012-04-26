@@ -1,3 +1,85 @@
+ICY 1.2.3.1 - 26/04/2012
+------------------------
+
+Minor bug fix in image saving.
+
+
+ICY 1.2.3.0 - 26/04/2012
+------------------------
+
+Application :
+
+* Improved ImageJ integration :
+  - ImageJ is now patched at runtime so we can use official builds and even update them.
+  - no more AWT component, less refresh problems in general.
+  - basic methods to convert Icy Sequence to ImageJ ImagePlus (with ROI preservation) and vice versa.
+* Added safe background processes termination check when application exit.
+* Canvas :
+  - fixed a bug in layers display and event dispatch ordering.
+* Canvas2D :
+  - removed zoom operation on double-click (already on mouse wheel).
+  - added shift modifier for aligned translation / rotation / scaling operations.
+  - added filtering option.
+* Canvas3D :
+  - pixel size is taken from sequence metadata information (no more duplicated information).
+* Loader :
+  - multi series image are now opened in different sequences.
+* ROI :
+  - implemented alignment assistance with shift drag operation.
+  - modified / tweaked ROI manipulation to make it more consistent.
+  - improved rendering.
+* Preferences :
+  - added Canvas preferences panel.
+  - added startup (daemon) plugins setup panel.
+* Added an option to enable/disable sequence bounds refresh on the Histogram.
+* Better metadata preservation on sequence save.
+* File drag and drag operation now works also in multi windows mode.
+* Added a workaround for the MAC OS JVM 1.6.0_29 update which cause a memory leak.
+* Fixed an error on ROI creation when VTK was missing.
+* Fixed an error in image saving (regression in 1.2.2.0).
+* Lot of others minors fixes, tweaks and improvements.
+
+Developers :
+
+* Added Parallel Colt library.
+* Added Xuggler library.
+* Added DataIterator interface :
+  This interface provides iteration for both read and write operation on double data.
+* Added ImageDataIterator and SequenceDataIterator class for easy IcyBufferedImage and Sequence data manipulation.
+* Added DataIteratorMath for basic math operations on DataIterator.
+* Renamed CloseTabbedPane --> CloseableTabbedPane.
+* Added ConfirmFrame class (non modal ConfirmDialog).
+* Added LineAnchor2D and RectAnchor2D for easy Line / Square alignment on shift drag operation.
+* IcyCanvas :
+  - added canvasToImageLogDelta() methods.
+* IcyCanvas2D:
+  - added canvasToImageLogDelta() methods.
+  - added getTransform() & getInverseTransform() methods which return AffineTransform object for fast canvas <--> image Graphics context change.
+* Canvas2D :
+  - give access now to CanvasView and CanvasMap objects.
+* Canvas3D :
+  - vtkPainter are now automatically added or removed to the renderer.
+* ROI :
+  - added getPosition / setPosition method.
+  - added ROIUtil class which provides utilities for ROI.
+  - added ROI.setEditable(..) and ROI.isEditable() methods so now we can have "Read Only" ROI.
+  - added setPoints() methods to ROI2DPolygon and ROI2DPolyline.  
+* ROIEvent :
+  - added FOCUS, SELECTION and PROPERTY change event type.
+  - removed POINT_xxx event type.
+  - PROPERTY_CHANGE replace the NAME_CHANGE type event.  
+* IcyIcon :
+  - added supports to normal color image icon (use the 'alpha' proterty).
+  - added setColor(Color) method to define the icon colorization when using alpha mask type image.
+* Added GraphicsUtil class which provide some Graphics facilities as drawing multi line text, calculating text bounds...
+* Sequence metadata object changed to OMEXMLMetadataImpl.
+* Worker thread has name so we can recognize them.
+* Added PluginThreaded interface so plugin start in a separate thread (replace old PluginStartAsThread which was not fully functional).
+* Added PluginDaemon interface so plugin start automatically on application initialization.
+  This is useful for enhancer type plugin.
+* Some refactoring.
+
+
 ICY 1.2.2.0 - 14/02/2012
 ------------------------
 
@@ -47,8 +129,7 @@ Developers :
 * Added ExtTabbedPane component (JTabbedPane with ExternalizablePanel support).
 * More access to Viewer and IcyCanvas object.
 * T and Z navigation panel moved to IcyCanvas.
-  So now when you override IcyCanvas you have to take care about panels
-configurations.
+  So now when you override IcyCanvas you have to take care about panels configurations.
 * added authentification support for NetworkUtil.download(...) method.
 * Added WeakListener abstract class for easy weak listener implementation.
 * some refactoring.
