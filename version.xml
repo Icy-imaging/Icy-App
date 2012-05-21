@@ -190,12 +190,26 @@
 			<files>
 				<file>
 					<localpath>lib/arpack-combo.jar</localpath>
+				</file>
+				<file>
 					<localpath>lib/csparsej.jar</localpath>
+				</file>
+				<file>
 					<localpath>lib/jplasma.jar</localpath>
+				</file>
+				<file>
 					<localpath>lib/jtransforms.jar</localpath>
+				</file>
+				<file>
 					<localpath>lib/junit.jar</localpath>
+				</file>
+				<file>
 					<localpath>lib/netlib-java.jar</localpath>
+				</file>
+				<file>
 					<localpath>lib/optimization.jar</localpath>
+				</file>
+				<file>
 					<localpath>lib/parallelcolt.jar</localpath>
 				</file>
 			</files>
