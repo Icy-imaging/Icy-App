@@ -1,3 +1,24 @@
+ICY 1.2.4.0 - 21/05/2012
+------------------------
+
+Application :
+
+* Ribbon minimization state is now saved and restored after applciation restart.
+* Plugin detail window rewritten (now correctly display HTML formated description).
+* Internet connection monitor (the CPU/memory monitor panel now displays an icon when you are not connected to internet).
+* Fixed ImageJ menu disappearing on MAC OSX.
+* Improved window tile arrangement (take previous window position in account).
+* Others tweaks, fixes or cleanup...
+
+Developer :
+
+* Added IdConfirmDialog class: 
+  A ConfirmDialog containing a checkbox to not display confirmation next time.
+* Removed IcyFileUtil and IcyNetworkUtil classes.
+* Moved Plugin.report(...) to IcyExceptionHandler.report(...)
+* Renamed FileDrop.Listener to FileDrop.FileDropListener
+
+
 ICY 1.2.3.1 - 26/04/2012
 ------------------------
 
