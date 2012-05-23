@@ -1,7 +1,7 @@
 ICY 1.2.4.1 - 21/05/2012
 ------------------------
 
-Minor fix in update processing.
+Minor fix in update processing and OSX launch.
 
 
 ICY 1.2.4.0 - 21/05/2012
