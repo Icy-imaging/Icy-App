@@ -1,3 +1,33 @@
+ICY 1.2.5.0 - 18/06/2012
+------------------------
+
+Application :
+
+* Improved GUI for colormap model loading.
+* Improved native libraries loading.
+* Preliminary headless support.
+* Lot of minors fixes and improvements...
+
+Developers :
+
+* Added new general GUI components :
+  - RangeSlider (slider representing a range).
+  - ColormapIcon (icon representing a colormap).
+* Added new GUI components for basic Sequence operation :
+  - SequencePreviewPanel (sequence preview).
+  - SequenceChooserPanel.
+  - SequenceRangePreviewPanel class.
+  - SequenceChooserPreviewPanel class.
+  - SequenceChooserRangePreviewPanel class.
+* Added PluginBundled interface when you need to bundle severals
+  classes extending Plugin in a single JAR file (bundled plugins are
+  usually hidden).
+* Added HandledException class (permit to avoid report dialog for handled exception).
+* Improved RangeComponent (can now display inner RangeSlider component).
+* Improved SimpleITK integration.
+* Added SwingX library.
+
+
 ICY 1.2.4.1 - 21/05/2012
 ------------------------
 
