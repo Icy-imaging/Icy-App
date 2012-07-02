@@ -1,3 +1,25 @@
+ICY 1.2.6.0 - 29/06/2012
+------------------------
+
+Application :
+
+* TIF saving uses LZW compression by default.
+* Added series selection dialog for multi series image file.
+* Fixed daemons plugins start and stop operations.
+* Fixed PermGen space problems.
+* Better metadata preservation.
+* cleanup and minors fixes...
+
+Developers :
+
+* PluginUpdater class has been splited in PluginUpdater and PluginUpdateFrame classes.
+* Added ThumbnailComponent class to display image thumbnail with basic description.
+* Added some methods in Loader class for better sequence / image / metadata loading...
+* Added MetaDataUtil class which provide metadata utilities.
+* Rewrote DataType class so getEnumContants() is working correctly.
+* Simplified DataIterator.
+
+
 ICY 1.2.5.0 - 18/06/2012
 ------------------------
 
