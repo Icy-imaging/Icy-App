@@ -1,3 +1,21 @@
+ICY 1.2.6.1 - 06/07/2012
+------------------------
+
+Application :
+
+* Fixed multiple image loading.
+* Fixed multiple plugin error report frame.
+* Better multi threads handling.
+* Fixed a bug in FileUtil.delete(..) method which could cause lags.
+* Improved preview (now support float data type) in the image load dialog.
+* A lot of others minors fixed and improvements.
+
+Developers :
+
+* Some code rewrite & cleanup in Plugin and Workspace management.
+* Some others minors changes or refactoring.
+
+
 ICY 1.2.6.0 - 29/06/2012
 ------------------------
 
