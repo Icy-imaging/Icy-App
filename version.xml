@@ -54,7 +54,7 @@
 		</element>
 		<element>
 			<name>Log4J</name>
-			<version>1.2.16.0</version>
+			<version>1.2.17.0</version>
 			<files>
 				<file>
 					<localpath>lib/log4j.jar</localpath>
@@ -62,14 +62,20 @@
 			</files>
 		</element>
 		<element>
-			<name>Slf4JJ</name>
-			<version>1.6.1.0</version>
+			<name>SLF4J</name>
+			<version>1.6.6.0</version>
 			<files>
 				<file>
 					<localpath>lib/slf4j-api.jar</localpath>
 				</file>
 				<file>
 					<localpath>lib/slf4j-log4j.jar</localpath>
+				</file>
+				<file>
+					<localpath>lib/slf4j-jcl.jar</localpath>
+				</file>
+				<file>
+					<localpath>lib/slf4j-nop.jar</localpath>
 				</file>
 			</files>
 		</element>
@@ -263,7 +269,7 @@
 		</element>
 		<element>
 			<name>JCL</name>
-			<version>2.2.2.0</version>
+			<version>2.5.0.0</version>
 			<files>
 				<file>
 					<localpath>lib/jcl-core.jar</localpath>
@@ -299,7 +305,7 @@
 		</element>
 		<element>
 			<name>Bio Formats</name>
-			<version>4.4.0.0</version>
+			<version>4.4.2.0</version>
 			<files>
 				<file>
 					<localpath>lib/loci-common.jar</localpath>
