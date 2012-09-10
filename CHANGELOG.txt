@@ -12,8 +12,6 @@ Application :
 * Better colormap preservation when switching from 2D to 3D canvas.
 * Better Icy to ImageJ ROI conversion.
 * Modified ROI2DPoint so it now intersects point and do not contains it (more consistent with other ROI).
-* Fixed a minor bug in ROI.getBooleanMask() method.
-* Fixed a minor bug in ROI2D.contains() and ROI2D.intersects() methods.
 * Better metadata support for multi serie image.
 * Fixed preview in the image loading dialog so it consumes less memory if possible.
 * Added chat status messages filtering.
@@ -39,6 +37,8 @@ Developers :
 * Fixed cursor preservation on Canvas2D.
 * Added MainInterface.getSequences(String name) to retrieve sequence by name.
 * Fixed a bug in ImageDataIterator.
+* Fixed a minor bug in ROI.getBooleanMask() method.
+* Fixed a minor bug in ROI2D.contains() and ROI2D.intersects() methods.
 * Added BooleanMask2D.getSubtractionMask(..) method.
 * Added ROI2D.merge(..) method to apply OR, AND, XOR binary operation on severals ROI2D.
 * Added ROI2D.subtract(roi1, roi2) method to do ROI subtraction.
