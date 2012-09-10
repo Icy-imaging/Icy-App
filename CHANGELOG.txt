@@ -1,4 +1,56 @@
-ICY 1.2.6.1 - 06/07/2012
+Icy 1.2.7.0 - 10/09/2012
+------------------------
+
+Application :
+
+* Entirely reworked the "Sequence / Image operation" band :
+  - new sequence resize feature.
+  - new C/Z/T operations.
+  - new color conversion feature.
+  - general improvements.
+* Better plugin error report.
+* Better colormap preservation when switching from 2D to 3D canvas.
+* Better Icy to ImageJ ROI conversion.
+* Modified ROI2DPoint so it now intersects point and do not contains it
+(more consistent with other ROI).
+* Fixed a minor bug in ROI.getBooleanMask() method.
+* Fixed a minor bug in ROI2D.contains() and ROI2D.intersects() methods.
+* Better metadata support for multi serie image.
+* Fixed preview in the image loading dialog so it consumes less memory if possible.
+* Added chat status messages filtering.
+* Added network proxy setting.
+* Added link to online website and help.
+* Added direct access to online plugins in taskbar.
+* A lot of others minors fixes and improvements.
+
+Developers :
+
+* Loader :
+  - added methods so we can now specify serie(s) to load.
+  - added 'getMetaData(File file)' method to retrieve the metadata of an image file.
+  - added 'loadImage(File file, int z, int t)' method to load a single image from multi image file.
+  - added methods to hide the progress bar.
+* Added methods to Saver class to hide the progress bar while saving.
+* Added IcyBufferedImage.copyData(src, int srcChannel, int dstChannel) to only copy data for a specified channel.
+* Added ExcelTable component to display excel type table.
+* Added abstract method 'getViewComponent()' to IcyCanvas so we can always retrieve the display component in a Canvas.
+* Added many components for all Sequence tools (SequencePreviewPane, SequenceRangePreviewPanel...)
+* Added IcyBufferedImageUtil class (general IcyBufferedImage tools).
+* Added methods to SequenceUtil class.
+* Fixed cursor preservation on Canvas2D.
+* Added MainInterface.getSequences(String name) to retrieve sequence by name.
+* Fixed a bug in ImageDataIterator.
+* Added BooleanMask2D.getSubtractionMask(..) method.
+* Added ROI2D.merge(..) method to apply OR, AND, XOR binary operation on severals ROI2D.
+* Added ROI2D.subtract(roi1, roi2) method to do ROI subtraction.
+* Added ShapeUtil.merge(..) and ShapeUtil.subtract(..) operations.
+* Sequence.metaChanged(String name) method is now public so you can use it to notify custom metadata changes.
+* Added a command line option to remove splash-screen.
+* Removed some deprecation in IcyCanvas.
+* Lot of refactoring and source reorganization (check deprecations).
+
+
+Icy 1.2.6.1 - 06/07/2012
 ------------------------
 
 Application :
@@ -16,7 +68,7 @@ Developers :
 * Some others minors changes or refactoring.
 
 
-ICY 1.2.6.0 - 29/06/2012
+Icy 1.2.6.0 - 29/06/2012
 ------------------------
 
 Application :
@@ -38,7 +90,7 @@ Developers :
 * Simplified DataIterator.
 
 
-ICY 1.2.5.0 - 18/06/2012
+Icy 1.2.5.0 - 18/06/2012
 ------------------------
 
 Application :
@@ -68,13 +120,13 @@ Developers :
 * Added SwingX library.
 
 
-ICY 1.2.4.1 - 21/05/2012
+Icy 1.2.4.1 - 21/05/2012
 ------------------------
 
 Minor fix in update processing.
 
 
-ICY 1.2.4.0 - 21/05/2012
+Icy 1.2.4.0 - 21/05/2012
 ------------------------
 
 Application :
@@ -95,13 +147,13 @@ Developers :
 * Renamed FileDrop.Listener to FileDrop.FileDropListener.
 
 
-ICY 1.2.3.1 - 26/04/2012
+Icy 1.2.3.1 - 26/04/2012
 ------------------------
 
 Minor bug fix in image saving.
 
 
-ICY 1.2.3.0 - 26/04/2012
+Icy 1.2.3.0 - 26/04/2012
 ------------------------
 
 Application :
@@ -177,7 +229,7 @@ Developers :
 * Some refactoring.
 
 
-ICY 1.2.2.0 - 14/02/2012
+Icy 1.2.2.0 - 14/02/2012
 ------------------------
 
 Application :
@@ -197,13 +249,13 @@ Developers :
 * Minors changes in Pixel/Band/ImagePosition classes.
 
 
-ICY 1.2.1.1 - 03/02/2012
+Icy 1.2.1.1 - 03/02/2012
 ------------------------
 
 Minor fix in chat nickname change.
 
 
-ICY 1.2.1.0 - 03/02/2012
+Icy 1.2.1.0 - 03/02/2012
 ------------------------
 
 Application :
@@ -233,7 +285,7 @@ Developers :
 
 
 
-ICY 1.2.0.0 - 10/01/2012
+Icy 1.2.0.0 - 10/01/2012
 ------------------------
 
 * ImageJ integration : you can now use ImageJ directly from Icy !
@@ -255,14 +307,14 @@ ICY 1.2.0.0 - 10/01/2012
 * updater improvements.
 
 
-ICY 1.1.3.0 - 14/11/2011
+Icy 1.1.3.0 - 14/11/2011
 ------------------------
 
 * fixed bug with files restoring on update processing.
 * minor changes on cropper tool.
 
 
-ICY 1.1.2.0 - 08/01/2011
+Icy 1.1.2.0 - 08/01/2011
 ------------------------
 
 * fixed a bug with unsigned short data type image.
