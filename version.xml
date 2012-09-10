@@ -71,12 +71,6 @@
 				<file>
 					<localpath>lib/slf4j-log4j.jar</localpath>
 				</file>
-				<file>
-					<localpath>lib/slf4j-jcl.jar</localpath>
-				</file>
-				<file>
-					<localpath>lib/slf4j-nop.jar</localpath>
-				</file>
 			</files>
 		</element>
 		<element>
