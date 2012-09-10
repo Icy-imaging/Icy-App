@@ -3,7 +3,7 @@ Icy 1.2.7.0 - 10/09/2012
 
 Application :
 
-* Entirely reworked the "Sequence / Image operation" band :
+* Entirely reworked the 'Sequence / Image operation' band :
   - new sequence resize feature.
   - new C/Z/T operations.
   - new color conversion feature.
@@ -11,8 +11,7 @@ Application :
 * Better plugin error report.
 * Better colormap preservation when switching from 2D to 3D canvas.
 * Better Icy to ImageJ ROI conversion.
-* Modified ROI2DPoint so it now intersects point and do not contains it
-(more consistent with other ROI).
+* Modified ROI2DPoint so it now intersects point and do not contains it (more consistent with other ROI).
 * Fixed a minor bug in ROI.getBooleanMask() method.
 * Fixed a minor bug in ROI2D.contains() and ROI2D.intersects() methods.
 * Better metadata support for multi serie image.
