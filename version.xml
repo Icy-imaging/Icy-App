@@ -216,10 +216,10 @@
 		</element>
 		<element>
 			<name>SwingX</name>
-			<version>1.6.2.0</version>
+			<version>1.6.4.0</version>
 			<files>
 				<file>
-					<localpath>lib/swingx-core.jar</localpath>
+					<localpath>lib/swingx-all.jar</localpath>
 				</file>
 			</files>
 		</element>
@@ -227,7 +227,7 @@
 
 		<element>
 			<name>Substance</name>
-			<version>7.2.2.1</version>
+			<version>7.2.2.2</version>
 			<files>
 				<file>
 					<localpath>lib/trident.jar</localpath>
