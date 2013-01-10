@@ -28,16 +28,4 @@
 <key name="allowBeta" value="false"/>
 </section>
 </section>
-<section name="workspaces">
-<section name="local">
-<section name="actives">
-<key name="Detection" value="true"/>
-<key name="Dev Tutorials" value="true"/>
-<key name="Microscopy" value="true"/>
-<key name="Processing" value="true"/>
-<key name="Tools" value="true"/>
-</section>
-</section>
-<section name="online"/>
-</section>
 </root>
