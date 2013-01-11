@@ -45,7 +45,7 @@
 		</element>
 		<element>
 			<name>ImageJ</name>
-			<version>1.4.6.13</version>
+			<version>1.4.7.8</version>
 			<files>
 				<file>
 					<localpath>ij</localpath>
@@ -58,6 +58,27 @@
 			<files>
 				<file>
 					<localpath>lib/log4j.jar</localpath>
+				</file>
+			</files>
+		</element>
+		<element>
+			<name>Apache POI</name>
+			<version>3.9.0.0</version>
+			<files>
+				<file>
+					<localpath>lib/poi.jar</localpath>
+				</file>
+				<file>
+					<localpath>lib/poi-excelant.jar</localpath>
+				</file>
+				<file>
+					<localpath>lib/poi-ooxml.jar</localpath>
+				</file>
+				<file>
+					<localpath>lib/poi-ooxml-schemas.jar</localpath>
+				</file>
+				<file>
+					<localpath>lib/poi-scratchpad.jar</localpath>
 				</file>
 			</files>
 		</element>
