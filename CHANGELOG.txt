@@ -1,3 +1,105 @@
+Icy 1.3.0.0 - 10/01/2012
+------------------------
+
+Application :
+* Added a general search bar :
+  - Search in plugins, protocols and kernel commands.
+  - You can add you own results to search engine with a plugin.
+* New ROI panel :
+ - new Load / Save / Copy / Paste operations on ROI.
+ - can change size and position depending the ROI type.
+ - added subtraction boolean operation.
+ - added surface / volume information.
+ - added pixel intensity information. 
+* New shortcuts :
+  - 2/4/6/8 (keypad) : image displacement (Canvas2D).
+  - F2 : duplicate view
+  - F3 : global search
+  - F4 : internalize/externalize view
+  - Ctrl+F4 : close view
+  - Ctrl+O : open an image file
+  - 0 : disable view synchronization group
+  - 1 : enable/disable view synchronization group 1
+  - 2 : enable/disable view synchronization group 2
+  - 3 : enable/disable view synchronization group 3
+  - 4 : enable/disable view synchronization group 4
+  - Shift+1 : global view synchronization group 1
+  - Shift+2 : global view synchronization group 2
+  - Shift+3 : global view synchronization group 3
+  - Shift+4 : global view synchronization group 4
+  - Shift+0 : cancel global view synchronization
+  - Shift+G : grid tile viewers in grid
+  - Shift+H : horizontal tile viewers arrangement
+  - Shift+V : vertical tile viewers arrangement
+* Reworked ROI control in Canvas2D.
+* Fixed proxy setting which should work now on Linux system.
+* Improved plugin installation / udpate process.
+* Fixed IcyBufferedImage bicubic filtered scaling.
+* Fixed the infamous ComboBox selection bug in Dialog on MAC OSX system.
+* Improved native librairie loading.
+* Better handling of incorrect save format.
+* Screenshot action now generate RGB image (ARGB is not supported by JPG nor AVI).
+* Fixed Canvas3D screenshot fearure.
+* Added support to launch a plugin at startup from the command line.
+* Added support to open an image from command line.  
+* Ctrl key is now used as mouse modifier on MAC OSX as Cmd key is
+misinterpreted by JVM as right mouse button modifier.
+* Better filename preservation in Sequence name.
+* Improved histogram display.
+* Added 'help' button in plugin manager to redirect on online plugin help.
+* Fixed a bug in metadata pixelSize fields.
+* Added new splash screens :)
+* A lot of others minors fixes and improvements.
+
+Developers :
+
+* Added new methods in specific ROI classes :
+  - ROI2DEllipse.setEllipse(..)
+  - ROI2DRectangle.setRectangle(..)
+* Added Point3D, Point4D and Point5D classes (same implementation as java.awt.geom.Point2D).
+* Added Rectangle3D, Rectangle4D and Rectangle5D classes (same implementation as java.awt.geom.Rectangle2D).
+* ROI :
+ - added getVolume() method (return volume in number of pixel).
+ - added getPerimeter() method (return perimeter in number of pixel).
+ - added getDimension() method (return number of dimension).
+ - introduced contains(..) method (method was initially located in ROI2D, ROI3D... classes).
+ - introduced intersect(..) method (method was initially located in ROI2D, ROI3D... classes).
+* BooleanMask2D :
+ - added getPoints() method (return points composing the mask).
+ - added getComponents() method (return independent object mask).
+ - added getEdgePoints() method (return mask contour points).
+ - added getComponentsPoints() method (return points from each independent object).
+* Centralized all kernels menu commands to actions :
+ - FileActions : all file commands.
+ - PreferencesActions : launch preferences panel commands.
+ - SequenceOperationActions : sequence manipulation commands.
+ - WindowActions : window arrangement / opening commands.
+ - GeneralActions : all others commands.
+ - RoiActions : ROI panel actions.
+* Canvas2D :
+ - added void translate(...) method.
+* Added Clipboard class for easy copy/paste operations in Icy.
+* IcyAbstractAction :
+ - now supports background action execution (with progressbar)
+ - added GetRichToolTip() method to retrieve the action RichToolTip.
+* IcyCommandxxxButton now support IcyAbstractAction.
+* added AbstractSequenceModel class for easy SequenceModel implementation.
+* added PluginSearchProvider interface : a plugin implementing this interface provides results for the global search bar.
+* Removed NetworkConnectionListener to only keep InternetAccessListener.
+* IcyFrame :
+ - added dispose() method to ensure frame close and release.
+ - added getVisibleRect() method.
+* Added new methods to the SwimmingPool class so we can now manipulate objects depending their names.
+* Added SwimmingObjectChooser component to select specific object type from the swimming pool.
+* Changed default pixel size unit to µm and time interval to second (compatible with OME).
+* Added convertToType methods can now rescale values on data bounds.
+* Added XMLPreferences.getXMLNode() method to get XML node.
+* Added WeakWindowFocusListener class.
+* Added methods to LookAndFeelUtil.
+* Changed IcyTextField event.
+* Added PluginRichToolTip class.
+
+
 Icy 1.2.7.0 - 10/09/2012
 ------------------------
 
