@@ -3,15 +3,15 @@ Icy 1.3.1.0 - 17/01/2012
 
 Application:
 
-* added ROI boolean NOT operation (inverse ROI).
-* fixed GUI resize issue with the Image Resize frame.
+* Added ROI boolean NOT operation (inverse ROI).
+* Fixed GUI resize issue with the Image Resize frame.
 
 Developers:
 
-* fixed issue on save sequence operation when parent directory was missing.
-* fixed IcyButton tooltip when an action is attached to the button.
-* can now disable/enable histogram auto refresh and auto bounds from code.
-* fixed BooleanMask2D.setBounds(..) which was accidently hidden in Icy 1.3.0.0
+* Fixed issue on save sequence operation when parent directory was missing.
+* Fixed IcyButton tooltip when an action is attached to the button.
+* Can now disable/enable histogram auto refresh and auto bounds from code.
+* Fixed BooleanMask2D.setBounds(..) which was accidently hidden in Icy 1.3.0.0
 * NetworkUtil: fixed openURL(..) backward compatibility.
 * FileUtil : tried to fix the obscure bug on delete() and rename() methods (Windows system only).
 
