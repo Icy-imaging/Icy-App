@@ -1,3 +1,28 @@
+Icy 1.3.2.0 - 18/02/2012
+------------------------
+
+Application:
+
+* Fixed an issue in local plugin search (search could not be done in online documentation of the plugin). 
+* Removed 'empty' plugin from the research result list.
+* Reverted to 'F3' shortcut for external / internal window mode.
+* Fixed minors issues with viewer initialization.
+* Replaced some Swing timer by Util timer (Swing timer tends to slowdown when you use too many of them).
+* Automatically switch to headless mode for headless system (that make sense).
+* Fixed regression in network loss detection (some latencies were added in Icy 1.3.0.0)
+* Several minors improvements, tweaks and fixes. 
+
+Developers:
+
+* Major rewrite of the plugin class loader, hope that will help with perm gen space error :
+  - now support getResource(..) and getResources(..) methods (return valid URL).
+  - far less memory usage (load resource on demand only).
+  - can release loaded resources so if loader is retained by a class memory usage is maintained low.
+* Fixed FileUtil.getCurrentDirectory() so it actually returns the application root directory
+  and not the launch directory which can be different.
+* General shortcut handled ad ActionMap / InputMap so a plugin can override them.
+
+
 Icy 1.3.1.0 - 17/01/2012
 ------------------------
 
