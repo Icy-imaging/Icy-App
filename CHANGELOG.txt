@@ -1,3 +1,58 @@
+Icy 1.3.5.0 - 17/05/2012
+------------------------
+
+Application:
+
+* Added an option to disable the automatic image ordering when loading a group of image.
+  It was always enabled before which may cause some issues.
+* Improved online search (less intensive on the website --> faster replies).
+* Results from the search bar are now sorted depending their relevance.
+* Canvas3D: channel can now be enabled/disabled the same way than with Canvas2D.
+* Added image copy/paste operation from/to external application.
+* Better Roi copy/paste operation.
+* Added Bio-Formats metakit part of library (needed for some image format).
+* Better default colormap for image with more than 3 channels.
+* Fixed a bug in chat panel which prevented private chat to work.
+* Fixed an issue with Viewer losing focus in some situation.
+* Added predefined colomaps : "alpha" and "glow upper under". 
+* Improved network error handling.
+* Many fixes and improvements... 
+
+Developers:
+
+* Added new Overlay class to replace the Painter interface:
+ - add support for overlay priority.
+ - automatic change event dispatch to sequence object.
+ - many classes has been modified internally to use the new Overlay class, backward compatibility should be provided.
+ - many others improvements, don't use the Painter anymore.
+* Reworked Layer class:
+ - handle new Overlay class.
+ - dispatch event only for Layer properties change.
+ - added fixed (cannot be removed) and readOnly (cannot change name) properties.
+* Canvas2D:
+ - All events are now sent to painter first then canvas.
+   If a painter consume an event, canvas won't receive it.
+ - Better support of getRenderedImage(...) image.
+* Canvas3D: event are now correctly forwarded to painter.
+* Loader: new methods, lot of rewrite...
+* added onClosed() method to ActionDialog.
+* Separated file choose and loading operation from ImageLoaderDialog class.
+* Separated file choose and saving operation from ImageSaverDialog class.
+* Added Plugin.getResource(..) and Plugin.getResources(..) methods.
+* Added SystemUtil.addToJavaLibraryPath(..) method to modify library path at runtime.
+* Added SystemUtil.loadLibrary(..) methods for easier native library loading.
+* IcyBufferedImage: added method to load only a sub part of an image from Reader.
+* New SequenceBuilder class to help in building a sequence with multi-threaded algorithms.
+* Plugin bug report now give informations about dependencies. 
+* PluginClassLoader:
+ - removed Osgi loader (not needed there).
+ - changed loader search order (system loader first --> local loader last).
+ - some fixes.
+* Added Sequence.calculateSize(..) method to help in calculating a distance or surface from a specified number of pixel.
+* Main interface do not anymore combine events for ROI/Painter add/remove operations.
+  --> more practical for developer but can make application slower when dealing with many ROI/Painter.
+
+
 Icy 1.3.2.0 - 18/02/2012
 ------------------------
 
