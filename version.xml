@@ -335,21 +335,6 @@
 			</files>
 		</element>
 		<element>
-			<name>Micro Manager</name>
-			<version>1.4.10.0</version>
-			<files>
-				<file>
-					<localpath>lib/MMAcqEngine.jar</localpath>
-				</file>
-				<file>
-					<localpath>lib/MMCoreJ.jar</localpath>
-				</file>
-				<file>
-					<localpath>lib/MMJ_.jar</localpath>
-				</file>
-			</files>
-		</element>
-		<element>
 			<name>Xuggler</name>
 			<version>5.4.0.0</version>
 			<changeslog />
