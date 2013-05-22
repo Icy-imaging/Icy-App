@@ -1,3 +1,19 @@
+Icy 1.3.6.0 - 22/05/2012
+------------------------
+
+Application:
+
+* fixed copy/paste operation for image/ROI (IcyCanvas).
+* fixed deprecated method in Loader which was causing stack overflow.
+* fixed some image loading crash after an image has been saved.
+* improved Canvas3D screenshot performance.
+
+Developers:
+
+* Clipboard: added methods for system clipboard handling.
+* a bit of refactoring.
+
+
 Icy 1.3.5.0 - 17/05/2012
 ------------------------
 
@@ -99,7 +115,7 @@ Developers:
 Icy 1.3.0.0 - 10/01/2012
 ------------------------
 
-Application :
+Application:
 
 * Added a general search bar :
   - Search in plugins, protocols and kernel commands.
@@ -150,7 +166,7 @@ misinterpreted by JVM as right mouse button modifier.
 * Added new splash screens :)
 * A lot of others minors fixes and improvements.
 
-Developers :
+Developers:
 
 * Added new methods in specific ROI classes :
   - ROI2DEllipse.setEllipse(..)
