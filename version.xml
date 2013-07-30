@@ -309,10 +309,25 @@
 		</element>
 		<element>
 			<name>Bio Formats</name>
-			<version>4.4.8.1</version>
+			<version>5.0.0.0b</version>
 			<files>
 				<file>
+					<localpath>lib/bio-formats.jar</localpath>
+				</file>
+				<file>
+					<localpath>lib/kryo.jar</localpath>
+				</file>
+				<file>
 					<localpath>lib/loci-common.jar</localpath>
+				</file>
+				<file>
+					<localpath>lib/metakit.jar</localpath>
+				</file>
+				<file>
+					<localpath>lib/native-lib-loader.jar</localpath>
+				</file>
+				<file>
+					<localpath>lib/netcdf.jar</localpath>
 				</file>
 				<file>
 					<localpath>lib/ome-io.jar</localpath>
@@ -321,19 +336,13 @@
 					<localpath>lib/ome-xml.jar</localpath>
 				</file>
 				<file>
-					<localpath>lib/bio-formats.jar</localpath>
+					<localpath>lib/poi-loci.jar</localpath>
 				</file>
 				<file>
 					<localpath>lib/scifio.jar</localpath>
 				</file>
 				<file>
-					<localpath>lib/poi-loci.jar</localpath>
-				</file>
-				<file>
-					<localpath>lib/metakit.jar</localpath>
-				</file>
-				<file>
-					<localpath>lib/netcdf.jar</localpath>
+					<localpath>lib/turbojpeg.jar</localpath>
 				</file>
 			</files>
 		</element>
