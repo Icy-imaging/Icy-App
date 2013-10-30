@@ -1,4 +1,4 @@
-Icy 1.4.0.0 - 30/10/2013
+Icy 1.4.0.2 - 30/10/2013
 ------------------------
 
 Application:
@@ -6,7 +6,8 @@ Application:
   - now preserve last file filter used on load image dialog.
   - fixed multiple plugin launch from Ribbon plugin button.
   - fixed global shortcut action being executed while taping text in text field.
-* ROI / ROI Panel:
+  - Change Log is displayed when a new version has been installed.
+ * ROI / ROI Panel:
   - complete new panel with more ROI informations and XLS export support.
   - removed the 'selected color' property (selected ROI keep their normal color now).
   - added 'opacity' property to change the content opacity representation.
@@ -39,6 +40,7 @@ Application:
 * Better error handling in general.
 * Better backup of invalid XML metadata file.
 * Removed the useless ROI tooltips.
+* Added signature for the OSX launcher.
 * Lot of others fixes, changes and tweaks.
 
 Developer:
