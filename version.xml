@@ -21,7 +21,19 @@
 					<localpath>icy.app/Contents/MacOS/JavaApplicationStub</localpath>
 				</file>
 				<file>
+					<localpath>icy.app/Contents/_CodeSignature/CodeResources</localpath>
+				</file>
+				<file>
 					<localpath>icy.app/Contents/Info.plist</localpath>
+				</file>
+				<file>
+					<localpath>icy.app/Contents/PkgInfo</localpath>
+				</file>
+				<file>
+					<localpath>icy.app/Contents/Resources/Java/null</localpath>
+				</file>
+				<file>
+					<localpath>icy.app/Contents/Resources/icy.icns</localpath>
 				</file>
 				<file>
 					<localpath>CHANGELOG.txt</localpath>
