@@ -29,7 +29,7 @@
 		<key>WorkingDirectory</key>
 		<string>$APP_PACKAGE/..</string>
 		<key>MainClass</key>
-		<string>updater.Main</string>
+		<string>icy.updater.Main</string>
 		<key>JVMVersion</key>
 		<string>1.6+</string>
 		<key>ClassPath</key>

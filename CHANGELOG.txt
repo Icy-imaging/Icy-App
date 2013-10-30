@@ -1,24 +1,150 @@
-Icy 1.3.6.0 - 22/05/2012
+Icy 1.4.0.2 - 30/10/2013
 ------------------------
 
 Application:
+* GUI:
+  - now preserve last file filter used on load image dialog.
+  - fixed multiple plugin launch from Ribbon plugin button.
+  - fixed global shortcut action being executed while taping text in text field.
+  - change log is displayed when a new version has been installed.
+ * ROI / ROI Panel:
+  - complete new panel with more ROI informations and XLS export support.
+  - removed the 'selected color' property (selected ROI keep their normal color now).
+  - added 'opacity' property to change the content opacity representation.
+  - fixed point removing on polygon.
+  - improved drawing performance (use Graphics clip information).
+* Layer:
+  - can now edit the layer's name directly through the table (as the ROI). 
+  - accept delete command through the table.
+  - some others minors tweaks.
+* Colormap:
+  - fixed color calculation with alpha blending.
+  - active color line order modified (alpha is behind now).
+  - tabs are now colored to reflect the channel colormap.
+* Fill sequence operation now use the ROI properties to get the region to fill.
+* Fixed issue in saving image in multiple file (temporary hack until issue is fixed in Bio-Formats).
+* Minors changes and fixes in Sequence save operation (better name logic).
+* F1 key now open a browser to the support forum.
+* Fixed minor issue in plugin installation.
+* Windows re-organization only affect viewer.
+* ImageJ wrapper:
+  - TRACED_ROI (ImageJ) are now converted to ROI2DArea.
+  - fixed a minor issue with the IJ <---> Icy image conversion.
+* Fixed a rendering issue with the screenshot feature on Canvas2D.
+* Fixed the infamous margin error in text field.
+* Fixed a bug with XML file containing '#' character in their filename.
+* Fixed ROI painter event handling with Canvas3D.
+* Fixed an issue with headless support (work in progress).
+* Fixed a regression which made the Canvas3D visible even if VTK library was not loaded.
+* More internals commands accessible through the search bar.
+* Better error handling in general.
+* Better backup of invalid XML metadata file.
+* Removed the useless ROI tooltips.
+* Added signature for the OSX launcher.
+* Lot of others fixes, changes and tweaks.
 
-* fixed copy/paste operation for image/ROI (IcyCanvas).
-* fixed deprecated method in Loader which was causing stack overflow.
-* fixed some image loading crash after an image has been saved.
-* improved Canvas3D screenshot performance.
+Developer:
+* New developer online documentation based on javadoc (still need some work).
+* Plugin:
+  - added loadLibrary(..) method for easy native libraries loading from the plugin jar file.
+* Sequence:
+  - setSelectedROI(..) method rewrote.
+* BooleanMask:
+  - added BooleanMask3D, BooleanMask4D and BooleanMask5D classes.
+  - added contains(BooleanMask) and intersects(BooleanMask) methods.
+  - added getPointsAsIntArray(..) method (better for GC work)
+  - added getContourPointsAsIntArray(..) method (better for GC work)
+* ROI (WARNING. major changes which may need code modification):
+  - general better 3D, 4D and 5D ROI support.
+  - added default 5D point constructor for all ROI.
+  - added hasSelectedPoint() method (used for cursor update in canvas)
+  - added getBooleanMask2D(..) method
+  - added boolean and subtraction operations support.
+  - added canSetPosition() and setPosition5D() methods.
+  - added canSetBounds() and setBounds5D(..) methods.
+  - added contains(ROI) and intersects(ROI) methods.
+  - added getNumberOfContourPoints() and getNumberOfPoints() methods (used for perimeter, area.. calculation).  
+  - added icon property (used by the ROI panel).
+  - internal overlay mouse position is now 5D.
+  - better BooleanMask integration in ROI.
+  - added ROI3DArea, ROI4DArea and ROI5DArea.  
+  - ROI are now implemented as plugin.
+  - many others changes.
+* ROIUtil:
+  - added boolean and subtraction operations for ROI list.
+  - added getStandardDeviation(..) methods.
+  - added getContourSize(..) and getInteriorSize(..) methods (return result in pixel).
+  - added getPerimeter(..) and getArea(..) methods (return the result in the input sequence pixel unit).
+  - added getSurfaceArea(..) and getVolume(..) methods (return the result in the input sequence pixel unit).
+* PluginROI interface modified, plugins using it have to be updated !
+* Painter interface deprecation completed:
+  - OverlayWrapper class used for wrapping.
+  - Layer, IcyCanvas, Sequence, ROI... now uses the Overlay only internally.
+  - removed as much Painter reference as possible.
+* Overlay:
+  - events now support 5D coordinates.
+  - added receiveKeyEventOnHidden and receiveMouseEventOnHidden properties.
+  - added isAttached(Sequence) method.
+  - do not anymore extends AbstractPainter.
+* MainListener interface is deprecated, use one of these instead:
+  GlobalViewerListener, GlobalSequenceListener, GlobalROIListener, GlobalOverlayListener, GlobalPluginListener.
+* Replaced 'focused sequence/viewer' by 'active sequence/viewer' logic:
+  FocusedSequenceListener becomes ActiveSequenceListener and FocusedViewerListener becomes ActiveViewerListener.
+* IcyCanvas:
+  - fixed default canvas size implementation.
+  - provide helpers for mouse event dispatch to overlays.
+  - minors changes and refactoring.
+ * Canvas2D:
+  - better support for future 3D/4D/5D ROI drawing.
+* SequenceDataIterator and ImageDataIterator implements the new 5D support from ROI.
+* Point3D / Point4D / Point5D classes improvements.
+* Rectangle3D / Rectangle4D / Rectangle5D classes improvements.
+* Added Dimension3D / Dimension4D / Dimension5D classes.
+* ByteArrayConvert: added readXXX() / writeXXX() methods for easy serialization.
+* Major rewrite of Processor and derived objects:
+ - replaced addTask(..) method by submit(..)
+ - support Callable interface and return Future object.
+* ThreadUtil: added support for Callable interface and Future object.
+* DynamicArray: added support for variable block size (granularity parameter).
+* Added ActionManager class which allow to access command action in a centralized way (will be improved in future).
+* Replaced XLSManager by XLSUtil so use the later one now.
+* GeneralPreferences: added getResultFolder() and setResultFolder() methods to get/set the default application 'results' folder.
+* IcyColorMap: added getRedMap(), getGreenMap()... methods.
+* TypeUtil: added toPoint(int[]) method.
+* FileUtil: added backup(..) method.
+* ArrayMath: added sum(..) method for all native array type.
+* ColorUtil: added many color conversion methods.
+* ImageUtil: added toRGB(..) and toARGB(..) methods.
+* Added ErrorReportFrame for easier generic report.
+* Added IcyTable component (better column resizing policy than JTable).
+* Added SpecialValueSpinner component.
+* ImageSaverDialog can now return selected options.
+* Viewer: can now start/stop play video sequence and change the desired frame rate from the code.
+* Fixed FileUtil.setExtension(..) method.
+* Rewrote SequenceChooser class (cleaner and updated to new method).
+* Prelemenary Bio-Formats automatic error report.
+* Many refactoring.
+* Removed some old deprecated units.
 
-Developers:
 
+Icy 1.3.6.0 - 22/05/2013
+------------------------
+
+Application:
+* Fixed copy/paste operation for image/ROI (IcyCanvas).
+* Fixed deprecated method in Loader which was causing stack overflow.
+* Fixed some image loading crash after an image has been saved.
+* Improved Canvas3D screenshot performance.
+
+Developer:
 * Clipboard: added methods for system clipboard handling.
-* a bit of refactoring.
+* A bit of refactoring.
 
 
-Icy 1.3.5.0 - 17/05/2012
+Icy 1.3.5.0 - 17/05/2013
 ------------------------
 
 Application:
-
 * Added an option to disable the automatic image ordering when loading a group of image.
   It was always enabled before which may cause some issues.
 * Improved online search (less intensive on the website --> faster replies).
@@ -30,12 +156,11 @@ Application:
 * Better default colormap for image with more than 3 channels.
 * Fixed a bug in chat panel which prevented private chat to work.
 * Fixed an issue with Viewer losing focus in some situation.
-* Added predefined colomaps : "alpha" and "glow upper under". 
+* Added predefined colomaps: "alpha" and "glow upper under". 
 * Improved network error handling.
 * Many fixes and improvements... 
 
-Developers:
-
+Developer:
 * Added new Overlay class to replace the Painter interface:
  - add support for overlay priority.
  - automatic change event dispatch to sequence object.
@@ -69,11 +194,10 @@ Developers:
   --> more practical for developer but can make application slower when dealing with many ROI/Painter.
 
 
-Icy 1.3.2.0 - 18/02/2012
+Icy 1.3.2.0 - 18/02/2013
 ------------------------
 
 Application:
-
 * Fixed an issue in local plugin search (search could not be done in online documentation of the plugin). 
 * Removed 'empty' plugin from the research result list.
 * Reverted to 'F3' shortcut for external / internal window mode.
@@ -83,9 +207,8 @@ Application:
 * Fixed regression in network loss detection (some latencies were added in Icy 1.3.0.0)
 * Several minors improvements, tweaks and fixes. 
 
-Developers:
-
-* Major rewrite of the plugin class loader, hope that will help with perm gen space error :
+Developer:
+* Major rewrite of the plugin class loader, hope that will help with perm gen space error:
   - now support getResource(..) and getResources(..) methods (return valid URL).
   - far less memory usage (load resource on demand only).
   - can release loaded resources so if loader is retained by a class memory usage is maintained low.
@@ -94,58 +217,55 @@ Developers:
 * General shortcut handled ad ActionMap / InputMap so a plugin can override them.
 
 
-Icy 1.3.1.0 - 17/01/2012
+Icy 1.3.1.0 - 17/01/2013
 ------------------------
 
 Application:
-
 * Added ROI boolean NOT operation (inverse ROI).
 * Fixed GUI resize issue with the Image Resize frame.
 
-Developers:
-
+Developer:
 * Fixed issue on save sequence operation when parent directory was missing.
 * Fixed IcyButton tooltip when an action is attached to the button.
 * Can now disable/enable histogram auto refresh and auto bounds from code.
 * Fixed BooleanMask2D.setBounds(..) which was accidently hidden in Icy 1.3.0.0
 * NetworkUtil: fixed openURL(..) backward compatibility.
-* FileUtil : tried to fix the obscure bug on delete() and rename() methods (Windows system only).
+* FileUtil: tried to fix the obscure bug on delete() and rename() methods (Windows system only).
 
 
-Icy 1.3.0.0 - 10/01/2012
+Icy 1.3.0.0 - 10/01/2013
 ------------------------
 
 Application:
-
-* Added a general search bar :
+* Added a general search bar:
   - Search in plugins, protocols and kernel commands.
   - You can add you own results to search engine with a plugin.
-* New ROI panel :
+* New ROI panel:
  - new Load / Save / Copy / Paste operations on ROI.
  - can change size and position depending the ROI type.
  - added subtraction boolean operation.
  - added surface / volume information.
  - added pixel intensity information. 
-* New shortcuts :
-  - 2/4/6/8 (keypad) : image displacement (Canvas2D).
-  - F2 : duplicate view
-  - F3 : global search
-  - F4 : internalize/externalize view
-  - Ctrl+F4 : close view
-  - Ctrl+O : open an image file
-  - 0 : disable view synchronization group
-  - 1 : enable/disable view synchronization group 1
-  - 2 : enable/disable view synchronization group 2
-  - 3 : enable/disable view synchronization group 3
-  - 4 : enable/disable view synchronization group 4
-  - Shift+1 : global view synchronization group 1
-  - Shift+2 : global view synchronization group 2
-  - Shift+3 : global view synchronization group 3
-  - Shift+4 : global view synchronization group 4
-  - Shift+0 : cancel global view synchronization
-  - Shift+G : grid tile viewers in grid
-  - Shift+H : horizontal tile viewers arrangement
-  - Shift+V : vertical tile viewers arrangement
+* New shortcuts:
+  - 2/4/6/8 (keypad): image displacement (Canvas2D).
+  - F2: duplicate view
+  - F3: global search
+  - F4: internalize/externalize view
+  - Ctrl+F4: close view
+  - Ctrl+O: open an image file
+  - 0: disable view synchronization group
+  - 1: enable/disable view synchronization group 1
+  - 2: enable/disable view synchronization group 2
+  - 3: enable/disable view synchronization group 3
+  - 4: enable/disable view synchronization group 4
+  - Shift+1: global view synchronization group 1
+  - Shift+2: global view synchronization group 2
+  - Shift+3: global view synchronization group 3
+  - Shift+4: global view synchronization group 4
+  - Shift+0: cancel global view synchronization
+  - Shift+G: grid tile viewers in grid
+  - Shift+H: horizontal tile viewers arrangement
+  - Shift+V: vertical tile viewers arrangement
 * Reworked ROI control in Canvas2D.
 * Fixed proxy setting which should work now on Linux system.
 * Improved plugin installation / udpate process.
@@ -163,45 +283,44 @@ misinterpreted by JVM as right mouse button modifier.
 * Improved histogram display.
 * Added 'help' button in plugin manager to redirect on online plugin help.
 * Fixed a bug in metadata pixelSize fields.
-* Added new splash screens :)
+* Added new splash screens:)
 * A lot of others minors fixes and improvements.
 
-Developers:
-
-* Added new methods in specific ROI classes :
+Developer:
+* Added new methods in specific ROI classes:
   - ROI2DEllipse.setEllipse(..)
   - ROI2DRectangle.setRectangle(..)
 * Added Point3D, Point4D and Point5D classes (same implementation as java.awt.geom.Point2D).
 * Added Rectangle3D, Rectangle4D and Rectangle5D classes (same implementation as java.awt.geom.Rectangle2D).
-* ROI :
+* ROI:
  - added getVolume() method (return volume in number of pixel).
  - added getPerimeter() method (return perimeter in number of pixel).
  - added getDimension() method (return number of dimension).
  - introduced contains(..) method (method was initially located in ROI2D, ROI3D... classes).
  - introduced intersect(..) method (method was initially located in ROI2D, ROI3D... classes).
-* BooleanMask2D :
+* BooleanMask2D:
  - added getPoints() method (return points composing the mask).
  - added getComponents() method (return independent object mask).
  - added getEdgePoints() method (return mask contour points).
  - added getComponentsPoints() method (return points from each independent object).
-* Centralized all kernels menu commands to actions :
- - FileActions : all file commands.
- - PreferencesActions : launch preferences panel commands.
- - SequenceOperationActions : sequence manipulation commands.
- - WindowActions : window arrangement / opening commands.
- - GeneralActions : all others commands.
- - RoiActions : ROI panel actions.
-* Canvas2D :
+* Centralized all kernels menu commands to actions:
+ - FileActions: all file commands.
+ - PreferencesActions: launch preferences panel commands.
+ - SequenceOperationActions: sequence manipulation commands.
+ - WindowActions: window arrangement / opening commands.
+ - GeneralActions: all others commands.
+ - RoiActions: ROI panel actions.
+* Canvas2D:
  - added void translate(...) method.
 * Added Clipboard class for easy copy/paste operations in Icy.
-* IcyAbstractAction :
+* IcyAbstractAction:
  - now supports background action execution (with progressbar)
  - added GetRichToolTip() method to retrieve the action RichToolTip.
 * IcyCommandxxxButton now support IcyAbstractAction.
 * added AbstractSequenceModel class for easy SequenceModel implementation.
-* added PluginSearchProvider interface : a plugin implementing this interface provides results for the global search bar.
+* added PluginSearchProvider interface: a plugin implementing this interface provides results for the global search bar.
 * Removed NetworkConnectionListener to only keep InternetAccessListener.
-* IcyFrame :
+* IcyFrame:
  - added dispose() method to ensure frame close and release.
  - added getVisibleRect() method.
 * Added new methods to the SwimmingPool class so we can now manipulate objects depending their names.
@@ -218,9 +337,8 @@ Developers:
 Icy 1.2.7.0 - 10/09/2012
 ------------------------
 
-Application :
-
-* Entirely reworked the 'Sequence / Image operation' band :
+Application:
+* Entirely reworked the 'Sequence / Image operation' band:
   - new sequence resize feature.
   - new C/Z/T operations.
   - new color conversion feature.
@@ -237,9 +355,8 @@ Application :
 * Added direct access to online plugins in taskbar.
 * A lot of others minors fixes and improvements.
 
-Developers :
-
-* Loader :
+Developer:
+* Loader:
   - added methods so we can now specify serie(s) to load.
   - added 'getMetaData(File file)' method to retrieve the metadata of an image file.
   - added 'loadImage(File file, int z, int t)' method to load a single image from multi image file.
@@ -269,8 +386,7 @@ Developers :
 Icy 1.2.6.1 - 06/07/2012
 ------------------------
 
-Application :
-
+Application:
 * Fixed multiple image loading.
 * Fixed multiple plugin error report frame.
 * Better multi threads handling.
@@ -278,8 +394,7 @@ Application :
 * Improved preview (now support float data type) in the image load dialog.
 * A lot of others minors fixed and improvements.
 
-Developers :
-
+Developer:
 * Some code rewrite & cleanup in Plugin and Workspace management.
 * Some others minors changes or refactoring.
 
@@ -287,8 +402,7 @@ Developers :
 Icy 1.2.6.0 - 29/06/2012
 ------------------------
 
-Application :
-
+Application:
 * TIF saving uses LZW compression by default.
 * Added series selection dialog for multi series image file.
 * Fixed daemons plugins start and stop operations.
@@ -296,8 +410,7 @@ Application :
 * Better metadata preservation.
 * cleanup and minors fixes...
 
-Developers :
-
+Developer:
 * PluginUpdater class has been splited in PluginUpdater and PluginUpdateFrame classes.
 * Added ThumbnailComponent class to display image thumbnail with basic description.
 * Added some methods in Loader class for better sequence / image / metadata loading...
@@ -309,19 +422,17 @@ Developers :
 Icy 1.2.5.0 - 18/06/2012
 ------------------------
 
-Application :
-
+Application:
 * Improved GUI for colormap model loading.
 * Improved native libraries loading.
 * Preliminary headless support.
 * Lot of minors fixes and improvements...
 
-Developers :
-
-* Added new general GUI components :
+Developer:
+* Added new general GUI components:
   - RangeSlider (slider representing a range).
   - ColormapIcon (icon representing a colormap).
-* Added new GUI components for basic Sequence operation :
+* Added new GUI components for basic Sequence operation:
   - SequencePreviewPanel (sequence preview).
   - SequenceChooserPanel.
   - SequenceRangePreviewPanel class.
@@ -345,8 +456,7 @@ Minor fix in update processing and OSX launch.
 Icy 1.2.4.0 - 21/05/2012
 ------------------------
 
-Application :
-
+Application:
 * Internet connection monitor (the CPU/memory monitor panel now displays an icon when you are not connected to internet).
 * Ribbon minimization state is now saved and restored after applciation restart.
 * Fixed ImageJ menu disappearing on MAC OSX.
@@ -354,8 +464,7 @@ Application :
 * Improved window tile arrangement (take previous window position in account).
 * Others tweaks, fixes or cleanup...
 
-Developers :
-
+Developer:
 * Added IdConfirmDialog class: 
   A ConfirmDialog containing a checkbox to not display confirmation next time.
 * Removed IcyFileUtil and IcyNetworkUtil classes.
@@ -372,28 +481,27 @@ Minor bug fix in image saving.
 Icy 1.2.3.0 - 26/04/2012
 ------------------------
 
-Application :
-
-* Improved ImageJ integration :
+Application:
+* Improved ImageJ integration:
   - ImageJ is now patched at runtime so we can use official builds and even update them.
   - no more AWT component, less refresh problems in general.
   - basic methods to convert Icy Sequence to ImageJ ImagePlus (with ROI preservation) and vice versa.
 * Added safe background processes termination check when application exit.
-* Canvas :
+* Canvas:
   - fixed a bug in layers display and event dispatch ordering.
-* Canvas2D :
+* Canvas2D:
   - removed zoom operation on double-click (already on mouse wheel).
   - added shift modifier for aligned translation / rotation / scaling operations.
   - added filtering option.
-* Canvas3D :
+* Canvas3D:
   - pixel size is taken from sequence metadata information (no more duplicated information).
-* Loader :
+* Loader:
   - multi series image are now opened in different sequences.
-* ROI :
+* ROI:
   - implemented alignment assistance with shift drag operation.
   - modified / tweaked ROI manipulation to make it more consistent.
   - improved rendering.
-* Preferences :
+* Preferences:
   - added Canvas preferences panel.
   - added startup (daemon) plugins setup panel.
 * Added an option to enable/disable sequence bounds refresh on the Histogram.
@@ -404,36 +512,35 @@ Application :
 * Fixed an error in image saving (regression in 1.2.2.0).
 * Lot of others minors fixes, tweaks and improvements.
 
-Developers :
-
+Developer:
 * Added Parallel Colt library.
 * Added Xuggler library.
-* Added DataIterator interface :
+* Added DataIterator interface:
   This interface provides iteration for both read and write operation on double data.
 * Added ImageDataIterator and SequenceDataIterator class for easy IcyBufferedImage and Sequence data manipulation.
 * Added DataIteratorMath for basic math operations on DataIterator.
 * Renamed CloseTabbedPane --> CloseableTabbedPane.
 * Added ConfirmFrame class (non modal ConfirmDialog).
 * Added LineAnchor2D and RectAnchor2D for easy Line / Square alignment on shift drag operation.
-* IcyCanvas :
+* IcyCanvas:
   - added canvasToImageLogDelta() methods.
 * IcyCanvas2D:
   - added canvasToImageLogDelta() methods.
   - added getTransform() & getInverseTransform() methods which return AffineTransform object for fast canvas <--> image Graphics context change.
-* Canvas2D :
+* Canvas2D:
   - give access now to CanvasView and CanvasMap objects.
-* Canvas3D :
+* Canvas3D:
   - vtkPainter are now automatically added or removed to the renderer.
-* ROI :
+* ROI:
   - added getPosition / setPosition method.
   - added ROIUtil class which provides utilities for ROI.
   - added ROI.setEditable(..) and ROI.isEditable() methods so now we can have "Read Only" ROI.
   - added setPoints() methods to ROI2DPolygon and ROI2DPolyline.  
-* ROIEvent :
+* ROIEvent:
   - added FOCUS, SELECTION and PROPERTY change event type.
   - removed POINT_xxx event type.
   - PROPERTY_CHANGE replace the NAME_CHANGE type event.  
-* IcyIcon :
+* IcyIcon:
   - added supports to normal color image icon (use the 'alpha' proterty).
   - added setColor(Color) method to define the icon colorization when using alpha mask type image.
 * Added GraphicsUtil class which provide some Graphics facilities as drawing multi line text, calculating text bounds...
@@ -448,18 +555,16 @@ Developers :
 Icy 1.2.2.0 - 14/02/2012
 ------------------------
 
-Application :
-
+Application:
 * Improved / fixed sequence image ordering from filename.
-* Many improvements on Chat :
+* Many improvements on Chat:
   - faster desktop rendering (fix lag issue on OSX).
   - support style & coloring from IRC.
   - support multi channels chat.
   - preferences panel.
 * Some others minors fixes and improvements.
 
-Developers :
-
+Developer:
 * Added CloseTabbedPane component (basically a JTabbedPane with closable tabs).
 * Added IRCUtil class (IRC utilities).
 * Minors changes in Pixel/Band/ImagePosition classes.
@@ -474,11 +579,10 @@ Minor fix in chat nickname change.
 Icy 1.2.1.0 - 03/02/2012
 ------------------------
 
-Application :
-
+Application:
 * Added support for "multi windows mode" (à la GIMP or ImageJ).
-* Added internal chat so users can discuss together easily :)
-* Canvas2D :
+* Added internal chat so users can discuss together easily:)
+* Canvas2D:
  - fixed zoom centering when using '+' / '-' buttons.
  - added invert mouse wheel axis option.
 * Cascade and Tile windows organization now work on multi screen.
@@ -486,8 +590,7 @@ Application :
 * Some others minors fixes and improvements.
 
 
-Developers :
-
+Developer:
 * Improved ExternalizablePanel component, it now uses an IcyFrame for its frame form.
 * Added overlay support to IcyDesktopPane (easy drawing on application DesktopPane).
 * Added DateUtil (Data utilities) class.
@@ -504,12 +607,12 @@ Developers :
 Icy 1.2.0.0 - 10/01/2012
 ------------------------
 
-* ImageJ integration : you can now use ImageJ directly from Icy !
+* ImageJ integration: you can now use ImageJ directly from Icy !
   This is still in beta stage and you may experiences some problems.
   You will see some errors messages coming from the ImageJ GUI construction, this is normal, just ignore them.
   We can remove completly these messages but we want to avoid bad practices with GUI creation and modification.
-* Canvas2D : added new synchronization method.
-* Canvas3D : severals fixes and improvements.
+* Canvas2D: added new synchronization method.
+* Canvas3D: severals fixes and improvements.
 * Better meta data handling (compatible with OME).
 * Fixed double image loading.
 * Improved colormap handling for multi channel image.
