@@ -1,3 +1,18 @@
+Icy 1.4.1.0 - 12/11/2013
+------------------------
+
+Application:
+* ROIPanel: fixed area and volume unit representation.
+* Removed image auto ordering when loading from the history.
+
+Developer:
+* Fixed issue in getSubSequence(Sequence, ROI) method.
+* Improved backward compatibility.
+  Lot of compatibilities issues appeared in the last version because of some majors changes in ROI and Overlay in general.
+  We are really sorry for the troubles and some should be fixed now but still it is preferable for developers to update their plugins which heavily rely on ROI and Overlay.
+* Javadoc changes.
+
+
 Icy 1.4.0.2 - 30/10/2013
 ------------------------
 
