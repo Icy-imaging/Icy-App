@@ -1,3 +1,16 @@
+Icy 1.4.2.0 - 13/11/2013
+------------------------
+
+Application:
+* Bug Report frame close automatically after report (regression fix).
+* ChangeLog is now accessible directly through the application (close to the 'About' section).
+* Some others minors tweaks and changes.
+
+Developer:
+* Fixed native library loading from Plugin on unix like system.
+* Javadoc changes.
+
+
 Icy 1.4.1.0 - 12/11/2013
 ------------------------
 
