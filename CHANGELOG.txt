@@ -11,7 +11,7 @@ Application:
 
 Developer:
 * Severals fixes with BooleanMask and ROI bounds calculations.
-* Rectangle<X>D: added setInfinity..() method.
+* Rectangle3D/4D/5D: added setInfinity..() method.
 * Some Javadoc changes.
 
 
