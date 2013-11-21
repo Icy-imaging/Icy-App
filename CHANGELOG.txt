@@ -1,3 +1,12 @@
+Icy 1.4.3.5 - 21/11/2013
+------------------------
+
+Application:
+* Some fix on ROI merge operations (again).
+* Better error handling of incorrect ROI merge operation.
+* Report frame now available also on internal application error.
+
+
 Icy 1.4.3.0 - 21/11/2013
 ------------------------
 
