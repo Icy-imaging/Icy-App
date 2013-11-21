@@ -1,3 +1,20 @@
+Icy 1.4.3.0 - 21/11/2013
+------------------------
+
+Application:
+* Fixed some issues with ROI boolean merge operation.
+* Modified the VTK Canvas3D screen shot rendering to RGB so it should always looks correct now. 
+* Replaced the default 'Save' ribbon menu command by 'Save as' command instead.   
+* Filter incorrect named classes in plugins folder to avoid useless warning messages.
+* Minors changes in the About frame.
+* Some others minors tweaks and changes.
+
+Developer:
+* Severals fixes with BooleanMask and ROI bounds calculations.
+* Rectangle<X>D: added setInfinity..() method.
+* Some Javadoc changes.
+
+
 Icy 1.4.2.0 - 13/11/2013
 ------------------------
 
