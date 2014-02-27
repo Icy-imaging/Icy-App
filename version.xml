@@ -48,7 +48,7 @@
 		</element>
 		<element>
 			<name>ICY Updater</name>
-			<version>1.6.8.0</version>
+			<version>1.6.9.0</version>
 			<files>
 				<file>
 					<localpath>updater.jar</localpath>
@@ -61,15 +61,6 @@
 			<files>
 				<file>
 					<localpath>ij</localpath>
-				</file>
-			</files>
-		</element>
-		<element>
-			<name>Log4J</name>
-			<version>1.2.17.0</version>
-			<files>
-				<file>
-					<localpath>lib/log4j.jar</localpath>
 				</file>
 			</files>
 		</element>
@@ -91,18 +82,6 @@
 				</file>
 				<file>
 					<localpath>lib/poi-scratchpad.jar</localpath>
-				</file>
-			</files>
-		</element>
-		<element>
-			<name>SLF4J</name>
-			<version>1.6.6.0</version>
-			<files>
-				<file>
-					<localpath>lib/slf4j-api.jar</localpath>
-				</file>
-				<file>
-					<localpath>lib/slf4j-log4j.jar</localpath>
 				</file>
 			</files>
 		</element>
@@ -160,15 +139,6 @@
 				</file>
 				<file>
 					<localpath>lib/jai_codec.jar</localpath>
-				</file>
-			</files>
-		</element>
-		<element>
-			<name>JAI ImageIO</name>
-			<version>1.1.0.0</version>
-			<files>
-				<file>
-					<localpath>lib/jai_imageio.jar</localpath>
 				</file>
 			</files>
 		</element>
@@ -258,7 +228,7 @@
 		</element>
 		<element>
 			<name>Substance</name>
-			<version>7.3.0.0</version>
+			<version>7.3.0.1</version>
 			<files>
 				<file>
 					<localpath>lib/trident.jar</localpath>
@@ -321,40 +291,10 @@
 		</element>
 		<element>
 			<name>Bio Formats</name>
-			<version>5.0.0.0b</version>
+			<version>5.0.0.2</version>
 			<files>
 				<file>
-					<localpath>lib/bio-formats.jar</localpath>
-				</file>
-				<file>
-					<localpath>lib/kryo.jar</localpath>
-				</file>
-				<file>
-					<localpath>lib/loci-common.jar</localpath>
-				</file>
-				<file>
-					<localpath>lib/metakit.jar</localpath>
-				</file>
-				<file>
-					<localpath>lib/native-lib-loader.jar</localpath>
-				</file>
-				<file>
-					<localpath>lib/netcdf.jar</localpath>
-				</file>
-				<file>
-					<localpath>lib/ome-io.jar</localpath>
-				</file>
-				<file>
-					<localpath>lib/ome-xml.jar</localpath>
-				</file>
-				<file>
-					<localpath>lib/poi-loci.jar</localpath>
-				</file>
-				<file>
-					<localpath>lib/scifio.jar</localpath>
-				</file>
-				<file>
-					<localpath>lib/turbojpeg.jar</localpath>
+					<localpath>lib/bioformats.jar</localpath>
 				</file>
 			</files>
 		</element>
