@@ -310,7 +310,7 @@
 		</element>
 		<element>
 			<name>VTK</name>
-			<version>5.8.0.0</version>
+			<version>6.1.0.0</version>
 			<changeslog />
 			<files>
 				<file>
