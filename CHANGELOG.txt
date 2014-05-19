@@ -1,3 +1,54 @@
+Icy 1.5.0.0 - 19/05/2014
+------------------------
+
+Application:
+* Improved 3D visualization.
+* Main menu:
+ - Added 'Import' command for plugin capable of importing resources.  
+ - Added 'Save Metadata' command to force save of the image metadata.
+* ROI panel:
+  - Subtraction command now produces the 2 possible results.
+    You have to remove the incorrect one afterward.
+  - Channel informations are now separated in several column (better for excel analysis).
+  - Excel export now always export all ROI (as this is generally what we want).
+  - Performance improvement when dealing with many ROIs
+* Improved headless support.
+* Fixed Java 8 compatibility issue.
+* Added support for local repository.
+* Fixed a bug making 1 pixel height or 1 pixel width ROI to become invisible.
+* Simpler image resize operation.
+* Swimming pool viewer improved.
+* Many bug fixes and others improvements.
+
+Developer:
+* Added Importer (and derived) interface to easily implement new resource / image importer from plugin.
+* Added ImageProvider interface for flexible image access.
+  This interface can be used in importer to provide low level image access.
+* ThreadUtil: added runSingle(..) method. 
+* Many changes in Loader interface.
+* VTK:
+ - New VTKCanvas class to replace Canvas3D.
+ - Added VtkImageVolume class for easier volume rendering from an image stack.
+ - New methods in VTKUtil.
+* ROI:
+  - Added contains(ROI) and intersects(ROI) methods.
+  - Added ROIUtil.getMassCenter() method.
+* SequenceUtil:
+ - Added rotate() method.
+ - Added toGray() and toRGB() methods.
+* IcyBufferedImageUtil: added rotate() method.
+* Added ActionDialog.isCanceled() method.
+* MainInterface:
+ - Added isHeadLess() method.
+ - Added getCommandLineArgs() and getCommandLinePluginArgs() method (for headless mode mainly).
+* FileUtil: added toFiles(paths) and toPath(files) methods.
+* Some fix on ROI merge operations (again).
+* Better error handling of incorrect ROI merge operation.
+* Report frame now available also on internal application error.
+* Updated Bio-Formats library to version 5.0.1
+* Updated VTK to version 6.1 (some plugins using the old VTK API might not work anymore).
+* Many others changes, deprecation, tweaks...
+
 Icy 1.4.3.5 - 21/11/2013
 ------------------------
 
