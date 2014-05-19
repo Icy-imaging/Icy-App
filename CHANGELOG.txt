@@ -38,7 +38,7 @@ Developer:
  - Added toGray() and toRGB() methods.
 * IcyBufferedImageUtil: added rotate() method.
 * Added ActionDialog.isCanceled() method.
-* MaintInterface:
+* MainInterface:
  - Added isHeadLess() method.
  - Added getCommandLineArgs() and getCommandLinePluginArgs() method (for headless mode mainly).
 * FileUtil: added toFiles(paths) and toPath(files) methods.
