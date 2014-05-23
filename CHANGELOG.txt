@@ -1,3 +1,17 @@
+Icy 1.5.1.0 - 23/05/2014
+------------------------
+
+Application:
+* fixed ROIUtil.getMassCenter() method.
+* fixed pixel size calculation on image resize operation.
+* fixed bug on ROI opacity change.
+* fixed LOD for ROI2DPoint and ROI2DLine.
+* fixed possible NPE in ROI panel.
+* fixed possible NPE in LUTViewer.
+* faulty plugins (corrupted jar file) are now automatically reinstalled.
+* others minors fixes and improvements.
+
+
 Icy 1.5.0.0 - 19/05/2014
 ------------------------
 
