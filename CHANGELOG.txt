@@ -1,15 +1,47 @@
+Icy 1.5.2.0 - 13/06/2014
+------------------------
+
+Application:
+* Modified way of retrieving the application folder (old method could fail on new OSX).
+* Saver: removed the temporary hack to fix BioFormats save.
+* Importer: fixed a minor issue with file path on Bio-Format importer.
+* ROI:
+ - fixed a issue with ROI subtraction operation.
+ - fixed a issue with ROI2DShape intersects() method.
+ - fixed issues with empty ROI2DArea.
+* Rectangle5D: fixed infinite size C report.
+* XMLUtil: added filterString(..) method to filter incorrect character.
+* VTK:
+ - fixed some VTK crashes due to multi thread access (even if protected).
+ - fixed volume shading.
+* minor change in plugin class loader for better handling on thread context class loader.
+* others minors changes.
+
+Developer:
+* ROI: fixed a issue with ROI2DShape intersects() method.
+* Rectangle5D: fixed infinite size C report.
+* XMLUtil: added filterString(..) method to filter incorrect character.
+* VTK:
+ - added lock() / unlock() method to require access to VTK rendering.
+ - added access to VTK properties and actors (activeCam, axes, bounding box, ruler, image volume...)
+ - added pick(..) method for 3D picking.
+ - added setVolumeVisible(..) method to display/hide image volume object.
+* some javadoc updates.
+* some cleanup.
+
+
 Icy 1.5.1.0 - 23/05/2014
 ------------------------
 
 Application:
-* fixed ROIUtil.getMassCenter() method.
-* fixed pixel size calculation on image resize operation.
-* fixed bug on ROI opacity change.
-* fixed LOD for ROI2DPoint and ROI2DLine.
-* fixed possible NPE in ROI panel.
-* fixed possible NPE in LUTViewer.
-* faulty plugins (corrupted jar file) are now automatically reinstalled.
-* others minors fixes and improvements.
+* Fixed ROIUtil.getMassCenter() method.
+* Fixed pixel size calculation on image resize operation.
+* Fixed bug on ROI opacity change.
+* Fixed LOD for ROI2DPoint and ROI2DLine.
+* Fixed possible NPE in ROI panel.
+* Fixed possible NPE in LUTViewer.
+* Faulty plugins (corrupted jar file) are now automatically reinstalled.
+* Others minors fixes and improvements.
 
 
 Icy 1.5.0.0 - 19/05/2014
