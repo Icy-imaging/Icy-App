@@ -1,3 +1,9 @@
+Icy 1.5.3.1 - 09/07/2014
+------------------------
+
+Fixed Rectangle3D/4D/5D.contains(...) method (can be annoying for developer).
+
+
 Icy 1.5.3.0 - 08/07/2014
 ------------------------
 
