@@ -1,3 +1,25 @@
+Icy 1.5.3.0 - 08/07/2014
+------------------------
+
+Application:
+* Last used colormap is now saved in the sequence persistent data.
+* Added multi selection support in Plugin browser.
+* Some improvements on the colormap combo box representation.
+* Partial rewrite of the Plugin class loader sub system, this hopefully fix the random load class errors !
+* Clean metadata on image loading.
+* Avoid useless Z and T numbering when saving as "multiple files".
+* Added missing plugins checking on start.
+* Minor changes/fixes on inspector layout.
+* Others minors changes.
+
+Developer:
+* Thread safe implementation of XMLPreferences.
+* Added PluginLauncher.startSafe(..) method which allow to handle exceptions.
+* Reworked the ThreadUtil.invokeNow(Callable) method.
+* Packed LociImporter class in LociImporterPlugin class.
+* Some cleanup, refactoring and javadoc updates.
+
+
 Icy 1.5.2.0 - 13/06/2014
 ------------------------
 
