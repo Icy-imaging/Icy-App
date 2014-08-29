@@ -1,3 +1,53 @@
+Icy 1.5.4.0 - 29/08/2014
+------------------------
+
+Application:
+* Layers panel:
+ - opacity setting has moved at bottom.
+ - support custom setting panel per layer (Overlay.getOptionsPanel())
+* SearchBar: faster result display / refresh of search bar
+* ROI:
+ - added ROI contour size field (only for drawing).
+ - fixed ROI2DEllipse area calculation.
+ - fixed vertical and horizontal ROI2DLine selection.
+ - modified ROI2DPoint rendering.
+ - Rewrote ROI2D and ROI3D perimeter calculation with a more precise approximation.
+* Fixed shared LUT on viewer duplication (regression).
+* Icy let you select appropriate importer when multiple choice are available.
+* Fixed histogram refresh.
+* Loader dialog show image preview even for "all files" filter.
+* Minors changes on VTK library on Unix system..
+* Fixed crash on exit on Unix system (temporary workaround for JVM bug).
+* Better internet connection monitor (lighter on network traffic).
+* Tweaks / fixes on GUI refresh.
+* Faster background repaint (cached), more responsive when moving windows.
+* Others minors improvements, bug fixes and cleanup.
+
+
+Developer:
+* Loader: many changes to provide better support on FileImporter and SequenceFileImporter classes.
+* Overlay: support custom setting panel with getOptionsPanel()
+* FileImporter.acceptFile(..) method now use path parameter.
+* SequenceUtil:
+ - C/Z/T merge operation now preserve metadata.
+ - added getSubSequence(Sequence, ROI, double) method.
+* Sequence:
+ - added hasOverlay(Class) method.
+ - added getROI/2D/3Ds(boolean sorted) methods.
+* User email information stored in preferences.
+* Fixed ROIUtil.getMassCenter() method.
+* Added GeneralPreferences.get/setLoaderFolder(..) to retrieve the current "Open" folder.
+* Do not clear anymore sequence objects (ROI and overlay) when sequence is closed.
+* Fixed XLSUtil.loadWorkbook(..) which was clearing file.
+* Fixed InstanceProcessors.submit(..) method.
+* Minor change in the way we close opened windows on application exit.
+* Some refactoring:
+ - ImageLoaderDialog --> LoaderDialog
+ - ImageSaverDialog --> SaverDialog
+ - LoadDialog --> OpenDialog
+* Some cleanup, refactoring and javadoc updates.
+
+
 Icy 1.5.3.1 - 09/07/2014
 ------------------------
 
