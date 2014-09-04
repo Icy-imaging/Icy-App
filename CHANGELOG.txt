@@ -1,3 +1,16 @@
+Icy 1.5.4.2 - 04/09/2014
+------------------------
+
+Application:
+* added an option to display the ROI name (per ROI).
+* fixed continuous histogram refresh on empty sequence (regression).
+* some improvements on headless mode.
+* check for update only once per day.
+* fixed network detection when proxy is used.
+* fixed faulty plugins verification.
+* other minors fixes.
+
+
 Icy 1.5.4.0 - 29/08/2014
 ------------------------
 
