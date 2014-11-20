@@ -1,3 +1,88 @@
+Icy 1.6.0.0 - 20/11/2014
+------------------------
+
+Application:
+* Undo operation support:
+ - customizable length history
+ - support undo & redo depending the operation
+ - undo / redo supported for almost all ROI operation
+ - undo supported for almost all sequence operation
+ - global undo / redo operation (when supported) by pressing Ctrl+Z / Ctrl+Y
+* Added plugin usage statistics report (beta).
+* Canvas2D:
+ - added area selection (Ctrl key + mouse drag)
+ - added message when there is not enough memory to display the image
+* Canvas2D and VtkCanvas:
+ - reset view with 'r' shortcut
+ - reset view and palette with 'R' shortcut
+* ROI:
+ - fixed minor issue on subtraction operation.
+ - fixed NOT boolean operation for 3D, 4D and 5D ROI.
+* ROIPanel : fixed sorting on position and size. 
+* Loader:
+ - better image auto ordering from filename when loading a group of file
+ - better progress information when loading a group of file
+ - improved image preview display (support multiple importer)
+* Loci importer: better retrieving of channel color from metadata
+* VTK library loading fixed for Unix system (still some issues with VTK 6.1 support on unix system) 
+* Colormap are preserved on Sequence extract channel / frame / slice operation.
+* Histogram:
+ - "auto bounds" parameter is now preserved.
+ - fixed minor refresh issue.
+* Minor fix with internet monitor.
+* Many bug fixes and tweaks.
+
+Developer:
+* New undo framework:
+ - added many classes to provide 'Undoable' operation (IcyUndoManager, IcyUndoableEdit...)
+ - added MainInterface.getUndoManager() method to retrieve the active Sequence UndoManager.
+ - added MainInterface.undo() and MainInterface.redo() methods for fast undo and redo on the active Sequence.
+ - look at ROI undoable operation example to learn how to use the framework.
+* FileUtil.getApplicationDirectory() tweaked for better support on OSX
+* PluginDescriptor:
+ - added isBlundled() method to know if this is a bundled plugin (several plugins inside the same package)
+ - added isKernelPlugin() to know if this plugin is bundled in the application.
+* PluginLauncher: some changes with plugin launch operation.
+* Plugin: added getName(), isBundled() and getOwnerClassName() methods.
+* ROI:
+ - added copyFrom(ROI) method to obtain a ROI copy.
+ - added getPropertyValue(..) / setPropertyValue(..) for generic property get and set operations.
+* MetaDataUtil: added getSizeX/Y/Z/T/C() and setSizeX/Y/Z/T/C() methods
+* Sequence:
+ - added copyFrom(..), copyDataFrom(..) and copyMetadataFrom(..) methods.
+ - added createUndoPoint(..), createUndoDataPoint(..), createUndoMetadataPoint(..) and AddUndoableEdit(..) methods to create complete, partial or custom restore point for undo operation.
+ - added undo() and redo() and clearUndoManager() methods
+ - added getSelectedROIs(Class<? extends ROI> roiClass..) to retrieve selected ROI of a specific type only.
+ - added getDefautColormap(..) and setDefautColormap(..) methods.
+ - added getColormap(..) and setColormap(..) methods (user LUT).
+* Added SequenceUtil.getCopy(Sequence, copyROI, copyOverlay, suffix) to get a copy of the specified sequence with specific options.
+* Added the ugly PluginNoEDTConstructor interface to avoid plugin creation in the swing graphics thread (needed for retro compatibility).
+  Be careful as some Plugin abstract classes now use this interface.
+* IcyBufferedImageUtil.convertToType(..) now uses safe type conversion as we always prefer it (even if it's bit slower).
+* Added ImageUtil.isGray(image) method to know if the specified RGB image only contains gray pixels.
+* Added MetaDataUtil.getChannelColor(..) method.
+* ROI2DShape: added addNewPoint(..) and removePoint(..) method. 
+* RectanglexD: fixed some typos in contains() and intersects() methods
+* ROIxDStack: fixed rounding error in contains(..) and intersects() methods
+* Added 3D, 4D and 5D rectangle ROI (available through code only)
+* Added new methods in LUT and LUTChannel to copy colormap and scaler objects.
+* Added MainInterface.getActiveLUT() for fast retrieving of current viewer's LUT.
+* Added new methods to DateUtil.
+
+
+Icy 1.5.4.2 - 04/09/2014
+------------------------
+
+Application:
+* added an option to display the ROI name (per ROI).
+* fixed continuous histogram refresh on empty sequence (regression).
+* some improvements on headless mode.
+* check for update only once per day.
+* fixed network detection when proxy is used.
+* fixed faulty plugins verification.
+* other minors fixes.
+
+
 Icy 1.5.4.0 - 29/08/2014
 ------------------------
 

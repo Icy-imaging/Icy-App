@@ -310,7 +310,7 @@
 		</element>
 		<element>
 			<name>VTK</name>
-			<version>6.1.0.0</version>
+			<version>6.1.0.1</version>
 			<changeslog />
 			<files>
 				<file>
@@ -324,6 +324,12 @@
 				</file>
 				<file>
 					<localpath>lib/win64/vtk</localpath>
+				</file>
+				<file>
+					<localpath>lib/unix32/vtk</localpath>
+				</file>
+				<file>
+					<localpath>lib/unix64/vtk</localpath>
 				</file>
 			</files>
 		</element>
