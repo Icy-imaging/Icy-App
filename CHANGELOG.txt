@@ -4,7 +4,7 @@ Icy 1.6.0.0 - 20/11/2014
 Application:
 * Undo operation support:
  - customizable length history
- - support undo & redo depending the operation
+ - support undo and redo depending the operation
  - undo / redo supported for almost all ROI operation
  - undo supported for almost all sequence operation
  - global undo / redo operation (when supported) by pressing Ctrl+Z / Ctrl+Y
