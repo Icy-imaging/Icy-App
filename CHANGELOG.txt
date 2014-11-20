@@ -52,7 +52,7 @@ Developer:
  - added copyFrom(..), copyDataFrom(..) and copyMetadataFrom(..) methods.
  - added createUndoPoint(..), createUndoDataPoint(..), createUndoMetadataPoint(..) and AddUndoableEdit(..) methods to create complete, partial or custom restore point for undo operation.
  - added undo() and redo() and clearUndoManager() methods
- - added getSelectedROIs(Class<? extends ROI> roiClass..) to retrieve selected ROI of a specific type only.
+ - added getSelectedROIs(Class roiClass..) to retrieve selected ROI of a specific type only.
  - added getDefautColormap(..) and setDefautColormap(..) methods.
  - added getColormap(..) and setColormap(..) methods (user LUT).
 * Added SequenceUtil.getCopy(Sequence, copyROI, copyOverlay, suffix) to get a copy of the specified sequence with specific options.
