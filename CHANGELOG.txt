@@ -27,7 +27,7 @@ Application:
 * VTK library loading fixed for Unix system (still some issues with VTK 6.1 support on unix system) 
 * Colormap are preserved on Sequence extract channel / frame / slice operation.
 * Histogram:
- - "auto bounds" parameter is now preserved.
+ - 'auto bounds' parameter is now preserved.
  - fixed minor refresh issue.
 * Minor fix with internet monitor.
 * Many bug fixes and tweaks.
