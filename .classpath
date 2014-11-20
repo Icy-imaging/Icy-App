@@ -2,6 +2,4 @@
 <classpath>
 	<classpathentry kind="lib" path="icy.jar"/>
 	<classpathentry kind="output" path="bin"/>
-	<referencedentry kind="lib" path="lib/bioformats.jar" sourcepath="D:/Stephane/Documents/dev/GIT/bioformats/components/ome-xml/src/ome"/>
-	<referencedentry kind="lib" path="lib/substance-flamingo.jar" sourcepath="/Icy-Insubstantial"/>
 </classpath>
