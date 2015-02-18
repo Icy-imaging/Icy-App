@@ -1,3 +1,45 @@
+Icy 1.6.1.0 - 18/02/2015
+------------------------
+
+Application:
+* ROI:
+ - can set position and size of selected ROI with CTRL + arrow keys.
+ - fixed the SHIFT modifier for Line and Rectangular ROIs.
+ - fixed minor issue with contains(x, y, z, t, c) method.
+ - 3D rendering (in VtkCanvas) improved.
+ - fixed some issues with channel specific information display in ROI panel.
+ - better approximation of the number of points with the generic computeNumberOfPoints() implementation.
+* Canvas2D:
+ - minors changes on shortcuts action.
+* VtkCanvas:
+ - added support to layer visibility and opacity.
+ - now support arrow keys to navigate through frame and keypad keys to translate view. 
+ - default background color is now black
+ - display information message when no enough memory to display image
+ - fixed VTK 3D rendering with more than 4 channels.
+* ImageJ:
+ - added support for drop file operation.
+ - better ROI conversion between Icy and ImageJ (uses RoiManager if needed).
+* fixed windows repositioning on multiple virtual desktop system.
+* added custom colormap support (colormaps inside the 'colormap' folder are now visible in the colormap combobox).
+* added range movement and range settings to Histogram panel.
+* added information on maximum memory with 64bit JVM in Preferences.
+* better assignment of default image colormaps.
+* some fixes and minors changes.
+
+Developer:
+* Layer: replaced 'alpha' by 'opacity'
+* fixed a bug with SequenceDataIterator object (should fix some issues with some ROIUtil methods).
+* added IcyCanvas.isVisible(Layer) method.
+* modified all the ArrayUtil.arrayToSafeArray(..) methods for better type conversion.
+* fixed a minor issue with the IcyBufferedImageUtil.convertToType() method.
+* removed the Plugin constructor using PluginDescriptor parameter (can cause issue)
+* several improvements to IcyVtkPanel class.
+* added ComponentUtil.centerOn(..) methods
+* minor changes to the SequenceIdImporter interface (now implements Closeable)
+* refactoring, cleanup.
+
+
 Icy 1.6.0.1 - 26/11/2014
 ------------------------
 

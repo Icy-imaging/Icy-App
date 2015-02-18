@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <root>
-<name>component 0</name>
+<name>Morgenstemning</name>
 <enabled>true</enabled>
 <type>RGB</type>
 <red rawdata="true">
