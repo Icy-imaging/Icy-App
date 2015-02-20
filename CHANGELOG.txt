@@ -1,4 +1,12 @@
-Icy 1.6.1.0 - 18/02/2015
+Icy 1.6.1.1 - 20/02/2015
+------------------------
+
+Application:
+* optimized default opacity for 3D rendering.
+* fixed a possible NPE on colormap update. 
+ 
+ 
+ Icy 1.6.1.0 - 18/02/2015
 ------------------------
 
 Application:
