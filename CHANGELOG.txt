@@ -1,3 +1,113 @@
+Icy 1.7.0.0 - 28/10/2015
+------------------------
+
+Application:
+* ROI panel:
+ - full implementation of the new ROIDescriptor feature.
+ - extensible descriptor list by plugin.
+ - now display the number of selected / total ROI in the table.
+ - better display configuration.
+ - separate columns selection for view and export.
+ - added default drawing properties.
+ - improved table computation time.
+ - better value rounding policies.
+ - fixed 'NOT' boolean operation on 2D ROI with fixed Z, T or C position.
+ - faster ROI merge operation (up to 10x faster).
+* fixed a bug in the Sequence dimension adjustment operation.
+* Undo:
+ - fixed a bug with the undo operation of ROI remove point.
+ - some changes to the history panel.
+* Histogram panel:
+ - bounds are now correctly restored from persistence.
+ - minors changes and fixes to the bounds range setting dialog. 
+* some fixes with 3D rendering (VtkCanvas)
+* conversion from IJ to Icy do not anymore display RoiManager.
+* better handling of error when changing the rendering mode (Canvas type change).
+* new splash screens (which are now dynamically fetched from res/image/splash location).
+* 'time interval' metadata is automatically computed when possible.
+* custom colormap (in 'colormap' folder) are now visible in the colormap selector.
+* double click on the 'Sequence filename' will open the folder where the file is actually located.
+* we can now remove the warning message when starting a second instance of Icy.
+* fixed a minor issue in search result with bold character.
+* improved Z/T dimension swap operation performance.
+* some improvements in support of plugin execution from command line.
+* many others changes and tweaks.
+
+Developer:
+* Sequence:
+ - added addROIs(..) and removeROIs(..) methods.
+ - do not cumulate ROI and Overlay events anymore (an event is sent for each add, modification or remove object operation).
+ - fixed getPixelSizeScaling(..) and calculateSize(..) methods.
+* IcyBufferendImage: fixed get/setRawData(..) methods
+* SequenceDataIterator: fixed a (very) nasty copy-paste bug that prevents all calculations in 3D.
+* ImageDataIterator: optimizations.
+* added Position2DIterator and Position5DIterator interfaces.
+* added BooleanMask2DIterator class to iterate over all contained points in a boolean mask.
+* added ROIIterator class to iterate over all contained points in a ROI.
+* added ROIDescriptor abstract class to define new ROI descriptor (any calculation done from a ROI)
+* added PluginROIDescriptor interface for easy implementation of new ROIDescriptor from Plugin.
+* BooleanMaskXD:
+ - added getNumberOfPoints() method.
+ - added getContourLength() method (return perimeter / surface area)
+* BooleanMask2D:
+ - added methods for merge operation with another BooleanMask.
+   These methods allow faster merge operation of many BooleanMask by reducing the number of BooleanMask creation.
+* ROI:
+ - added getSubROI(..) method to retrieve a sub part of a ROI.
+ - added methods for merge operation with another ROI.
+   These methods allow faster merge operation of many ROI by reducing the number of ROI creation.
+ - fixed default computeNumberOfPoints() implementation.
+ - better error detection on ROI copy operation.
+ - added methods to retrieve and set the defaults settings of drawing properties.
+* ROI2DArea:
+ - added add/exclusiveAdd/remove(ROI2DArea) methods
+ - added add/exclusiveAdd/remove(BooleanMask2D) methods
+ - safer manipulation in multi threaded context
+ - fixed a minor refresh issue.
+ - some tweaks here and there.
+* ROI2DShape: faster getBooleanMask2D(..) implementation (help a lot for descriptor calculation).
+* ROI2DPath:
+ - fixed contains(..) and intersects(..) implementation.
+ - better merge(ROI) implementation.
+* ROI2DPolyLine: use the new Polyline2D shape for a better and more accurate implementation.
+* ROI2DPolygon: use the new Polygon2D shape for a better and more accurate implementation.
+* ROIUtil:
+ - merge(List<ROI>, Op) method should be faster now in most situation now.
+ - many deprecated methods because of the new ROIDescriptor structure.
+* added Polygon2D and Polyline2D Shape objects.
+* ShapeUtil:
+ - added isClosed(Shape), getOpenPath(Shape), getClosedPath(Shape) methods.
+ - merge(List<Shape>, Op) should work better and faster.
+ - union, exclusiveUnion, intersection and subtraction operation should work better.
+* Overlay: add getAttachedCanvas() method to retrieve all canvas where the overlay is displayed.
+* IcyCanvas.create(..) now throws exception.
+* IcyCanvas2D: set the alpha colormap value to full opaque by default.
+* IcyCanvas3D: set the alpha colormap value to linear by default.
+* Canvas2D: fixed minor issue with filtering parameter.
+* LUT: added setAlphaToLinear() and setAlphaToOpaque() methods.
+* IcyColormap: added methods to retrieve default and custom colormap
+* MainInterface:
+ - tweaked the events generation.
+ - 'ROI/Overlay add' events happen now *after* 'Sequence opened' event.
+* Loader:
+ - fixed Importer retrieval (it was launching the plugin instead of just creating it).
+ - getXXXImporters(..) methods automatically report errors.
+* PluginLoader: fixed getPlugins(Class<?> ..) method which wasn't retrieving BlundedPlugin.
+* added AbstractRoisPanel class to allow an easier incorporation of the ROI table in external component / frame.
+* MetaDataUtil: added getPositionX/Y/Z() and getTimePosition() methods.
+* SystemUtil: added openFolder(..) method.
+* Array1DUtil: added getInterleavedData(..) and deInterleave(..) methods.
+* ByteArrayConvert: major rewrite (fixed several bugs).
+* FileUtil: added isDirectory(String) method.
+* PluginLauncher: put create(..) method in public as we may need it.
+* ColorUtil: added mix(Color, Color, ratio) method.
+* ZipUtil: reworked a bit
+* XMLUtil: better handling of random exception using xerces library.
+* GuiUtil: added createIcyFrameFromWindow(..) method to convert external window to IcyFrame.
+* minor fix in the way we handle Layer removal operation.
+* many others fixes, tweaks and cleanup.
+
+
 Icy 1.6.1.1 - 20/02/2015
 ------------------------
 
