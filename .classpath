@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="lib" path="icy.jar"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/Plugins-Tutorials"/>
 	<classpathentry kind="output" path="bin"/>
-	<referencedentry kind="lib" path="lib/bioformats.jar" sourcepath="D:/Stephane/Documents/dev/GIT/bioformats/components/ome-xml/src"/>
 </classpath>
