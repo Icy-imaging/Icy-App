@@ -1,3 +1,11 @@
+Icy 1.7.1.0 - 03/11/2015
+------------------------
+
+* ImageDataIterator:
+ - fixed a bug (regression).
+ - optimized a bit the implementation.
+ 
+
 Icy 1.7.0.0 - 28/10/2015
 ------------------------
 
