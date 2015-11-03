@@ -1,3 +1,10 @@
+Icy 1.7.2.0 - xx/11/2015
+------------------------
+
+Application:
+ - fixed possible NPE on Metadata read.
+ 
+
 Icy 1.7.1.0 - 03/11/2015
 ------------------------
 
