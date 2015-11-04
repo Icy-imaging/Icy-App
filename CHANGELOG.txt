@@ -1,8 +1,8 @@
-Icy 1.7.2.0 - xx/11/2015
+Icy 1.7.2.0 - 04/11/2015
 ------------------------
 
 Application:
- - fixed possible NPE on Metadata read.
+ - fixed NPE on Metadata read preventing some image load operation (regression).
  
 
 Icy 1.7.1.0 - 03/11/2015
