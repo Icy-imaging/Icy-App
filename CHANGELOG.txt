@@ -1,7 +1,8 @@
 Icy 1.7.3.0 - 12/11/2015
 ------------------------
 
-Application: just some minors bugs fixes here and there.
+Application:
+ - just some bug fixes here and there.
  
 
 Icy 1.7.2.0 - 04/11/2015
