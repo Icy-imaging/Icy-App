@@ -300,14 +300,74 @@
 					<localpath>lib/gluegen-rt.jar</localpath>
 				</file>
 				<file>
+					<localpath>lib/gluegen-rt-natives-linux-amd64.jar</localpath>
+				</file>
+				<file>
+					<localpath>lib/gluegen-rt-natives-linux-i586.jar</localpath>
+				</file>
+				<file>
+					<localpath>lib/gluegen-rt-natives-macosx-universal.jar</localpath>
+				</file>
+				<file>
+					<localpath>lib/gluegen-rt-natives-windows-amd64.jar</localpath>
+				</file>
+				<file>
+					<localpath>lib/gluegen-rt-natives-windows-i586.jar</localpath>
+				</file>				
+				<file>
 					<localpath>lib/joal.jar</localpath>
+				</file>
+				<file>
+					<localpath>lib/joal-natives-linux-amd64.jar</localpath>
+				</file>
+				<file>
+					<localpath>lib/joal-natives-linux-i586.jar</localpath>
+				</file>
+				<file>
+					<localpath>lib/joal-natives-macosx-universal.jar</localpath>
+				</file>
+				<file>
+					<localpath>lib/joal-natives-windows-amd64.jar</localpath>
+				</file>
+				<file>
+					<localpath>lib/joal-natives-windows-i586.jar</localpath>
 				</file>
 				<file>
 					<localpath>lib/jocl.jar</localpath>
 				</file>
 				<file>
+					<localpath>lib/jocl-natives-linux-amd64.jar</localpath>
+				</file>
+				<file>
+					<localpath>lib/jocl-natives-linux-i586.jar</localpath>
+				</file>
+				<file>
+					<localpath>lib/jocl-natives-macosx-universal.jar</localpath>
+				</file>
+				<file>
+					<localpath>lib/jocl-natives-windows-amd64.jar</localpath>
+				</file>
+				<file>
+					<localpath>lib/jocl-natives-windows-i586.jar</localpath>
+				</file>				
+				<file>
 					<localpath>lib/jogl-all.jar</localpath>
 				</file>
+				<file>
+					<localpath>lib/jogl-all-natives-linux-amd64.jar</localpath>
+				</file>
+				<file>
+					<localpath>lib/jogl-all-natives-linux-i586.jar</localpath>
+				</file>
+				<file>
+					<localpath>lib/jogl-all-natives-macosx-universal.jar</localpath>
+				</file>
+				<file>
+					<localpath>lib/jogl-all-natives-windows-amd64.jar</localpath>
+				</file>
+				<file>
+					<localpath>lib/jogl-all-natives-windows-i586.jar</localpath>
+				</file>				
 			</files>
 		</element>
 		<element>
