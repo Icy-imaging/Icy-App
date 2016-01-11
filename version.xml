@@ -400,7 +400,7 @@
 		</element>
 		<element>
 			<name>VTK</name>
-			<version>6.1.0.1</version>
+			<version>6.3.0.1</version>
 			<changeslog />
 			<files>
 				<file>
