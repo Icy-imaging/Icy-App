@@ -293,6 +293,24 @@
 			</files>
 		</element>
 		<element>
+			<name>JogAmp</name>
+			<version>2.1.5.0</version>
+			<files>
+				<file>
+					<localpath>lib/gluegen-rt.jar</localpath>
+				</file>
+				<file>
+					<localpath>lib/joal.jar</localpath>
+				</file>
+				<file>
+					<localpath>lib/jocl.jar</localpath>
+				</file>
+				<file>
+					<localpath>lib/jogl-all.jar</localpath>
+				</file>
+			</files>
+		</element>
+		<element>
 			<name>IRCLib</name>
 			<version>1.1.0.1</version>
 			<files>
