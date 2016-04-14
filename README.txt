@@ -1,7 +1,7 @@
 Icy: an open community platform for bioimage informatics - http://icy.bioimageanalysis.org/
 
 Icy has been created by the Bio Images Analysis Unit at Institut Pasteur (http://www.bioimageanalysis.org/).
-Icy is free and open source, using GPLv3. Copyright 2014 Institut Pasteur.
+Icy is free and open source, using GPLv3. Copyright 2016 Institut Pasteur.
 Source code is available and provided in each application download (included in the icy.jar archive file).
 
 Kernel architecture and code
