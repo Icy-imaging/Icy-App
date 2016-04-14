@@ -16,7 +16,8 @@ Application:
  - some changes related to the new VTK implementation.
  - better handling of automatic rendering level.
  - support object/ROI picking.
- - improved the translation operation.
+ - improved translation operation.
+ - fixed global layers visibility for outline objects. 
 * Canvas2D: added background color support.
 * ROI2DPoint: better visualization in VTK canvas.
 * ROI2DShape: added selection box in VTK canvas.
@@ -26,10 +27,11 @@ Application:
 * Added support for inspector collapsing.
 * Added support for Proxy authentication.
 * ROI panel:
- - fixed ROI panel filtering.
  - added ROI color field.
+ - fixed ROI panel filtering.
  - fixed refresh issue on property change for multiple ROI (as opacity change)
  - fixed "no more field update" bug after a not handled exception happened during descriptor calculation.
+ - fixed multi selection when column sorting was enabled.
 * Loader:
  - better handling of error during Importer creation
  - fixed XML cleaning for non image file (allow to open XML file from other importers)
@@ -39,20 +41,19 @@ Application:
 * Added warning tooltip when using 32 bits java on 64 bits window system.
 * Fixed DownloadFrame so it can display download speed again.
 * Re-introduced plugin download progress so we can cancel it.
-* Better handling of windows positionning on different OS.
+* Better handling of windows positioning on different OS.
+* Improved application launch speed (still very dependent of the number of plugin installed).
 * Several memory usage optimization.
 * Many minors improvements, tweaks and cleanup.
 
- 
 Developer:
-
 * VtkCanvas:
  - added pickProp(x,y) method.
  - added getPickedObject() to retrieve picked object on last mouse press/move event.
  - added 'PickOnMouseMove' property to allow object picking on mouse move event.
  - moved volume shading switch to the setting panel.
  - getMouseImagePos() method always returns null (not supported) now.
- - alpha LUT factor is now modified in this class and not anymore in IcyCanvas3D. 
+ - alpha LUT factor is now modified in this class and not anymore in IcyCanvas3D.
 * VtkImageVolume: simplified volume mapper definition (GPU or CPU)
 * added VtkBinaryVolume class (derived from VtkImageVolume).
 * VtkUtil:
@@ -61,7 +62,7 @@ Developer:
  - added getBinaryColorMap() and getBinaryOpacityMap() methods.
  - added setPolyDataColor(..), getOutline(..) and setOutlineBounds(..) methods.
  - added getLayerProps(..) / added getLayersProps(..) methods.
- - added hasProp(..) / addProps(..) methods.
+ - added getProps(..), hasProp(..) / addProps(..) methods.
  - faster hasProp(..) method.
  - safer canvas locking on method using it. 
 * ROI:
@@ -100,8 +101,12 @@ Developer:
  - reworked the UpdateEventHandler to dramatically increase performance for large number of pending updates.
  - replaced EventHierarchicalChecker with CollapsibleEvent --> ChangeListener interface modified (check for possible impact)
  - replaced EventListenerList by List<Listener> for faster events dispatching in critical sections (ROI, Overlay...)
+ - optimized JAR resource loading for PluginClassLoader
+ - optimized XML load operation
 * ImageUtil: added loadAsync(..) methods.
-* SytemUtil: added isWindows64() method.
+* SytemUtil:
+ - added isWindows64() method.
+ - added getScreenDevices() method.
 * XMLUtil: optimized memory usage of zip/unzip operation.
 * ZipUtil: added new pack(..)/unpack(..) methods.
 * Polygon2D: fixed possible NPE.
