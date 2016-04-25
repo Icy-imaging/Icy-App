@@ -1,4 +1,4 @@
-Icy 1.8.0.0 - 07/04/2016
+Icy 1.8.0.0 - 25/04/2016
 ------------------------
 
 Application:
@@ -28,9 +28,11 @@ Application:
 * Added support for Proxy authentication.
 * ROI panel:
  - added ROI color field.
- - fixed ROI panel filtering.
- - fixed refresh issue on property change for multiple ROI (as opacity change)
- - fixed "no more field update" bug after a not handled exception happened during descriptor calculation.
+ - fixed ROI panel filtering / sorting.
+ - fixed refresh issue on property change for multiple ROI (as opacity change).
+ - fixed 'no more field update' bug after a not handled exception happened during descriptor calculation.
+ - split ROI Descriptor calculation on separate thread (3 threads) so basic information (as name, position...) are always immediately computed
+   and displayed even if a complex descriptor takes a very long time to compute.
  - fixed multi selection when column sorting was enabled.
 * Loader:
  - better handling of error during Importer creation
@@ -78,7 +80,7 @@ Developer:
  - added getTotalDistance(..) method with factors parameters to allow accurate calculation of perimeter.
 * ROI2DArea:
  - optimized intersect(ROI) method.
- - fixed possible issue on XML persistance.
+ - fixed possible issue on XML persistence.
  - more robust for multi thread environment.
 * ROI3DArea: added support for focus/selected state with VTK.
 * ROI3DStack: fixed minors issues.
@@ -92,7 +94,8 @@ Developer:
  - fixed and reworked getContourLength() for more accurate calculation.
 * Overlay: added XML persistence support.
 * Sequence:
- - overlays can now be saved in XML persistence if the Overlay 'persitence' property is set (false by default).
+ - overlays can now be saved in XML persistence if the Overlay 'persistence' property is set (false by default).
+ - fixed setColormap(..) method so persistence is not lost in some case.
  - contained IcyBufferedImage share a common IcyColorSpace object to reduce memory usage.
 * IcyBufferedImage: by default IcyBufferedImage are now created with 'autoUpdateChannelBounds' set to false.
   This avoid useless computation, flag is automatically updated when the image is added to a Sequence object.
