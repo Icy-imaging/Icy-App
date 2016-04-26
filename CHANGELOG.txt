@@ -1,3 +1,144 @@
+Icy 1.8.0.0 - 26/04/2016
+------------------------
+
+Application:
+* VTK:
+ - upgraded to VTK 6.3
+ - switched to the new VTK OpenGL2 rendering backend
+   --> simplified mapper (GPU or CPU)
+   --> multi channel support for GPU raycasting
+   --> GPU raycasting should work on OSX as long the graphics card driver are up to date.
+ - switched to OpenGL components
+   --> OSX 10.6.8 and older *do not support anymore* VTK, do not upgrade to this version if you need to use VTK on these OS !
+   --> newer OSX versions can now use Java 7 or Java 8 without any troubles for VTK.
+   --> no more display refresh / overlapping on OSX.
+* VtkCanvas:
+ - some changes related to the new VTK implementation.
+ - better handling of automatic rendering level.
+ - support object/ROI picking.
+ - improved translation operation.
+ - fixed global layers visibility for outline objects. 
+* Canvas2D: added background color support.
+* ROI2DPoint: better visualization in VTK canvas.
+* ROI2DShape: added selection box in VTK canvas.
+* ROI2DArea: added visualization in VTK canvas.
+* ROI3DArea: added visualization in VTK canvas.
+* Viewer: better handling of error during canvas type change.
+* Added support for inspector collapsing.
+* Added support for Proxy authentication.
+* ROI panel:
+ - added ROI color field.
+ - fixed ROI panel filtering / sorting.
+ - fixed refresh issue on property change for multiple ROI (as opacity change).
+ - fixed 'no more field update' bug after a not handled exception happened during descriptor calculation.
+ - split ROI Descriptor calculation on separate thread (3 threads) so basic information (as name, position...) are always immediately computed
+   and displayed even if a complex descriptor takes a very long time to compute.
+ - fixed multi selection when column sorting was enabled.
+* Loader:
+ - better handling of error during Importer creation
+ - fixed XML cleaning for non image file (allow to open XML file from other importers)
+* Double click on a Plugin in the Preferences plugin list open the plugin detail panel.
+* Fixed issue with saving image file containing ':' character in their file path.
+* Fixed Icy to ImageJ image conversion (was failing with double data type)
+* Added warning tooltip when using 32 bits java on 64 bits window system.
+* Fixed DownloadFrame so it can display download speed again.
+* Re-introduced plugin download progress so we can cancel it.
+* Better handling of windows positioning on different OS.
+* Improved application launch speed (still very dependent of the number of plugin installed).
+* Several memory usage optimization.
+* Many minors improvements, tweaks and cleanup.
+
+Developer:
+* VtkCanvas:
+ - added pickProp(x,y) method.
+ - added getPickedObject() to retrieve picked object on last mouse press/move event.
+ - added 'PickOnMouseMove' property to allow object picking on mouse move event.
+ - moved volume shading switch to the setting panel.
+ - getMouseImagePos() method always returns null (not supported) now.
+ - alpha LUT factor is now modified in this class and not anymore in IcyCanvas3D.
+* VtkImageVolume: simplified volume mapper definition (GPU or CPU)
+* added VtkBinaryVolume class (derived from VtkImageVolume).
+* VtkUtil:
+ - added getBinaryImageData(..) method to retrieve a binary vtkImageData object.
+ - added getSurfaceFromImage(..) method to transform a vtkImageData object to vtkPolyData (iso surface).
+ - added getBinaryColorMap() and getBinaryOpacityMap() methods.
+ - added setPolyDataColor(..), getOutline(..) and setOutlineBounds(..) methods.
+ - added getLayerProps(..) / added getLayersProps(..) methods.
+ - added getProps(..), hasProp(..) / addProps(..) methods.
+ - faster hasProp(..) method.
+ - safer canvas locking on method using it. 
+* ROI:
+ - moved basic updateFocus(), updateSelect() and updateDrag() handling in ROI class (was in ROI2D)
+ - moved basic mouseMove() and mousePressed() handling in ROI class (was in ROI2D)
+ - optimized contains(ROI) and getIntersection(ROI) methods. 
+ - added isEmpty() method.
+ - added property info to ROI_CHANGED event (distinguish position or content change).
+* ROI2D: added computePerimeter(Sequence) and getPerimeter(Sequence) methods to provide accurate perimeter information.
+* ROI3D: added computeSurfaceArea(Sequence) and getSurfaceArea(Sequence) methods to provide accurate surface area information.
+* ROI2DShape:
+ - added support for focus/selected state with VTK.
+ - added getTotalDistance(..) method with factors parameters to allow accurate calculation of perimeter.
+* ROI2DArea:
+ - optimized intersect(ROI) method.
+ - fixed possible issue on XML persistence.
+ - more robust for multi thread environment.
+* ROI3DArea: added support for focus/selected state with VTK.
+* ROI3DStack: fixed minors issues.
+* ROI Descriptor:
+ - perimeter & area calculation only available 2D ROI.
+ - surface area & volume calculation only available 3D ROI.
+* BooleanMask2D:
+ - tweaks and fixes on boolean operation.
+ - reworked getContourLength() for more accurate calculation.
+* BooleanMask3D:
+ - fixed and reworked getContourLength() for more accurate calculation.
+* Overlay: added XML persistence support.
+* Sequence:
+ - overlays can now be saved in XML persistence if the Overlay 'persistence' property is set (false by default).
+ - fixed setColormap(..) method so persistence is not lost in some case.
+ - contained IcyBufferedImage share a common IcyColorSpace object to reduce memory usage.
+* IcyBufferedImage: by default IcyBufferedImage are now created with 'autoUpdateChannelBounds' set to false.
+  This avoid useless computation, flag is automatically updated when the image is added to a Sequence object.
+* modified SequenceUtil/IcybufferedImage type conversion methods.  
+* Performance optimization:
+ - reworked the UpdateEventHandler to dramatically increase performance for large number of pending updates.
+ - replaced EventHierarchicalChecker with CollapsibleEvent --> ChangeListener interface modified (check for possible impact)
+ - replaced EventListenerList by List<Listener> for faster events dispatching in critical sections (ROI, Overlay...)
+ - optimized JAR resource loading for PluginClassLoader
+ - optimized XML load operation
+* ImageUtil: added loadAsync(..) methods.
+* SytemUtil:
+ - added isWindows64() method.
+ - added getScreenDevices() method.
+* XMLUtil: optimized memory usage of zip/unzip operation.
+* ZipUtil: added new pack(..)/unpack(..) methods.
+* Polygon2D: fixed possible NPE.
+* PluginDescriptor: added lazy load of changelog, icon and image (reduce memory usage).
+* PluginRepositoryLoader: simplified loading (see PluginDescriptor changes)
+* Array1DUtil:
+ - fixed ArrayToSafeArray methods when using same input and output type.
+ - fixed getInterleavedData(..) and deInterleave(..) methods.
+* FileUtil: added cleanPath(String) method to remove some invalid character in file path before save operation.
+* MetaDataUtil: added getTimeIntervalFromTimePositions(..) method
+* DateUtil: added getTimeAsString(double valueInMs) method.
+* Colormap: better detection of linear colormap.
+* ComponentUtil: added fixPosition(Component) to fix position of a component entirely offscreen (useful for Window).
+* UnitUtil:
+ - fixed a bug in displayTimeAsStringWithUnits(..) method.
+ - fixed UnitUtil.displayTimeAsStringWithComma(..) method.
+* SystemUtil:
+ - added getScreenDevices(..) and getScreenDevice(..) to retrieve screen device for a given position / region.
+ - added getScreenBounds(..) to retrieve the area of a specific screen device.
+* some refactoring.
+
+
+Icy 1.7.3.0 - 12/11/2015
+------------------------
+
+Application:
+ - just some bug fixes here and there.
+ 
+
 Icy 1.7.2.0 - 04/11/2015
 ------------------------
 
