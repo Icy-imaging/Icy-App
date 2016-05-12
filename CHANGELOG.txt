@@ -1,3 +1,23 @@
+Icy 1.8.1.0 - 12/05/2016
+------------------------
+
+Application:
+* ROI Panel:
+ - relaxed mutex for better performance.
+ - refresh ROI descriptors when plugin list changed.
+* ROI: fixed minors issues on contains(ROI) and intersects(ROI) methods.
+* Viewer: display a message when changing canvas.
+* fixed SequenceImporter and Importer plugin launch.
+* plugin instance are registered on instance creation and not only on 'run' operation.
+* minors changes on Plugin update process.
+* others small fixes, tweaks and changes.
+
+Developer:
+* fixed a small issue with GuiUtil.createIcyFrameFromWindow(..) method.
+* minors changes to LookAndFeelUtil.
+* MetaDataUtil: fixed minors issues.
+
+
 Icy 1.8.0.0 - 26/04/2016
 ------------------------
 
