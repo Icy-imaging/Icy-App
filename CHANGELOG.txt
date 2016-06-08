@@ -1,3 +1,18 @@
+Icy 1.8.2.0 - 08/06/2016
+------------------------
+
+Application:
+* fixed memory leak when removing image from Sequence.
+* VTK: fixed NPE when drawing a ROI on an image which have a 3D duplicated view.
+* always separate channel when saving in OME TIFF format (bug fixed in Bio-Formats library).
+* better metadata preservation on image saving operation.
+
+Developer:
+* ROIXDArea: fixed a small issue in setBoooleanMask(..) method
+* MetaDataUtil: fixed minors issues and added many methods to MetadataUtil.
+* some internal refactoring.
+
+
 Icy 1.8.1.0 - 12/05/2016
 ------------------------
 
