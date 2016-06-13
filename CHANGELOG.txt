@@ -1,3 +1,13 @@
+Icy 1.8.3.0 - 13/06/2016
+------------------------
+
+Application:
+* fixed small issue on single image saving operation (script / protocol).
+
+Developer:
+* Plugin: fixed issue with native library loading on OSX with java 8.
+
+
 Icy 1.8.2.0 - 08/06/2016
 ------------------------
 
