@@ -1,3 +1,10 @@
+Icy 1.8.3.2 - 17/06/2016
+------------------------
+
+Application:
+* fixed severals issues with metadata during image load/store operations.
+
+
 Icy 1.8.3.0 - 13/06/2016
 ------------------------
 
