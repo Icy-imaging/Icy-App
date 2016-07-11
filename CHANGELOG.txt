@@ -1,3 +1,28 @@
+Icy 1.8.4.0 - 11/07/2016
+------------------------
+
+Application:
+* GUI:
+ - better handling of Ctrl+Tab shortcut to switch between opened image.
+ - double clicking on desktop background now collapse inspector instead of detaching it.
+ - modified desktop background image drawing.
+* General:
+ - added an option to ask for saving new generated sequence before closing them.
+* Metadata:
+ - removed issue which forced having a time interval > 0 on metadata edition.
+ - fixed possible NPE with metadata access.
+* Loader: better colormap recovery from Bio-Formats
+* PluginInstaller: added detection of corrupted JAR / XML file during installation (should get rid of these infamous false error reports)
+* ImageJ: fixed wrapper so plugin playing with ImageJ Toolbar (as NeuronJ) work as expected.
+
+Developer:
+* ExternalizablePanel use its internal frame only only when required.
+* added ConfirmDialog.confirmEx(..) method to distinguish 'Cancel' operation.
+* ROI2D: removed perimeter calculation cache as it is dependent from Sequence metadata as well.
+* ROI3D: removed surface area calculation cache as it is dependent from Sequence metadata as well.
+* ZipUtil: added isValid(..) method
+
+
 Icy 1.8.3.2 - 17/06/2016
 ------------------------
 
