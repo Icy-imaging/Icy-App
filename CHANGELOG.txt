@@ -1,3 +1,17 @@
+Icy 1.8.5.0 - 20/07/2016
+------------------------
+
+Application:
+* GUI: fixed infinite histogram refresh in very rare case (keep high CPU usage).
+* General: fixed Plugin changelog display on plugin update (regression).
+* Loader: minor fix on colormap retrieve for Bio-Formats importer.
+
+Developer:
+* added ColorUtil.getColorFromWavelength(double) method.
+* ClassPatcher: add new methods.
+* JarClassLoader: fixed issue with externally loaded classes.
+
+
 Icy 1.8.4.0 - 11/07/2016
 ------------------------
 
