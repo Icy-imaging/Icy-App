@@ -1,3 +1,11 @@
+Icy 1.8.5.1 - 22/07/2016
+------------------------
+
+Application:
+* fixed a minor bug in ROI table values refresh.
+* fixed a bug in Plugin Importer retrieval.
+
+
 Icy 1.8.5.0 - 20/07/2016
 ------------------------
 
