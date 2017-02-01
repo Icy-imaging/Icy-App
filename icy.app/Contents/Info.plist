@@ -4,13 +4,13 @@
 	<key>CFBundleName</key>
 	<string>Icy</string>
 	<key>CFBundleIdentifier</key>
-	<string>icy.main.Icy</string>
+	<string>org.BioImageAnalysis.Icy</string>
 	<key>CFBundleVersion</key>
 	<string>100.0</string>
 	<key>CFBundleAllowMixedLocalizations</key>
 	<string>false</string>
 	<key>CFBundleExecutable</key>
-	<string>UniversalJavaApplicationStub</string>
+	<string>JavaApplicationStub</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundlePackageType</key>
@@ -23,17 +23,6 @@
 	<string>6.0</string>
 	<key>CFBundleIconFile</key>
 	<string>icy.icns</string>
-	<key>JavaX</key>
-	<dict>
-		<key>WorkingDirectory</key>
-		<string>$APP_PACKAGE/..</string>
-		<key>MainClass</key>
-		<string>icy.updater.Main</string>
-		<key>JVMVersion</key>
-		<string>1.7+</string>
-		<key>ClassPath</key>
-		<string>$APP_PACKAGE/../updater.jar</string>
-	</dict>
 	<key>Java</key>
 	<dict>
 		<key>WorkingDirectory</key>
