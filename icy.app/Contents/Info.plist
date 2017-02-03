@@ -20,10 +20,21 @@
 	<key>CFBundleGetInfoString</key>
 	<string>Icy - Bio Image Analysis</string>
 	<key>CFBundleInfoDictionaryVersion</key>
-	<string>6.0</string>
+	<string>7.0</string>
 	<key>CFBundleIconFile</key>
 	<string>icy.icns</string>
 	<key>Java</key>
+	<dict>
+		<key>WorkingDirectory</key>
+		<string>$APP_PACKAGE/..</string>
+		<key>MainClass</key>
+		<string>icy.updater.Main</string>
+		<key>JVMVersion</key>
+		<string>1.7+</string>
+		<key>ClassPath</key>
+		<string>$APP_PACKAGE/../updater.jar</string>
+	</dict>
+	<key>JavaX</key>
 	<dict>
 		<key>WorkingDirectory</key>
 		<string>$APP_PACKAGE/..</string>
