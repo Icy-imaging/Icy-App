@@ -3,7 +3,7 @@
 	<elements>
 		<element>
 			<name>ICY Kernel</name>
-			<version>1.8.7.0</version>
+			<version>1.9.0.0</version>
 			<files>
 				<file>
 					<localpath>icy.jar</localpath>
@@ -16,21 +16,6 @@
 				</file>
 				<file>
 					<localpath>resources.jar</localpath>
-				</file>
-				<file>
-					<localpath>icy.app/Contents/MacOS/JavaApplicationStub</localpath>
-				</file>
-				<file>
-					<localpath>icy.app/Contents/Info.plist</localpath>
-				</file>
-				<file>
-					<localpath>icy.app/Contents/PkgInfo</localpath>
-				</file>
-				<file>
-					<localpath>icy.app/Contents/Resources/Java/null</localpath>
-				</file>
-				<file>
-					<localpath>icy.app/Contents/Resources/icy.icns</localpath>
 				</file>
 				<file>
 					<localpath>colormap/ametrine.xml</localpath>
@@ -56,8 +41,26 @@
 			</files>
 		</element>
 		<element>
+			<name>Icy OSX Launcher</name>
+			<version>1.1.0.0</version>
+			<files>
+				<file>
+					<localpath>icy.app/Contents/MacOS/JavaApplicationStub</localpath>
+				</file>
+				<file>
+					<localpath>icy.app/Contents/Info.plist</localpath>
+				</file>
+				<file>
+					<localpath>icy.app/Contents/PkgInfo</localpath>
+				</file>
+				<file>
+					<localpath>icy.app/Contents/Resources/icy.icns</localpath>
+				</file>
+			</files>
+		</element>
+		<element>
 			<name>ICY Updater</name>
-			<version>1.8.4.0</version>
+			<version>1.9.0.0</version>
 			<files>
 				<file>
 					<localpath>updater.jar</localpath>
@@ -66,7 +69,7 @@
 		</element>
 		<element>
 			<name>ImageJ</name>
-			<version>1.5.0.9</version>
+			<version>1.5.1.9</version>
 			<files>
 				<file>
 					<localpath>ij/ij.jar</localpath>
