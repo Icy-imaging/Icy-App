@@ -1,1 +1,1 @@
-java -jar updater.jar
+java -jar `dirname $0`/updater.jar
