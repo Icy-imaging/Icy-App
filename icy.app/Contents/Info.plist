@@ -4,7 +4,7 @@
 	<key>CFBundleName</key>
 	<string>Icy</string>
 	<key>CFBundleIdentifier</key>
-	<string>org.BioImageAnalysis.Icy</string>
+	<string>org.bioimageanalysis.icy</string>
 	<key>CFBundleVersion</key>
 	<string>100.0</string>
 	<key>CFBundleAllowMixedLocalizations</key>
