@@ -10,7 +10,7 @@
 	<key>CFBundleAllowMixedLocalizations</key>
 	<string>false</string>
 	<key>CFBundleExecutable</key>
-	<string>JavaApplicationStub</string>
+	<string>Launcher</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundlePackageType</key>
@@ -23,7 +23,7 @@
 	<string>7.0</string>
 	<key>CFBundleIconFile</key>
 	<string>icy.icns</string>
-	<key>IcyJava</key>
+	<key>IcyJav</key>
 	<dict>
 		<key>WorkingDirectory</key>
 		<string>$APP_PACKAGE/..</string>

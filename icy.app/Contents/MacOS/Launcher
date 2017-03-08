@@ -1,4 +1,10 @@
-#!/bin/bash
+#!/usr/bin/env bash
+##################################################################################
+#                                                                                #
+# Launcher                                                                       #
+#                                                                                #
+# Modified by Stephane Dallongeville for Icy software (2017)                     #
+#                                                                                #
 ##################################################################################
 #                                                                                #
 # universalJavaApplicationStub                                                   #
@@ -111,9 +117,9 @@ CFBundleIconFile=`/usr/libexec/PlistBuddy -c "print :CFBundleIconFile" "${InfoPl
 
 
 # check Info.plist for Apple style Java keys -> if key :Java is present, parse in apple mode
-/usr/libexec/PlistBuddy -c "print :IcyJava" "${InfoPlistFile}" > /dev/null 2>&1
+/usr/libexec/PlistBuddy -c "print :IcyJav" "${InfoPlistFile}" > /dev/null 2>&1
 exitcode=$?
-JavaKey=":IcyJava"
+JavaKey=":IcyJav"
 
 # read Info.plist in Apple style if exit code returns 0 (true, :Java key is present)
 if [ $exitcode -eq 0 ]; then
