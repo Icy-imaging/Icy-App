@@ -12,10 +12,13 @@
 					<localpath>icy.exe</localpath>
 				</file>
 				<file>
-					<localpath>icy.sh</localpath>
+					<localpath>icy</localpath>
 				</file>
 				<file>
 					<localpath>resources.jar</localpath>
+				</file>
+				<file>
+					<localpath>osx-appfix</localpath>
 				</file>
 				<file>
 					<localpath>colormap/ametrine.xml</localpath>
@@ -45,7 +48,7 @@
 			<version>1.1.0.0</version>
 			<files>
 				<file>
-					<localpath>icy.app/Contents/MacOS/JavaApplicationStub</localpath>
+					<localpath>icy.app/Contents/MacOS/Launcher</localpath>
 				</file>
 				<file>
 					<localpath>icy.app/Contents/Info.plist</localpath>
