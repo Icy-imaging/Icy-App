@@ -9,13 +9,13 @@
 					<localpath>icy.jar</localpath>
 				</file>
 				<file>
+					<localpath>resources.jar</localpath>
+				</file>
+				<file>
 					<localpath>icy.exe</localpath>
 				</file>
 				<file>
 					<localpath>icy</localpath>
-				</file>
-				<file>
-					<localpath>resources.jar</localpath>
 				</file>
 				<file>
 					<localpath>osx-appfix</localpath>
