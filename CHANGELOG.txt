@@ -55,14 +55,14 @@ Application:
 * several tweaks and optimizations.
 * some code cleanup.
  
- Developer:
- * ROI:
+Developer:
+* ROI:
  - added 'group' field (will be use in future for 'group' ROI operation)
  - added getLength(Sequence) method to compute length/perimeter with Sequence pixel size information.
  - added getEffectiveDimension(..) dimension method.
  - added unselectAllPoints() method.
  - moved some methods to ROIUtil.
- * ROI3D:
+* ROI3D:
  - added ROI3DPainter class for easier display and interaction for 3D ROI.
  - added isOverEdge(..) method.
  - added add(..), exclusiveAdd(..), intersects(..) and subtract(..) methods.
