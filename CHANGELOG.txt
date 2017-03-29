@@ -118,7 +118,9 @@ Developer:
 * IcyBufferedImage:
  - trying to load too large array of data throw a TooLargeArrayException exception
  - added copyData(array, ..) method to copy data from an array
-* IcyBufferedImageUtil: added fast downscaleBy2(..) methods to quickly downscale image by a factor of 2 
+* IcyBufferedImageUtil:
+ - added fast downscaleBy2(..) methods to quickly downscale image by a factor of 2 
+ - changed toBufferedImage(..) method so it returns accelerated volatile image when possible.
 * new 'undoable' operations:
  - ROIReplaceSequenceEdit (replaced single ROI in a sequence)
  - ROIReplacesSequenceEdit (replaced multiple ROI in a sequence)
@@ -139,6 +141,9 @@ Developer:
 * IcyCanvas3D:
  - added methods to handle mouse (image) position.
  - added imageToCanvas(..) and canvasToImage(..) methods (with default implementation to avoid breaking compatibility)
+* Canvas2D:
+ - added getFitToCanvas() / setFirToCanvas() methods
+ - getARGBImage(..) now returns volatile accelerated image for faster image drawing operation (may consume more memory to prepare the image)
 * VtkCanvas:
  - added getWorldZ(Point) method to retrieve Z depth for a given 2D canvas position.
  - added worldToDisplay(Point3D) method to convert a 3D world point to canvas 3D position.
