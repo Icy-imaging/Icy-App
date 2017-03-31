@@ -44,7 +44,9 @@ Application:
    - added 'open region...' command to load a specific XY region of an image.
    - re-organized the ROI creation actions.
    - added many ROI operation actions (see the above 'ROI' and 'ROI Panel' sections).
-* Canvas2D: reversed panning direction from keypad keys.
+* Canvas2D:
+ - reversed panning direction from keypad keys.
+ - image cache now use volatile accelerated image (image redraw should be much faster on some systems) 
 * VtkCanvas: improved overlay handling (should be a bit faster and safer)
 * better metadata preservation on Sequence operation.   
 * sequence merging operations is now possible with Sequence of different type.  
