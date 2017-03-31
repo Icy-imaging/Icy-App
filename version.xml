@@ -48,7 +48,7 @@
 			<version>1.1.0.0</version>
 			<files>
 				<file>
-					<localpath>icy.app/Contents/MacOS/Launcher</localpath>
+					<localpath>icy.app/Contents/MacOS/JavaApplicationStub</localpath>
 				</file>
 				<file>
 					<localpath>icy.app/Contents/Info.plist</localpath>
