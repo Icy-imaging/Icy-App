@@ -1,3 +1,199 @@
+Icy 1.9.0.1 - 03/04/2017
+------------------------
+
+Application:
+* added new 3D ROI:
+ - 3D point type ROI.
+ - 3D line type ROI.
+ - 3D polyline type ROI.
+ - Ellipse 3D stack type ROI (available from stacking operation).
+ - Polygon 3D stack type ROI (available from stacking operation).
+* ROI:
+ - more interaction with 3D VTK display (can move and modify the ROI)
+ - better and safer VTK rendering in general
+ - added 'to 3D stack' operation to convert 2D ROI to 3D Stack ROI.
+ - added 'to Mask' operation to convert shape ROI to Area ROI.
+ - added 'to Shape' operation to convert area ROI to Polygon ROI.
+ - added 'Separate' operation to separate unconnected object from an Area ROI.
+ - added 'ROI Cutter' operation to manually cut/separate ROI.
+* ROI Panel:
+ - can now modify position / size of multiple ROI at same time.
+ - we can now quickly move view to a specific ROI location by double clicking on it (work in both way: from ROI panel or from the image). 
+ - cleaned GUI:
+   - removed some ROI operations we usually do from keyboard (copy/paste, delete)
+   - moved some ROI operations to ROI band (load/save, boolean operator).
+   - XLS export button moved at the top of the ROI table.
+* Image Loader (loader dialog):
+ - added Z and T range selection
+ - added channel selection
+ - added resolution level selection
+ - added 2D region (XY) selection
+ - improved preview
+ - better filename auto ordering
+* Image Saver (saver dialog):
+ - removed Z and T range selection (better to do adjust range before)
+ - use big tiff when dataset is above 2GB
+ - setting are now preserved in XML preferences.
+ - image conversion is now automatically done when you use a save format which isn't compatible with the current image format.
+   A warning is displayed to inform the user about possible data loss.
+* GUI:
+ - added a new tooltip to explain where is the main menu.
+ - added java 6 warning for OSX users.
+ - improved memory usage report in memory monitor.
+ - reorganized 'File & ROI tools' menu:
+   - added 'open region...' command to load a specific XY region of an image.
+   - re-organized the ROI creation actions.
+   - added many ROI operation actions (see the above 'ROI' and 'ROI Panel' sections).
+* Canvas2D:
+ - reversed panning direction from keypad keys.
+ - image cache now use volatile accelerated image (image redraw should be much faster on some systems) 
+* VtkCanvas: improved overlay handling (should be a bit faster and safer)
+* better metadata preservation on Sequence operation.   
+* sequence merging operations is now possible with Sequence of different type.  
+* ToolTipFrame: we can now clink on URL to open external browser.
+* Updater: fixed local directory saving (it was saving in working folder instead of application folder)
+* fixed wait for plugin update in headless mode.
+* many bug fixes.
+* several tweaks and optimizations.
+* some code cleanup.
+ 
+Developer:
+* ROI:
+ - added 'group' field (will be use in future for 'group' ROI operation)
+ - added getLength(Sequence) method to compute length/perimeter with Sequence pixel size information.
+ - added getEffectiveDimension(..) dimension method.
+ - added unselectAllPoints() method.
+ - moved some methods to ROIUtil.
+* ROI3D:
+ - added ROI3DPainter class for easier display and interaction for 3D ROI.
+ - added isOverEdge(..) method.
+ - added add(..), exclusiveAdd(..), intersects(..) and subtract(..) methods.
+ - added ROI3DShape: abstract class for 3D Shape ROI.
+ - added ROI3DPoint: 3D point type ROI.
+ - added ROI3DLine: 3D line type ROI.
+ - added ROI3DPolyline: 3D polyline type ROI.
+ - added ROI3DStackShape: abstract class for 3D Stack Shape ROI.
+ - added ROI3DStackEllipse: Ellipse 3D stack type ROI (available from stacking operation).
+ - added ROI3DStackPolygon: Polygon 3D stack type ROI (available from stacking operation).
+* ROI3DStack:
+ - fixed setName(..) methods so children get modified as well.
+ - deprecated getUseChildColor()/setUseChildColor(..) methods.
+* ROI3DArea:
+ - added ROI3DArea(BooleanMask2D, zMin, zMax) constructor.
+ - added isOverEdge(..) method.
+* ROI5DArea: fixed a bug in optimizeBounds()
+* ROI Overlay: drawROI(..) and drawName(..) are now public.
+* ROIUtil:
+ - moved methods from ROI: getUnion(..), getIntersection(..), ...
+ - added convertToStack(..) method to convert 2D ROI to 3D Stack ROI.
+ - added convertToMask(..) method to convert Shape ROI to Area ROI.
+ - added convertToShape(..) method to convert Area ROI to Polygon ROI.
+ - added getConnectedComponents(..) to separate and retrieve connected components from an input ROI.
+ - added copyROIProperties(..) to copy properties from an input ROI.
+ - added split(ROI, Line2D) to cut/split a ROI from a given Line2D.
+ - added convertToSequence(..) method to convert a list of ROI to a labeled sequence.
+* ROIDescriptor: added getDescriptor(descriptors, descriptorId) method   
+* ROIPerimeterDescriptor: modified to use the new ROI.getLength(..) method.
+* BooleanMask2D:
+ - added getConnectedContourPoints(..) method to retrieve contour in 'connected' order.
+ - minor change to make it safer.
+* added new 'geom' classes: Polygon2D, Polyline2D, Shape3D (base class for 3D shape), Line3D, Polyline3D
+* Rectangle3D: added intersectsLine(..) method.
+* Point3D: 
+ - added many methods to compute distance, total distance, angle, normalize, length, dot product, cross product...
+ - added translate(..) method
+ - better hashCode() implementation.
+* Anchor2D:
+ - added integer Z position information (for 3D position of 2D ROI)
+ - added VTK display and interaction support (allow ROI2D manipulation with VTK).
+* PathAnchor2D: fixed visibility for closing point.
+* added Rectangle2DUtil, Line2DUtil and Point2DUtil classes (utilities for the java classes)
+* Sequence:
+ - added position X, Y, Z information (metadata)
+ - added 'origin' resolution, XY region, Z range, T range, channel information (when loading sub part of an image)
+ - added getOutputBaseName() / getOutputExtension() and getOutputFilename() to obtain wanted output filename given 'origin' informations
+ - trying to load too large array of data throw a TooLargeArrayException exception
+* SequencePersistent: added isValidXMLPersitence(..) methods
+* SequenceUtil:
+ - added getOriginPoint(..) / convertPoint(..) for point position conversion operation
+ - added getOriginRectangle(..) / convertRectangle(..) for rectangle position conversion operation
+* IcyBufferedImage:
+ - trying to load too large array of data throw a TooLargeArrayException exception
+ - added copyData(array, ..) method to copy data from an array
+* IcyBufferedImageUtil:
+ - added fast downscaleBy2(..) methods to quickly downscale image by a factor of 2 
+ - changed toBufferedImage(..) method so it returns accelerated volatile image when possible.
+* new 'undoable' operations:
+ - ROIReplaceSequenceEdit (replaced single ROI in a sequence)
+ - ROIReplacesSequenceEdit (replaced multiple ROI in a sequence)
+ - PositionROIEdit (modified single ROI position)
+ - PositionROIsEdit (modified multiple ROI position)
+ - BoundsROIEdit (modified single ROI bounds)
+ - BoundsROIsEdit (modified multiple ROI bounds)
+ - PropertyROIEdit (modified single ROI property)
+ - PropertyROIsEdit (modified multiple ROI property)
+ - Point3DAddedROIEdit (added a new point in a 3D ROI)
+ - Point3DMovedROIEdit (modified a point in a 3D ROI)
+ - Point3DRemovedROIEdit (removed a point in a 3D ROI)
+* DefaultSequenceEdit: default undo operation on Sequence also preserve ROI and Overlays now (reference only)
+* IcyCanvas:
+ - added canvasToImageLogDeltaZ(..) method, this is the Z equivalent to canvasToImageLogDeltaY(..) / canvasToImageLogDeltaX(..) methods.
+ - added centerOn(region) method for centering view on a specified image location. 
+* IcyCanvas2D: improved setMousePos(..) method to be safer.
+* IcyCanvas3D:
+ - added methods to handle mouse (image) position.
+ - added imageToCanvas(..) and canvasToImage(..) methods (with default implementation to avoid breaking compatibility)
+* Canvas2D:
+ - added getFitToCanvas() / setFirToCanvas() methods
+ - getARGBImage(..) now returns volatile accelerated image for faster image drawing operation (may consume more memory to prepare the image)
+* VtkCanvas:
+ - added getWorldZ(Point) method to retrieve Z depth for a given 2D canvas position.
+ - added worldToDisplay(Point3D) method to convert a 3D world point to canvas 3D position.
+ - added displayToWorld(Point) method to convert a 2D canvas position to a world 3D point.
+ - implemented imageToCanvas(..) and canvasToImage(..) from previous added methods.
+ - implemented getScaleX/Y() methods.
+ - implemented setMouseImagePosX/Y/Z(..) methods.
+ - mouse event now provide a correct mouse position.
+ - removed the enable picking on Mouse Move switch.
+* VtkUtil: simplified getSurfaceFromImage(..) method.
+* IcyVtkPanel: added proper event consuming.
+* Loader:
+ - added checkOpening(..) method to check we have enough resource to open an image
+ - added methods to load only sub part (Z, T and C) and sub resolution of the image.
+ - fixed issues while using Importer on non image files.
+ - many changes in general, new methods, refactoring...
+* Bio-Format importer:
+ - added multi thread support.
+ - added tile loading for large image and sub resolution loading.
+ - better thumbnail loading.
+* AbstractImageProvider / PluginSequenceFileImporter / PluginSequenceIdImporter:
+ - improved default getThumbnail(..) implementation
+ - added getImageByTile(..) method to load an image by tile (useful for large image)
+* Saver:
+ - added many new methods to check compatibility image writing compatibility.
+ - reverted channel combination for 3 channels image saving in TIFF format (better for RGB image preview)
+ - methods doing Z/T range saving operation are now deprecated (better to do it before)
+ - added method getCompatibleSequenceForWriter(..) to automatically convert a Sequence so it can be save by a given writer (possible data loss)
+ - added SaverOptionPanel for easier setting definition
+* SequenceDataIterator: fixed typo making some ROI calculations wrong in some situation.
+* MetaDataUtil: replaced OMEXMLMetadataImpl class by OMEXMLMetadata in some methods (more generic, check if that bring issue)
+* FileUtil: added getFiles(..) method to easily retrieve file with a specific extension without using a FileFilter.
+* XMLUtil: added filtering to avoid incorrect character in name/attribute fields.
+* SystemUtil:
+ - added getJavaVersionAsNumber() method
+ - getJavaFreeMemory() return the total amount of free memory available to the JVM 
+ - getJavaMaxMemory() return the maximum amount of memory the JVM will attempt to use 
+ - getJavaAllocatedMemory() return the memory currently *allocated* by the JVM
+ - getJavaUsedMemory() return an estimation of the memory currently *used* by the JVM
+ - getJavaTotalMemory() is deprecated (replaced by getJavaAllocatedMemory())
+* ImageComponent: now use a cache for faster image drawing
+* NumberTextField: added setInteger(..) method to force integer value instead of double value. 
+* ImageJUtil: added convertToIcyBufferedImage(..) method to convert a single image from an ImagePlus to an IcyBufferedImage
+* IcyExceptionHandler: added anti spam protection for report(..) method.
+* IcyCommandButton: added setPopup(..) method to enable popup action.
+* RecentList: thread safe accesses, fixed possible NPE.
+ 
+
 Icy 1.8.6.0 - 26/07/2016
 ------------------------
 

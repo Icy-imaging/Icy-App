@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist SYSTEM "file://localhost/System/Library/DTDs/PropertyList.dtd">
 <plist version="0.9">
 <dict>
 	<key>CFBundleName</key>
-	<string>ICY</string>
+	<string>Icy</string>
 	<key>CFBundleIdentifier</key>
-	<string>ICY</string>
+	<string>org.bioimageanalysis.icy</string>
 	<key>CFBundleVersion</key>
-	<string>100.0</string>
+	<string>1.0</string>
 	<key>CFBundleAllowMixedLocalizations</key>
-	<string>true</string>
+	<string>false</string>
 	<key>CFBundleExecutable</key>
 	<string>JavaApplicationStub</string>
 	<key>CFBundleDevelopmentRegion</key>
@@ -17,21 +16,21 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleSignature</key>
-	<string>????</string>
+	<string>Icy_</string>
 	<key>CFBundleGetInfoString</key>
-	<string>ICY - Bio imaging Analisys</string>
+	<string>Icy - Bio Image Analysis</string>
 	<key>CFBundleInfoDictionaryVersion</key>
-	<string>6.0</string>
+	<string>7.0</string>
 	<key>CFBundleIconFile</key>
 	<string>icy.icns</string>
-	<key>Java</key>
+	<key>IcyJav</key>
 	<dict>
 		<key>WorkingDirectory</key>
 		<string>$APP_PACKAGE/..</string>
 		<key>MainClass</key>
 		<string>icy.updater.Main</string>
 		<key>JVMVersion</key>
-		<string>1.6+</string>
+		<string>1.7+</string>
 		<key>ClassPath</key>
 		<string>$APP_PACKAGE/../updater.jar</string>
 	</dict>

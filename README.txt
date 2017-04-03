@@ -1,8 +1,22 @@
-Icy: an open community platform for bioimage informatics - http://icy.bioimageanalysis.org/
+Icy - copyright 2017 - Institut Pasteur
+An open community platform for bio image analysis - http://icy.bioimageanalysis.org
 
-Icy has been created by the Bio Images Analysis Unit at Institut Pasteur (http://www.bioimageanalysis.org/).
-Icy is free and open source, using GPLv3. Copyright 2016 Institut Pasteur.
-Source code is available and provided in each application download (included in the icy.jar archive file).
+Icy has been created by the Bio Images Analysis team at Institut Pasteur - https://research.pasteur.fr/fr/team/bioimage-analysis
+Icy is free and open source, it has been funded both by Institut Pasteur and the FBI consortium - https://france-bioimaging.org
+
+Source code is provided in the main application package (in the icy.jar archive file) but can also be found on the GitHub repository - https://github.com/Icy-imaging/Icy-Kernel
+
+
+Note for OSX users
+------------------
+Because of system's restrictive security rules you may not be able to launch Icy properly after having downloaded it, in this case use the following steps to fix it:
+- execute osx-appfix by right clicking on it (or Ctrl + click) and use 'Open'.
+- double click on the Icy application icon and confirm application launch.
+Now you should be able to use Icy normally.
+
+
+Contributors
+------------
 
 Kernel architecture and code
     Stephane Dallongeville and Fabrice de Chaumont
@@ -37,7 +51,7 @@ Many thanks to beta testers and contributors
         "How to display data by color schemes compatible with red-green color perception deficiencies" Opt. Express 21, 9862-9874 (2013)        
 
 Libraries used in Icy
-    LOCI (Bio-Formats) - http://www.openmicroscopy.org/site/products/bio-formats
+    Bio-Formats - http://www.openmicroscopy.org/site/products/bio-formats
     VTK - http://www.vtk.org/
     Substance / Insubstancial - https://github.com/Insubstantial/insubstantial
     Flanagan - http://www.ee.ucl.ac.uk/~mflanaga/java/
