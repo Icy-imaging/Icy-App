@@ -63,7 +63,7 @@
 		</element>
 		<element>
 			<name>ICY Updater</name>
-			<version>1.9.0.0</version>
+			<version>1.9.0.1</version>
 			<files>
 				<file>
 					<localpath>updater.jar</localpath>
