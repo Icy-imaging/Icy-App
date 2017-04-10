@@ -1,3 +1,22 @@
+Icy 1.9.1.0 - 10/04/2017
+------------------------
+
+Application:
+* ROI2DArea / ROI3DArea : fixed ROI double click shortcut.
+* ROI2DPoint / ROI3DPoint: fixed auto select on point focus.
+* Canvas2D: fixed image cache update and auto resizing on image size change.
+* Loader: minor improvement to image preview display
+* Updater: better local path handling.
+
+Developer:
+* Anchor2D: added COLOR, SELECTEDCOLOR and SELECTED property change event.
+* added FileUtil.APPLICATION_DIRECTORY constant
+* Metadata:
+ - fixed some retro compatibility issues with OMEXMLMetadata object.
+ - refactoring (switch from loci to ome OMEXMLMetadata structure when possible)
+* fixed 'micro' character representation
+
+
 Icy 1.9.0.1 - 03/04/2017
 ------------------------
 
