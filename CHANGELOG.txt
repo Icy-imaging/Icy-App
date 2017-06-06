@@ -1,3 +1,36 @@
+Icy 1.9.2.0 - 06/06/2017
+------------------------
+
+Application
+* GUI: reworked Sequence and ROI menu tasks.
+* Loader:
+ - we can now select image series directly from Loader dialog
+ - some bug fixes in preview refresh
+ - fixed Bio-Formats sub resolution loading
+ - fixed some bugs in Bio-Formats importer
+ - preserve series information when using 'open sequence region'
+* fixed colormap opacity (regression)
+* better colormap preservation of some Sequence operations.
+* now support HTTPS connection for plugin repository.
+* OutputPanel: we can now set a maximum line limit
+* several bug fixes
+
+Developer
+* fixed IcyBufferedImage.toBufferedImage(..) method (regression)
+* switched to OMEXMLMetadata class from 'ome' package when possible (refactoring)
+* MetadataUtil: lot of refactoring (due to OMEXMLMetadata class change mainly)
+* OMEUtil: some refactoring (due to OMEXMLMetadata class change mainly)
+* added ImageProvider.getOMEXMLMetadata() method to use the good OMEXMLMetadata class ('ome' package)
+* VTKUtil: added getImageData(..) method
+* MainInterface: added getROIRibbonTask() method
+* IcyCanvas: protected listener operations (add/remove/fireEvent)
+* minor fix on ROI2DLine.setLine(..) method
+* ROIActions: added fillInterior and fillExterior actions
+* Sequence: some refactoring
+* minor change in function ClassUtil.getFile(String className)
+* minor fix in FileUtil.getFileExtension(..) method
+
+
 Icy 1.9.1.0 - 10/04/2017
 ------------------------
 
