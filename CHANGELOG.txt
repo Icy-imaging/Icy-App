@@ -1,3 +1,15 @@
+Icy 1.9.2.1 - 19/06/2017
+------------------------
+
+* Bio-formats importer:
+ - fixed sub resolution image loading when region is specified
+* ROI2DPoint / ROI3DPoint:
+ - fixed getBoundxx() so it returns a non empty bounds (which is problematic for some calculation)
+ - fixed getBooleanMask(..) so it does return a mask when inclusive is true
+* fixed regression on SequenceUtil.concatC(..) method.
+* others minors changes or fixes.
+
+
 Icy 1.9.2.0 - 06/06/2017
 ------------------------
 
