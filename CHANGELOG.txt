@@ -1,3 +1,14 @@
+Icy 1.9.3.0 - 30/06/2017
+------------------------
+
+* modified image rendering in Canvas2D to improve update and rendering speed with large image. 
+* fixed error detection on download for 0 byte files.
+* new informative message for plugin requiring a new java version.
+* fixed 'multiple files' image saving which could failed in some case.
+* minor change to memory panel.
+* others minors fixes.
+
+
 Icy 1.9.2.1 - 19/06/2017
 ------------------------
 
@@ -13,7 +24,7 @@ Icy 1.9.2.1 - 19/06/2017
 Icy 1.9.2.0 - 06/06/2017
 ------------------------
 
-Application
+Application:
 * GUI: reworked Sequence and ROI menu tasks.
 * Loader:
  - we can now select image series directly from Loader dialog
@@ -27,7 +38,7 @@ Application
 * OutputPanel: we can now set a maximum line limit
 * several bug fixes
 
-Developer
+Developer:
 * fixed IcyBufferedImage.toBufferedImage(..) method (regression)
 * switched to OMEXMLMetadata class from 'ome' package when possible (refactoring)
 * MetadataUtil: lot of refactoring (due to OMEXMLMetadata class change mainly)
