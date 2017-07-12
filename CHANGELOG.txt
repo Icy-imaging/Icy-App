@@ -1,3 +1,21 @@
+Icy 1.9.3.2 - 30/06/2017
+------------------------
+
+Application:
+* GUI: removed 'show all' button from search result panel (useless).
+* Loader:
+ - fixed multi series opening (available only with defaults load options)
+ - fixed an issue with tile loading in Bio-Formats importer
+ - better report of incorrect java version for importer
+* Canvas2D: fixed issue on refreshing empty sequence (regression)
+
+Developer:
+* ROI: added getProperty(..) and setProperty(..) method to get/set arbitrary properties (String format).
+* ROI3D/4D/5DStack: safer for multi-threaded operations.
+* Plugin: added prepareLibrary(..) method to prepare native library loading
+* Better color map preservation for multi channel image creation.
+
+
 Icy 1.9.3.0 - 30/06/2017
 ------------------------
 
