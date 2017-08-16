@@ -1,3 +1,29 @@
+Icy 1.9.4.0 - 11/08/2017
+------------------------
+
+Application:
+- minors fixes and tweaks.
+
+Developer:
+* ROI2DArea / BooleanMask2D:
+ - added upscale() method for 2x up scaling.
+ - added downscale() method for 2x down scaling.
+* ROI3DArea / BooleanMask3D: 
+ - added upscale() method for 2x up scaling.
+ - added upscale2D() method for 2x up scaling (2D only).
+ - added downscale() method for 2x down scaling.
+ - added downscale2D() method for 2x down scaling (2D only).
+* ROI:
+ - getProperty(..) / setProperty(..) property name is not anymore case sensitive.
+* ROIUtil:
+ - added scale(ROI, ...) method (only work for ROI2DShape and ROI3DShape)
+ - added getUpscaled(..) method for 2x up scaled ROI.
+ - added getDownscaled(..) method for 2x down scaled ROI. 
+* Loader: fixed a minor bug on region image loading.
+* Saver: fixed "origin" informations on saving operation
+* Sequence: added resetOriginInformation() method
+
+
 Icy 1.9.3.2 - 12/07/2017
 ------------------------
 
