@@ -1,3 +1,18 @@
+Icy 1.9.4.1 - 30/08/2017
+------------------------
+
+Application:
+* Histogram: added export to XLS (or CSV)
+* Loader: fixed small issue in Sequence naming.
+* Bio-Formats importer: better preservation of original filename
+* others minors changes and tweaks.
+
+Developer:
+* Histogram: added getCSVFormattedData() method
+* XLSUtil: added setFromCSV(..) method
+* SaveDialog: added chooseFileForResult(..) methods
+
+
 Icy 1.9.4.0 - 11/08/2017
 ------------------------
 
