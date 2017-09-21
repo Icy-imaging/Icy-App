@@ -165,7 +165,7 @@
 		</element>
 		<element>
 			<name>JFree Chart</name>
-			<version>1.0.2.0</version>
+			<version>1.0.17.0</version>
 			<files>
 				<file>
 					<localpath>lib/jfreechart.jar</localpath>
@@ -363,7 +363,7 @@
 		</element>
 		<element>
 			<name>Bio Formats</name>
-			<version>5.6.0.0</version>
+			<version>5.7.1.0</version>
 			<files>
 				<file>
 					<localpath>lib/bioformats.jar</localpath>
