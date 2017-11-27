@@ -1,3 +1,42 @@
+Icy 1.9.5.1 - 27/11/2017
+------------------------
+
+Application:
+* fixed ImageJ issue on last OSX preventing Icy from starting.
+* Search: 'Actionable' bundled plugins are not visible in search results.
+
+Developer:
+* added added Sequence.getROIs(Class roiClass, boolean sorted) method
+* minor tweak/fix in MetaDataUtil.keepSingleSerie(..)
+
+
+Icy 1.9.5.0 - 03/11/2017
+------------------------
+
+Application:
+* Fixed some java 9 issues.
+* ROI: copy/paste operation now takes care of sequence sub resolution / crop.
+* fixed minor issue with Substance library with Java 9.
+* better sequence naming on partial loading (sub region).
+* fixed small bug in task submission resulting in better responsiveness of some task (as the search result).
+* others minors changes and tweaks.
+
+Developer:
+* ROIUtil:
+ - fixed scale(..) operation on ROI2DRectShape type.
+ - added adjustToSequence(..) method to adjust a ROI depending the Sequence resolution and position.
+* BooleanMask2D: 2D downscale() method now use 2 pixels for true by default.
+* BooleanMask3D: 3D downscale() method now use 4 pixels for true by default.
+* ImageProvider: added isResolutionAvailable(..) method
+* AbstractImageProvider: added basic isResolutionAvailable(..) implementation
+* Canvas2D:
+ - re-introduced old CanvasView.getImage() for backward compatibility
+ - CanvasView.getImage() renamed to CanvasView.getImageAsTiles()
+* Search API: some changes to prepare for new Web search interface
+* added WebInterface class to prepare future Web interface communication
+* StringUtil: added split() method
+
+
 Icy 1.9.4.1 - 30/08/2017
 ------------------------
 
