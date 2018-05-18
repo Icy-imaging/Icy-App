@@ -1,3 +1,80 @@
+Icy 1.9.6.0 - 18/05/2018
+------------------------
+
+Application:
+* Many changes and improvements with image loading from a group of files:
+ - better meta data handling
+ - preview supported
+ - automatic Stitching
+ - compatible with Importer interface
+* We can now see plugin JAR file location and online help directly from the 'Plugin details' panel.
+* Fixed issue Java 10 on OSX (ImageJ error) and Window (Launcher error).
+* Output log can now be saved in file
+* Minor change on memory information display
+* Some other minor fixed and changes 
+* Documentation fixes
+
+Developer
+* Loader:
+ - reworked getSequenceFileImporters(..) methods to be more generic
+ - moved file grouping in separate class.
+ - added new 'load(...)' methods for partial load and display of Sequence from a group of file.
+ - added new 'loadSequence(..)' method for partial Sequence load from a group of file.
+ - added 'internalLoadGroup(..)' methods for partial Sequence load from a file group
+ - Sequence now keep a reference on used Importer for loading, the Imported is closed when Sequence is unloaded from memory.
+* LociImporterPlugin:
+ - added automatic Stitching
+ - added Metadata level selection using 'flags' in open(..) method
+ - reverted 'groupFiles' property back to true by default
+ - implemented getPixelsByTile(..) method with region loading support
+ - added region loading support to getImageByTile(..) method
+ - added sub resolution support to getImage(IFormatReader, ...) method
+ - added sub resolution support to getPixelsInternal(IFormatReader, ...) methods
+ - added sub resolution support to getImageInternal(IFormatReader, ...) methods 
+* AbstractImageProvider:
+ - replaced getImageByTile(..) by getPixelsByTile(..) and the method now support region loading.
+* SequenceFileGroupImporter:
+ - added closeInternalsImporters() method
+ - minor fix on getImage(..) (sizeX and sizeY could be wrong)
+ - minor fix on getThumbnail(..)
+* BooleanMask2D:
+ - minor fix in getContourPointsxxx(..) methods
+ - changed the way we detect incompatible  dimension on Union and Intersection operation
+* ROI2DShape:
+ - minor fix on computeBounds2D()
+ - minor fix on getBooleanMask(..)
+* VtkUtil:
+ - added getPolyDataFromPoints(..) method
+ - added polyDataToImageData(..) method
+ - added transformPolyData(..) method
+ - added objToMesh(..) method
+ - added objToImageData(..) method
+* Array1DUtil:
+ - added copyRect(...) method for easier 'rectangular' copy
+* ClassUtil:
+ - added getJarPath(Class) method
+* Sequence:
+ - tweaked getOverlays(Class) method
+ - added getSelectedROISet(Class) method
+ - added getSelectedROIs(Class roiClass, sorted, wantReadOnly) method
+ - added imageProvider field (this is the importer, will be used later)
+* LUT/IcyColorMap:
+ - minor fix on copyFrom(..) method
+ - minor fix on setAlphaToOpaque(..) method
+* ImageUtil: added getTileList(Rectangle region, ...) method
+* added GeomUtil class (utilities for 'Geom' classes)
+* SeriesSelectionDialog: now use SequenceIdImporter instead of SequenceFileImporter importer.
+* SystemUtil:
+ - getJavaVersionAsNumber() now returns JAVA version as major numbers (6.0xx, 7.0xx, 8.0xx, 9.0xx, ...)
+* added caching preferences (not yet used)
+* OMEUtil:
+ - added getNonNegativeInteger(int) method
+* PluginDescriptor:
+ - better information recovering for bundled plugin.
+ - added getPluginJarPath() method
+* prepared new Web interface
+
+
 Icy 1.9.5.1 - 27/11/2017
 ------------------------
 
