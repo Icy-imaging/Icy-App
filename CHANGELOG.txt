@@ -1,7 +1,7 @@
 Icy 1.9.6.0 - 18/05/2018
 ------------------------
 
-Application:
+Application
 * Many changes and improvements with image loading from a group of files:
  - better meta data handling
  - preview supported
