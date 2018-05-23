@@ -1,3 +1,10 @@
+Icy 1.9.6.2 - 23/05/2018
+------------------------
+
+Application
+* Fixed launcher settings to be compatible with Java 10
+
+
 Icy 1.9.6.1 - 23/05/2018
 ------------------------
 
