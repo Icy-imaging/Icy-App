@@ -11,13 +11,13 @@ Icy 1.9.6.0 - 18/05/2018
 ------------------------
 
 Application
-* Many changes and improvements with image loading from a group of files:
+* Many changes and improvements with multi-file image loading:
  - better meta data handling
  - preview supported
  - automatic Stitching
  - compatible with Importer interface
 * We can now see plugin JAR file location and online help directly from the 'Plugin details' panel.
-* Fixed issue Java 10 on OSX (ImageJ error) and Window (Launcher error).
+* Fixed issues with Java 10 on OSX (ImageJ error) and Windows (Launcher error).
 * Output log can now be saved in file
 * Minor change on memory information display
 * Some other minor fixed and changes 
