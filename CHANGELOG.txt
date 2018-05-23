@@ -1,3 +1,12 @@
+Icy 1.9.6.1 - 23/05/2018
+------------------------
+
+Application
+* Fixed / improved image preview refresh in Loader dialog.
+* minor change in frame / component visibility on opening.
+* other minor fixes.
+
+
 Icy 1.9.6.0 - 18/05/2018
 ------------------------
 
