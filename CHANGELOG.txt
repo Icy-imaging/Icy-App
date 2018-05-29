@@ -1,3 +1,11 @@
+Icy 1.9.7.0 - 29/05/2018
+------------------------
+
+Application
+* Severals fixes and improvements on multi file loading
+* Fixed updater to keep it compatible with Java 6
+
+
 Icy 1.9.6.2 - 23/05/2018
 ------------------------
 
