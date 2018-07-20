@@ -1,3 +1,39 @@
+Icy 1.9.8.0 - 20/07/2018
+------------------------
+
+Application
+* Loader:
+ - fixed time position (timestamp) in metadata when loading sub part of sequence
+ - fixed a small bug in setting panel (couldn't change 'loading type' in some situation)
+ - fixed minor bug with possible invalid metadata when stitching was used.
+ - stitching disabled when 'loading type' is set to 'separate' (better implementation) 
+* Minor fix to update plugin processing (incorrect message report) 
+
+Developer
+* Sequence:
+ - better metadata initialization
+ - added getPosition() method for fast XYZ position retrieving
+ - added getPositionT() / getTimeStamp() methods
+ - added getPositionTOffset(..) method
+ - added setPositionT() / setTimeStamp(..) methods
+ - added setPositionTOffset(..) method
+* MetaDataUtil:
+ - added getPositionT(..) / getTimeStamp(..) methods
+ - changed getTimePosition(..) by getPositionTOffset(..) methods
+ - added setPositionT(..) / setTimeStamp(..) methods
+ - added setPositionTOffset(..) methods
+* SequenceUtil:
+ - added convertPoint(..) methods for easy coordinate conversion between 2 Sequence objects
+ - added convertRectangle(..) methods for easy region conversion between 2 Sequence objects
+* ROIUtil:
+ - rewrote adjustToSequence(..) method (better implementation).
+* VtkUtil:
+ - added getROIFromBinaryImage(..) method to convert VTK binary image to ROI
+ - renamed method polyDataToImageDate(..) to getBinaryImageData(..)
+ - added getTransform(..) method
+ - renamed method objToMesh(..) to getSurfaceFromOBJ(..)
+
+
 Icy 1.9.7.0 - 29/05/2018
 ------------------------
 
@@ -18,8 +54,8 @@ Icy 1.9.6.1 - 23/05/2018
 
 Application
 * Fixed / improved image preview refresh in Loader dialog.
-* minor change in frame / component visibility on opening.
-* other minor fixes.
+* Minor change in frame / component visibility on opening.
+* Other minor fixes.
 
 
 Icy 1.9.6.0 - 18/05/2018
