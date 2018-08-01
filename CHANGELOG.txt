@@ -1,3 +1,14 @@
+Icy 1.9.8.1 - 01/08/2018
+------------------------
+
+Application
+* Loader:
+ - better colormap preservation on grouped image opening.
+ - fixed tile image loading on grouped image opening.
+* Removed IRC chat (not really used and to avoid bot spam)
+* Fixed minor issue with preferences saving (asking for restart everytime)
+
+
 Icy 1.9.8.0 - 20/07/2018
 ------------------------
 
