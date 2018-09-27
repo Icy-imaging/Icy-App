@@ -1,3 +1,45 @@
+Icy 1.9.9.0 - 27/09/2018
+------------------------
+
+Application
+* Loader:
+ - added series grouping when 'grouping' in enabled in Loader dialog
+ - added groupSeries(..) method to group similar series in an image
+* Sequence: fixed series index reset after saving an image
+* ROI:
+ - fixed 3D VTK display (correctly handling specific Z and T position of the ROI)
+ - fixed ROI Mass Center computation for single point ROI
+* VtkCanvas:
+ - fixed layers refresh on position change
+ - fixed/better implementation of layers visibility
+* Network:
+ - added warning message for HTTPS compatibility with the future web site
+ - fixed HTTPS support for future web site (when java version ok)
+ - replaced automatic redirection by manual (and safer) redirection
+ - better error handling in general
+
+Developer
+* Sequence: added getDataInterpolated(t, z, c, y, x) method
+* IcyBufferedImage: added getDataInterpolate(x,y,c) method
+* Loader: added groupSeries(..) method to group similar series in an image
+* Line2DIterator / Line3DIterator: added forceLastPoint parameter.
+* VtkUtil:
+ - added getJavaArray(vtkDataArray) method
+ - added getPolyDataFromDataSet(vtkDataSet) method
+ - added getBooleanMaskFromBinaryImage(vtkImageData..) method
+
+
+Icy 1.9.8.1 - 01/08/2018
+------------------------
+
+Application
+* Loader:
+ - better colormap preservation on grouped image opening.
+ - fixed tile image loading on grouped image opening.
+* Removed IRC chat (not really used and to avoid bot spam)
+* Fixed minor issue with preferences saving (asking for restart everytime)
+
+
 Icy 1.9.8.0 - 20/07/2018
 ------------------------
 
