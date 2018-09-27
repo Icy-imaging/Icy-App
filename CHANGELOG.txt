@@ -19,14 +19,10 @@ Application
  - better error handling in general
 
 Developer
-* Sequence:
- - added getDataInterpolated(t, z, c, y, x) method
-* IcyBufferedImage:
- - added getDataInterpolate(x,y,c) method
-* Loader:
- - added groupSeries(..) method to group similar series in an image
-* Line2DIterator / Line3DIterator:
- - added forceLastPoint parameter.
+* Sequence: added getDataInterpolated(t, z, c, y, x) method
+* IcyBufferedImage: added getDataInterpolate(x,y,c) method
+* Loader: added groupSeries(..) method to group similar series in an image
+* Line2DIterator / Line3DIterator: added forceLastPoint parameter.
 * VtkUtil:
  - added getJavaArray(vtkDataArray) method
  - added getPolyDataFromDataSet(vtkDataSet) method
