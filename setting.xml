@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
 <root>
 <section name="icy">
 <section name="workspaces">
@@ -9,9 +10,6 @@
 <section name="general">
 <section name="toolTips">
 <key name="plugins.ylemontag.matlabcommunicator.MatlabCommunicatorDeamon.InstallMessage" value="false"/>
-<key name="mainMenuTip" value="false"/>
-<key name="MicroManager.HiddenMenu.Tip" value="false"/>
-<key name="httpsNotSupportedWarning" value="false"/>
 </section>
 <section name="confirms">
 <key name="exit" value="false"/>
@@ -51,46 +49,6 @@
 <section name="SumIntensity"/>
 <section name="MassCenterC"/>
 <section name="Icon"/>
-<section name="Position T"/>
-<section name="Sphericity"/>
-<section name="Mean intensity"/>
-<section name="2nd axis"/>
-<section name="Yaw"/>
-<section name="ASM"/>
-<section name="Read only"/>
-<section name="Position C"/>
-<section name="Roundness"/>
-<section name="3rd axis"/>
-<section name="Contrast"/>
-<section name="2nd Diameter"/>
-<section name="Entropy"/>
-<section name="Homogeneity"/>
-<section name="Max intensity"/>
-<section name="Feret"/>
-<section name="Min intensity"/>
-<section name="Size C"/>
-<section name="Sum intensity"/>
-<section name="1st axis"/>
-<section name="Mass center C"/>
-<section name="Color"/>
-<section name="Convexity"/>
-<section name="Size X"/>
-<section name="Mass center X"/>
-<section name="Roll"/>
-<section name="Size Z"/>
-<section name="Mass center Y"/>
-<section name="Size Y"/>
-<section name="Standard deviation"/>
-<section name="Mass center Z"/>
-<section name="Position Z"/>
-<section name="Group id"/>
-<section name="1st Diameter"/>
-<section name="Position Y"/>
-<section name="Position X"/>
-<section name="3rd Diameter"/>
-<section name="Size T"/>
-<section name="Mass center T"/>
-<section name="Pitch"/>
 </section>
 <section name="export">
 <section name="PositionY"/>
@@ -125,21 +83,17 @@
 <section name="Icon"/>
 </section>
 </section>
-<key name="lastUpdateCheckTime" value="1538060006166"/>
+<key name="lastUpdateCheckTime" value="1452768008765"/>
 <key name="guiFontSize" value="12"/>
 <key name="sequencePersistence" value="true"/>
 <key name="autoUpdate" value="false"/>
 <key name="usageStatsReport" value="false"/>
 <key name="alwaysOnTop" value="false"/>
-<key name="guiSkin" value="Cerulean"/>
-<key name="loaderFolder" value="D:\Stephane\Pictures\Pasteur\bio\misc"/>
 </section>
 <section name="canvas">
 <key name="mouseWheelSensibility" value="5"/>
 <key name="invertMouseWheelAxis" value="false"/>
 <key name="filtering" value="false"/>
-<section name="Canvas2D"/>
-<section name="vtkCanvas"/>
 </section>
 <section name="network">
 <key name="proxySetting" value="1"/>
@@ -180,28 +134,19 @@
 <section name="online"/>
 <key name="autoUpdate" value="false"/>
 <key name="allowBeta" value="false"/>
-<section name="plugins.tprovoost.Microscopy.MicroManagerForIcy.MicromanagerPlugin">
-<section name="StageMover"/>
-<key name="displayAcquisition" value="true"/>
-<key name="storeLastAcquisition" value="true"/>
-</section>
 </section>
 <section name="loader">
 <section name="entry0">
-<key name="nbFile" value="1"/>
-<key name="file0" value="D:/Stephane/Pictures/Pasteur/bio/misc/Abdomen.tif"/>
+<key name="nbFile" value="0"/>
 </section>
 <section name="entry1">
-<key name="nbFile" value="1"/>
-<key name="file0" value="D:/Stephane/Pictures/Pasteur/bio/bright field/P7.jpg"/>
+<key name="nbFile" value="0"/>
 </section>
 <section name="entry2">
-<key name="nbFile" value="1"/>
-<key name="file0" value="D:/Stephane/Pictures/Pasteur/bio/misc/3D_T/Actin Filaments.tif"/>
+<key name="nbFile" value="0"/>
 </section>
 <section name="entry3">
-<key name="nbFile" value="1"/>
-<key name="file0" value="D:/Stephane/Pictures/Pasteur/bio/misc/3D_T/bat-cochlea-volume.tif"/>
+<key name="nbFile" value="0"/>
 </section>
 <section name="entry4">
 <key name="nbFile" value="0"/>
@@ -223,25 +168,13 @@
 </section>
 </section>
 <key name="maxMemory" value="6112"/>
-<key name="id" value="8153225"/>
+<key name="id" value="211551116"/>
 <key name="os" value="win64"/>
-<key name="clientCpuNumber" value="4"/>
-<key name="clientTotalMemory" value="8468393984"/>
-<key name="appFolder" value="D:/Stephane/Dev/Pasteur/Java/Eclipse/Icy/Icy-App"/>
-<key name="version" value="1.9.9.0"/>
-<key name="lastUploadDate" value="1538059989984"/>
-<section name="frame">
-<section name="imageLoader">
-<key name="loadtype" value="2"/>
-<key name="extension" value="All image files / Bio-Formats"/>
-<key name="width" value="600"/>
-<key name="heigth" value="537"/>
-</section>
-</section>
-<section name="gui.histo">
-<key name="autoRefresh" value="false"/>
-<key name="autoBounds" value="false"/>
-</section>
+<key name="clientCpuNumber" value="8"/>
+<key name="clientTotalMemory" value="12833738752"/>
+<key name="appFolder" value="D:/Stephane/Documents/dev/GIT/Icy-Kernel"/>
+<key name="version" value="1.7.3.0"/>
+<key name="lastUploadDate" value="1452768059481"/>
 </section>
 <section name="plugins">
 <section name="ylemontag">
@@ -249,196 +182,6 @@
 <section name="MatlabCommunicatorDeamon">
 <section name="InterpreterVersions">
 <key name="plugins.ylemontag.matlabcommunicator.MatlabCommunicatorDeamon" value="1.0.5.0"/>
-<key name="plugins.ylemontag.matlabxserver.MatlabXServerDeamon" value="3.2.0.0"/>
-</section>
-</section>
-</section>
-</section>
-<section name="tprovoost">
-<section name="scale">
-<section name="Scale"/>
-</section>
-<section name="Microscopy">
-<section name="MicroManagerForIcy">
-<section name="MicromanagerPlugin">
-<key name="libray_path" value="C:\Apps\Micro-Manager_1.4.22/"/>
-<section name="CFGFiles">
-<key name="nbfiles" value="1"/>
-<key name="cfgfile0" value="C:\Apps\Micro-Manager_1.4.22\MMConfig_demo.cfg"/>
-</section>
-</section>
-</section>
-</section>
-</section>
-<section name="plugins.adufour.protocols.Protocols"/>
-<section name="plugins.tprovoost.scripteditor.main.ScriptEditorPlugin">
-<section name="recentFiles">
-<section name="entry0">
-<key name="file0" value="C:\Users\Stephane\AppData\Local\Temp\BioFlow\plugins\adufour\bioflow\python\2D\BioFlow2D.py"/>
-</section>
-</section>
-<section name="openedFiles">
-<section name="entry0">
-<key name="file0" value="C:\Users\Stephane\AppData\Local\Temp\BioFlow\plugins\adufour\bioflow\python\2D\BioFlow2D.py"/>
-</section>
-<key name="idxTab" value="0"/>
-</section>
-</section>
-<section name="nherve">
-<section name="maskeditor">
-<section name="MaskEditor">
-<key name="XE" value="0"/>
-<key name="YE" value="0"/>
-<key name="XI" value="573"/>
-<key name="YI" value="44"/>
-<key name="WidthE" value="580"/>
-<key name="HeightE" value="800"/>
-<key name="WidthI" value="580"/>
-<key name="HeightI" value="648"/>
-<key name="Externalized" value="false"/>
-<key name="MaximizedI" value="false"/>
-<key name="MaximizedE" value="false"/>
-</section>
-</section>
-</section>
-<section name="adufour">
-<section name="trackprocessors">
-<section name="speed">
-<section name="MotionProfilerProcessor"/>
-</section>
-</section>
-<section name="roi">
-<section name="ROIMeasures">
-<section name="measures">
-<section name="FULLPATH">
-<key name="selected" value="false"/>
-</section>
-<section name="FOLDER">
-<key name="selected" value="false"/>
-</section>
-<section name="DATASET">
-<key name="selected" value="true"/>
-</section>
-<section name="NAME">
-<key name="selected" value="true"/>
-</section>
-<section name="COLOR">
-<key name="selected" value="true"/>
-</section>
-<section name="X">
-<key name="selected" value="true"/>
-</section>
-<section name="Y">
-<key name="selected" value="true"/>
-</section>
-<section name="Z">
-<key name="selected" value="true"/>
-</section>
-<section name="T">
-<key name="selected" value="true"/>
-</section>
-<section name="C">
-<key name="selected" value="false"/>
-</section>
-<section name="X_GLOBAL">
-<key name="selected" value="false"/>
-</section>
-<section name="Y_GLOBAL">
-<key name="selected" value="false"/>
-</section>
-<section name="Z_GLOBAL">
-<key name="selected" value="false"/>
-</section>
-<section name="BOX_WIDTH">
-<key name="selected" value="false"/>
-</section>
-<section name="BOX_HEIGHT">
-<key name="selected" value="false"/>
-</section>
-<section name="BOX_DEPTH">
-<key name="selected" value="false"/>
-</section>
-<section name="CONTOUR">
-<key name="selected" value="true"/>
-</section>
-<section name="INTERIOR">
-<key name="selected" value="true"/>
-</section>
-<section name="SPHERICITY">
-<key name="selected" value="false"/>
-</section>
-<section name="ROUNDNESS">
-<key name="selected" value="false"/>
-</section>
-<section name="CONVEXITY">
-<key name="selected" value="false"/>
-</section>
-<section name="MAX_FERET">
-<key name="selected" value="false"/>
-</section>
-<section name="ELLIPSE_A">
-<key name="selected" value="false"/>
-</section>
-<section name="ELLIPSE_B">
-<key name="selected" value="false"/>
-</section>
-<section name="ELLIPSE_C">
-<key name="selected" value="false"/>
-</section>
-<section name="YAW">
-<key name="selected" value="false"/>
-</section>
-<section name="PITCH">
-<key name="selected" value="false"/>
-</section>
-<section name="ROLL">
-<key name="selected" value="false"/>
-</section>
-<section name="ELONGATION">
-<key name="selected" value="false"/>
-</section>
-<section name="FLATNESS3D">
-<key name="selected" value="false"/>
-</section>
-<section name="INTENSITY_MIN">
-<key name="selected" value="false"/>
-</section>
-<section name="INTENSITY_AVG">
-<key name="selected" value="true"/>
-</section>
-<section name="INTENSITY_MAX">
-<key name="selected" value="false"/>
-</section>
-<section name="INTENSITY_SUM">
-<key name="selected" value="false"/>
-</section>
-<section name="INTENSITY_STD">
-<key name="selected" value="false"/>
-</section>
-<section name="INTENSITY_TEXTURE_ASM">
-<key name="selected" value="false"/>
-</section>
-<section name="INTENSITY_TEXTURE_CONT">
-<key name="selected" value="false"/>
-</section>
-<section name="INTENSITY_TEXTURE_ENT">
-<key name="selected" value="false"/>
-</section>
-<section name="INTENSITY_TEXTURE_HOMO">
-<key name="selected" value="false"/>
-</section>
-<section name="PERIMETER">
-<key name="selected" value="true"/>
-</section>
-<section name="AREA">
-<key name="selected" value="true"/>
-</section>
-<section name="SURFACE_AREA">
-<key name="selected" value="false"/>
-</section>
-<section name="VOLUME">
-<key name="selected" value="false"/>
-</section>
 </section>
 </section>
 </section>
@@ -446,21 +189,21 @@
 </section>
 <section name="frame">
 <section name="main">
-<key name="XE" value="-1809"/>
-<key name="YE" value="161"/>
-<key name="WidthE" value="1537"/>
-<key name="HeightE" value="952"/>
+<key name="XE" value="58"/>
+<key name="YE" value="43"/>
+<key name="WidthE" value="1066"/>
+<key name="HeightE" value="739"/>
 <key name="MaximizedE" value="false"/>
 </section>
 <section name="inspector">
-<key name="XC" value="1229"/>
+<key name="XC" value="733"/>
 <key name="YC" value="0"/>
 <key name="XE" value="600"/>
 <key name="YE" value="140"/>
 <key name="XI" value="600"/>
 <key name="YI" value="140"/>
-<key name="WidthC" value="300"/>
-<key name="HeightC" value="790"/>
+<key name="WidthC" value="325"/>
+<key name="HeightC" value="577"/>
 <key name="WidthE" value="300"/>
 <key name="HeightE" value="600"/>
 <key name="WidthI" value="300"/>
@@ -477,8 +220,8 @@
 <key name="YE" value="100"/>
 <key name="XI" value="100"/>
 <key name="YI" value="100"/>
-<key name="WidthC" value="292"/>
-<key name="HeightC" value="700"/>
+<key name="WidthC" value="317"/>
+<key name="HeightC" value="487"/>
 <key name="WidthE" value="400"/>
 <key name="HeightE" value="600"/>
 <key name="WidthI" value="400"/>
@@ -495,8 +238,8 @@
 <key name="YE" value="200"/>
 <key name="XI" value="200"/>
 <key name="YI" value="200"/>
-<key name="WidthC" value="292"/>
-<key name="HeightC" value="700"/>
+<key name="WidthC" value="317"/>
+<key name="HeightC" value="487"/>
 <key name="WidthE" value="400"/>
 <key name="HeightE" value="300"/>
 <key name="WidthI" value="400"/>
@@ -513,8 +256,8 @@
 <key name="YE" value="200"/>
 <key name="XI" value="200"/>
 <key name="YI" value="200"/>
-<key name="WidthC" value="420"/>
-<key name="HeightC" value="700"/>
+<key name="WidthC" value="317"/>
+<key name="HeightC" value="487"/>
 <key name="WidthE" value="400"/>
 <key name="HeightE" value="300"/>
 <key name="WidthI" value="400"/>
