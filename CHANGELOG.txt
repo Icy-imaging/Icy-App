@@ -1,3 +1,10 @@
+Icy 1.9.9.1 - 28/09/2018
+------------------------
+
+Application
+* fixed java version checking for HTTPS compatibility
+
+
 Icy 1.9.9.0 - 27/09/2018
 ------------------------
 
