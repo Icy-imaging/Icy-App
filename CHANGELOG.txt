@@ -1,3 +1,29 @@
+Icy 1.9.10.0 - 19/11/2018
+-------------------------
+
+Application
+* ROI:
+ - fixed 3D VTK display for ROI2DPoint and ROI3DPoint
+ - tweaks for faster retrieve of default property value
+* Saver:
+ - FPS is automatically determined from metadata (AVI format)
+ - added time interval field for easier FPS calculation (AVI format)
+* Plugin: minor fix about plugin installation notification
+* Network: audit methods cannot lock anymore Icy launch process.
+* Minor fix on possible exception with the Clipboard.
+* Other minors changes or fixes.
+
+Developer
+* IcyBufferedImage:
+ - fixed possible out of bounds operation with getDataInterpolated(..)
+ - minors changes to prepare volatile raster
+* Sequence:
+ - fixed possible out of bounds operation with getDataInterpolated(..)
+ - use metadata to retrieve dimension information when we can't get them from data (just for X, Y and C dimension).
+* Loader: prepared async loading method (not yet complete)
+* VtkUtil: renamed getArray(..) to getJavaArray(..)
+
+
 Icy 1.9.9.1 - 28/09/2018
 ------------------------
 
