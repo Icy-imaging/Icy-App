@@ -1,7 +1,7 @@
-Icy - copyright 2017 - Institut Pasteur
+Icy - copyright 2018 - Institut Pasteur
 An open community platform for bio image analysis - http://icy.bioimageanalysis.org
 
-Icy has been created by the Bio Images Analysis team at Institut Pasteur - https://research.pasteur.fr/fr/team/bioimage-analysis
+Icy has been created by the Bio Image Analysis team at Institut Pasteur - https://research.pasteur.fr/fr/team/bioimage-analysis
 Icy is free and open source, it has been funded both by Institut Pasteur and the FBI consortium - https://france-bioimaging.org
 
 Source code is provided in the main application package (in the icy.jar archive file) but can also be found on the GitHub repository - https://github.com/Icy-imaging/Icy-Kernel
@@ -9,10 +9,25 @@ Source code is provided in the main application package (in the icy.jar archive 
 
 Note for OSX users
 ------------------
-Because of system's restrictive security rules you may not be able to launch Icy properly after having downloaded it, in this case use the following steps to fix it:
-- execute osx-appfix by right clicking on it (or Ctrl + click) and use 'Open'.
-- double click on the Icy application icon and confirm application launch.
-Now you should be able to use Icy normally.
+First, you need to have java installed on your system. Sometime java is installed but just for web applications (JRE) in which case you need to install the JDK 8 for Mac OSX..
+Then ensure you have authorized the application in the security preferences as OSX won't allow external application by default:
+
+* OSX 10.11 or older
+  You can resolve the problem by going to:
+  System --> Preferences --> Security --> Privacy then change Allow applications downloaded from to Anywhere
+  Or you can select to authorize Icy application specifically.
+
+* OSX 10.12 or above
+  You don't have anymore the Anywhere choice here and because of system's restrictive security rules you may not be able to launch Icy properly even by forcing it.
+  In this case you need to execute the osx-appfix file (located in the Icy folder) by right clicking on it (or Ctrl + click) and use Open.
+  You should now be able to use Icy normally.
+
+* OSX 10.12 or above - alternate method
+  If the previous method didn't worked (sometime the script do not execute properly), you can try to execute the osx-appfix command manually:
+  - Open the Terminal app
+  - Go into the folder of Icy (using cd command)
+  - Execute the following command: xattr -dr com.apple.quarantine icy.app
+  Then hopefully now you should be able to execute Icy normally :)
 
 
 Contributors
