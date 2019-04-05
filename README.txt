@@ -1,4 +1,4 @@
-Icy - copyright 2018 - Institut Pasteur
+Icy - copyright 2019 - Institut Pasteur
 An open community platform for bio image analysis - http://icy.bioimageanalysis.org
 
 Icy has been created by the Bio Image Analysis team at Institut Pasteur - https://research.pasteur.fr/fr/team/bioimage-analysis
@@ -9,7 +9,8 @@ Source code is provided in the main application package (in the icy.jar archive 
 
 Note for OSX users
 ------------------
-First, you need to have java installed on your system. Sometime java is installed but just for web applications (JRE) in which case you need to install the JDK 8 for Mac OSX..
+First, you need to have java installed on your system. Sometime java is installed but just for web applications (JRE) in which case you need to install the JDK 8 for Mac OSX.
+We strongly recommend to keep JDK 8 which is more stable than newer version of Java (9 or above) so if possible try to keep Java 8 as the default version.
 Then ensure you have authorized the application in the security preferences as OSX won't allow external application by default:
 
 * OSX 10.11 or older
