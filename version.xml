@@ -45,25 +45,25 @@
 		</element>
 		<element>
 			<name>Icy OSX Launcher</name>
-			<version>1.1.0.0</version>
+			<version>2.0.0.0</version>
 			<files>
 				<file>
-					<localpath>icy.app/Contents/MacOS/JavaApplicationStub</localpath>
+					<localpath>Contents/MacOS/JavaApplicationStub</localpath>
 				</file>
 				<file>
-					<localpath>icy.app/Contents/Info.plist</localpath>
+					<localpath>Contents/Info.plist</localpath>
 				</file>
 				<file>
-					<localpath>icy.app/Contents/PkgInfo</localpath>
+					<localpath>Contents/PkgInfo</localpath>
 				</file>
 				<file>
-					<localpath>icy.app/Contents/Resources/icy.icns</localpath>
+					<localpath>Contents/Resources/icy.icns</localpath>
 				</file>
 			</files>
 		</element>
 		<element>
 			<name>ICY Updater</name>
-			<version>1.9.9.0</version>
+			<version>2.0.0.0</version>
 			<files>
 				<file>
 					<localpath>updater.jar</localpath>

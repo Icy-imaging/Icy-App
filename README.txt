@@ -11,23 +11,22 @@ Note for OSX users
 ------------------
 First, you need to have java installed on your system. Sometime java is installed but just for web applications (JRE) in which case you need to install the JDK 8 for Mac OSX.
 We strongly recommend to keep JDK 8 which is more stable than newer version of Java (9 or above) so if possible try to keep Java 8 as the default version.
-Then ensure you have authorized the application in the security preferences as OSX won't allow external application by default:
+Then you may experience issues with the system security preventing you from executing external application by default:
 
 * OSX 10.11 or older
-  You can resolve the problem by going to:
-  System --> Preferences --> Security --> Privacy then change Allow applications downloaded from to Anywhere
+  You can resolve the problem by going to System --> Preferences --> Security --> Privacy
+  then change Allow applications downloaded from to 'Anywhere'
   Or you can select to authorize Icy application specifically.
 
 * OSX 10.12 or above
-  You don't have anymore the Anywhere choice here and because of system's restrictive security rules you may not be able to launch Icy properly even by forcing it.
-  In this case you need to execute the osx-appfix file (located in the Icy folder) by right clicking on it (or Ctrl + click) and use Open.
-  You should now be able to use Icy normally.
+  You don't have anymore the 'Anywhere' choice here, in this case you need to open Icy by right clicking on it (or Ctrl + click) and use 'Open' command to force the operation.
+  Normally the next time it should open directly.
 
 * OSX 10.12 or above - alternate method
-  If the previous method didn't worked (sometime the script do not execute properly), you can try to execute the osx-appfix command manually:
+  If the previous method didn't worked, you can try to execute this command manually to by-pass the system security:
   - Open the Terminal app
-  - Go into the folder of Icy (using cd command)
-  - Execute the following command: xattr -dr com.apple.quarantine icy.app
+  - Go into the folder where you installed Icy (using cd command)
+  - Execute the following command: xattr -dr com.apple.quarantine Icy.app
   Then hopefully now you should be able to execute Icy normally :)
 
 
@@ -43,7 +42,7 @@ Website graphic design
 Website code
     Fabrice de Chaumont
 
-EzPlug and Protocols
+EzPlug and Protocols (as many others plugins)
     Alexandre Dufour
 
 Scripting

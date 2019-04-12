@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-BASEDIR=$(dirname $0)
-xattr -dr com.apple.quarantine $BASEDIR/icy.app
