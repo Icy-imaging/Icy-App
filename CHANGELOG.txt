@@ -2,7 +2,8 @@ Icy 2.0.0.0 - 12/04/2019
 ------------------------
 
 Application
-* New image cache engine.
+* new image cache engine.
+* new packaging for easier installation on OSX system.
 * GUI:
  - added new Icy 'virtual mode' button to force the image cache engine to be used for all opened / created images.
  - memory monitor now display image cache load level.

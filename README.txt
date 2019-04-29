@@ -11,23 +11,8 @@ Note for OSX users
 ------------------
 First, you need to have java installed on your system. Sometime java is installed but just for web applications (JRE) in which case you need to install the JDK 8 for Mac OSX.
 We strongly recommend to keep JDK 8 which is more stable than newer version of Java (9 or above) so if possible try to keep Java 8 as the default version.
-Then you may experience issues with the system security preventing you from executing external application by default:
-
-* OSX 10.11 or older
-  You can resolve the problem by going to System --> Preferences --> Security --> Privacy
-  then change Allow applications downloaded from to 'Anywhere'
-  Or you can select to authorize Icy application specifically.
-
-* OSX 10.12 or above
-  You don't have anymore the 'Anywhere' choice here, in this case you need to open Icy by right clicking on it (or Ctrl + click) and use 'Open' command to force the operation.
-  Normally the next time it should open directly.
-
-* OSX 10.12 or above - alternate method
-  If the previous method didn't worked, you can try to execute this command manually to by-pass the system security:
-  - Open the Terminal app
-  - Go into the folder where you installed Icy (using cd command)
-  - Execute the following command: xattr -dr com.apple.quarantine Icy.app
-  Then hopefully now you should be able to execute Icy normally :)
+Note that the first time you try to launch the application it may not work because of the default Security preferences.
+You can force it by doing right click on the application icon (or Ctrl+click) and use 'Open' command, then validate the operation so now you should now be able to use Icy normally :)
 
 
 Contributors
