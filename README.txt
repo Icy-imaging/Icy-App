@@ -1,7 +1,7 @@
-Icy - copyright 2017 - Institut Pasteur
+Icy - copyright 2019 - Institut Pasteur
 An open community platform for bio image analysis - http://icy.bioimageanalysis.org
 
-Icy has been created by the Bio Images Analysis team at Institut Pasteur - https://research.pasteur.fr/fr/team/bioimage-analysis
+Icy has been created by the Bio Image Analysis team at Institut Pasteur - https://research.pasteur.fr/fr/team/bioimage-analysis
 Icy is free and open source, it has been funded both by Institut Pasteur and the FBI consortium - https://france-bioimaging.org
 
 Source code is provided in the main application package (in the icy.jar archive file) but can also be found on the GitHub repository - https://github.com/Icy-imaging/Icy-Kernel
@@ -9,10 +9,10 @@ Source code is provided in the main application package (in the icy.jar archive 
 
 Note for OSX users
 ------------------
-Because of system's restrictive security rules you may not be able to launch Icy properly after having downloaded it, in this case use the following steps to fix it:
-- execute osx-appfix by right clicking on it (or Ctrl + click) and use 'Open'.
-- double click on the Icy application icon and confirm application launch.
-Now you should be able to use Icy normally.
+First, you need to have java installed on your system. Sometime java is installed but just for web applications (JRE) in which case you need to install the JDK 8 for Mac OSX.
+We strongly recommend to keep JDK 8 which is more stable than newer version of Java (9 or above) so if possible try to keep Java 8 as the default version.
+Note that the first time you try to launch the application it may not work because of the default Security preferences.
+You can force it by doing right click on the application icon (or Ctrl+click) and use 'Open' command, then validate the operation so now you should now be able to use Icy normally :)
 
 
 Contributors
@@ -27,7 +27,7 @@ Website graphic design
 Website code
     Fabrice de Chaumont
 
-EzPlug and Protocols
+EzPlug and Protocols (as many others plugins)
     Alexandre Dufour
 
 Scripting

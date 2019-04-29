@@ -1,3 +1,64 @@
+Icy 2.0.0.0 - 12/04/2019
+------------------------
+
+Application
+* new image cache engine.
+* new packaging for easier installation on OSX system.
+* GUI:
+ - added new Icy 'virtual mode' button to force the image cache engine to be used for all opened / created images.
+ - memory monitor now display image cache load level.
+ - Icy shows 'virtual mode' in title when image cache engine is forced ON.
+ - improved 'General' and 'Canvas' preferences presentation.
+ - added image cache settings in 'General preferences' section.
+ - added informations on image cache at startup.
+ - fixed position of Series selection dialog
+* Loader:
+ - added lazy data loading for faster Sequence loading operation.
+ - improved preview display refresh.
+* ROI:
+ - added 'ROI to Square' conversion.
+ - added 'ROI to Circle' conversion.
+ - small changes / improvements on ROI tasks GUI
+* Viewer:
+ - timelaps are now in 'repeat' playback mode by default
+ - added 'SPACE' key shortcut to play/pause timelaps playback 
+* better background processing of some basic sequence operations ('Duplicate', 'Convert RGB', 'Convert Gray', 'Crop'...)
+* minor speed improvement on application start
+* added new splash screens
+* many other small changes, tweaks, fixes and refactoring
+
+Developer
+* IcyBufferedImage:
+ - many changes to add image cache support.
+ - added lazy data loading support (for faster Sequence loading operation)
+ - added isVolatile() / setVolatile(..) method to enable/disable image caching.
+ - added isDataInitialized() / isDataLoaded().. methods.
+ - many others changes.
+* Sequence:
+ - added isVolatile() / setVolatile(..) method to enable/disable image caching.
+ - added setDataXY(..) method (need to use it for image caching)
+ - changed the way channel bounds are updated (as data can be loaded on demand).
+* SequenceUtil:
+ - fixed getSubSequence(...) method to work with volatile images.
+ - extractSlice(..) and extractFrame(..) now correctly duplicate original images data (should have been the case).
+ - minor fix on colormap update in utilities methods.
+* Loader:
+ - added 'forceVolatile' parameter on some methods to force image caching.
+ - fixed possible Importer leak on error. 
+* Bio-Formats importer:
+ - fixed possible bugs during downscaled image/data loading
+* ROIUtil:
+ - added convertToPoint(..), convertToEllipse(..) and convertToRectangle(..) methods
+* DataIterator:
+ - updated to be compatible with volatile images.
+* VtkUtil:
+ - minor change in getBinaryImageData(vtkPolyData, ...) method
+* added FileUtil.getDrive(path) method
+* added IcyFrame.getBorder() method 
+* fixed last ROIs objects retention when removing ROIS from an image while keeping the image open.
+* added EHCache library.
+
+
 Icy 1.9.10.0 - 19/11/2018
 -------------------------
 
