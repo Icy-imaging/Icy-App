@@ -11,8 +11,8 @@ Note for OSX users
 ------------------
 First, you need to have java installed on your system. Sometime java is installed but just for web applications (JRE) in which case you need to install the JDK 8 for Mac OSX.
 We strongly recommend to keep JDK 8 which is more stable than newer version of Java (9 or above) so if possible try to keep Java 8 as the default version.
-Note that the first time you try to launch the application it may not work because of the default Security preferences.
-You can force it by doing right click on the application icon (or Ctrl+click) and use 'Open' command, then validate the operation so now you should now be able to use Icy normally :)
+Then be sure to have Icy installed in Applications folder. The first time you try to launch the application it may not work because of the default Security preferences.
+You can force it by doing right click on the application icon (or Ctrl+click) and use 'Open' command, then validate the operation. You should now be able to use Icy normally :)
 
 
 Contributors
