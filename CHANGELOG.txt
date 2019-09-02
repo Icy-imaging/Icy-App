@@ -1,3 +1,19 @@
+Icy 2.0.2.0 - 30/08/2019
+------------------------
+
+Application
+* Loader:
+ - empty pre-fetch tasks on Sequence close.
+* VTK:
+ - correct colormap alpha channel loading for IcyCanvas3D
+* Search:
+ - general improvements on search engine (support +/- operator on keyword).
+ - switched online search to the new web interface
+
+Developer
+* fixed ROIUtil.convertToSequence(..) method to correctly generate labeled image.
+
+
 Icy 2.0.1.0 - 12/08/2019
 ------------------------
 
