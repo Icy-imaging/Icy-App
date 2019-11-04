@@ -1,3 +1,25 @@
+Icy 2.0.3.0 - 31/10/2019
+------------------------
+
+Application
+* Canvas:
+ - faster and smaller memory footprint for screenshot for simple 2D image
+* VTK:
+ - fixed colormap alpha restoration for 3D VTK canvas. 
+* Loader / Bio-Formats:
+ - fixed tile image loading.
+ - fixed duplicated data when opening several sequences at once.
+ - minor tweak to avoid using cache when not needed (better performance).
+ - minor change on data pre-fetch strategy.
+* replaced micro character by 'u' to avoid incorrect display on non UTF-16 softwares
+* updated online bug report to make it compliant with new web report.
+* small fix in ROI table sorter.
+
+Developer
+- fixed MANIFEST.MF file containing an invalid character which was making Eclipse to crash.
+- small tweak in XMLUtil.loadDocument(..) methods.
+
+
 Icy 2.0.2.0 - 30/08/2019
 ------------------------
 
