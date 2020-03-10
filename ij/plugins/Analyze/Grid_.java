@@ -8,6 +8,7 @@ import ij.plugin.*;
 import ij.measure.*;
 
 public class Grid_ implements PlugIn, DialogListener {
+	private static double crossSize = 0.1;
 	private static String[] colors = {"Red","Green","Blue","Magenta","Cyan","Yellow","Orange","Black","White"};
 	private static String color = "Cyan";
 	private final static int LINES=0, HLINES=1, CROSSES=2, POINTS=3, NONE=4;
@@ -15,7 +16,8 @@ public class Grid_ implements PlugIn, DialogListener {
 	private static String type = types[LINES];
 	private static double areaPerPoint;
 	private static boolean randomOffset;
-	private Random random = new Random(System.currentTimeMillis());	
+	private static boolean bold;	
+	private Random random = new Random(System.currentTimeMillis());
 	private ImagePlus imp;
 	private double tileWidth, tileHeight;
 	private int xstart, ystart;
@@ -24,7 +26,6 @@ public class Grid_ implements PlugIn, DialogListener {
 	private String units = "pixels";
 
 	public void run(String arg) {
-		if (IJ.versionLessThan("1.43u"))	 		return;
 		imp = IJ.getImage();
 		showDialog();
 	}
@@ -48,7 +49,8 @@ public class Grid_ implements PlugIn, DialogListener {
 
 	void drawCrosses() {
 		GeneralPath path = new GeneralPath();
-		float arm  = 5;
+		float arm  = (int)Math.round(crossSize*tileWidth);
+		if (arm<3) arm=3;
 		for(int h=0; h<linesV; h++) {
 			for(int v=0; v<linesH; v++) {
 				float x = (float)(xstart+h*tileWidth);
@@ -65,8 +67,19 @@ public class Grid_ implements PlugIn, DialogListener {
 	void showGrid(Shape shape) {
 		if (shape==null)
 			imp.setOverlay(null);
-		else
-			imp.setOverlay(shape, getColor(), null);
+		else {
+			Roi roi = new ShapeRoi(shape);
+			roi.setStrokeColor(getColor());
+			if (bold && linesV*linesH<5000) {
+				ImageCanvas ic = imp.getCanvas();
+				double mag = ic!=null?ic.getMagnification():1.0;
+				double width = 2.0;
+				if (mag<1.0)
+					width = width/mag;
+				roi.setStrokeWidth(width);
+			}
+			imp.setOverlay(new Overlay(roi));
+		}
 	}
 
 	void drawLines() {
@@ -116,13 +129,14 @@ public class Grid_ implements PlugIn, DialogListener {
 		}
 		if (areaPerPoint==0.0)
 			areaPerPoint = (width*cal.pixelWidth*height*cal.pixelHeight)/81.0; // default to 9x9 grid
-		ImageWindow win = imp.getWindow();
 		GenericDialog gd = new GenericDialog("Grid...");
-		gd.addChoice("Grid Type:", types, type);
-		gd.addNumericField("Area per Point:", areaPerPoint, places, 6, units+"^2");
+		gd.addChoice("Grid type:", types, type);
+		gd.addNumericField("Area per point:", areaPerPoint, places, 6, units+"^2");
 		gd.addChoice("Color:", colors, color);
-		gd.addCheckbox("Random Offset", randomOffset);
+		gd.addCheckbox("Bold", bold);
+		gd.addCheckbox("Random offset", randomOffset);
 		gd.addDialogListener(this);
+		dialogItemChanged(gd, null);
 		gd.showDialog();
 		if (gd.wasCanceled()) 
 			showGrid(null);
@@ -134,11 +148,11 @@ public class Grid_ implements PlugIn, DialogListener {
 		type = gd.getNextChoice();
 		areaPerPoint = gd.getNextNumber();
 		color = gd.getNextChoice();
+		bold = gd.getNextBoolean();
 		randomOffset = gd.getNextBoolean();
-		
 		double minArea= (width*height)/50000.0;
-		if (type.equals(types[CROSSES])&&minArea<144.0)
-			minArea = 144.0;
+		if (type.equals(types[CROSSES])&&minArea<50.0)
+			minArea = 50.0;
 		else if (minArea<16)
 			minArea = 16.0;
 		if (areaPerPoint/(pixelWidth*pixelHeight)<minArea) {
@@ -163,6 +177,11 @@ public class Grid_ implements PlugIn, DialogListener {
 		linesH = (int)((height-ystart)/tileHeight)+1;
 		if (gd.invalidNumber())
 			return true;
+		showGrid();
+        	return true;
+	}
+
+	private void showGrid() {
 		if (type.equals(types[LINES]))
 			drawLines();
 		else if (type.equals(types[HLINES]))
@@ -173,7 +192,6 @@ public class Grid_ implements PlugIn, DialogListener {
 			drawPoints();
 		else
 			showGrid(null);
-        	return true;
 	}
 
 	Color getColor() {

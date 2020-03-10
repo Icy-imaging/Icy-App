@@ -6,11 +6,11 @@
   font = new Font("SanSerif", Font.PLAIN, 28);
   roi = new TextRoi(10, 5, "This is an overlay", font);
   roi.setStrokeColor(Color.yellow);
-  roi.setFillColor(new Color(0,0,0,0.5));
+  roi.setFillColor(new Color(0.0,0.0,0.0,0.5));
   overlay.add(roi);
   roi = new Roi(30,70,200,150);
   roi.setStrokeColor(Color.blue);
-  roi.setFillColor(new Color(0,0,1,0.3));
+  roi.setFillColor(new Color(0.0,0.0,1.0,0.3));
   overlay.add(roi);
   roi = new OvalRoi(60,60,140,140);
   roi.setStrokeColor(Color.green);

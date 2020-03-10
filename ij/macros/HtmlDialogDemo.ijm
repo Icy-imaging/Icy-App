@@ -31,7 +31,7 @@
      +"<ul>"
      +"<li>Runs <u>everywhere</u>"
      +"<li>Fastest pure <b>Java</b> image processing program"
-     +"<li>Extensive plugin and macro creating abilities"
+     +"<li>Easily extended using plugin and macros"
      +"</ul>");
 
 // Headers, font color, and italics

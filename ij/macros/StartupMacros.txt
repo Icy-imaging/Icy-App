@@ -3,17 +3,10 @@
 // automatically installed in the Plugins>Macros submenu and
 // in the toolbar when ImageJ starts up.
 
-  // The macro named "AutoRun" runs when ImageJ starts.
-  // macro "AutoRun" {
-  //    print("AutoRun");
-  // }
+// The "AutoRun" macro has been replaced by the Edit>Options>Startup command.
 
-  // The macro named "AutoRunAndHide" runs when ImageJ starts
-  // and the file containing it is not displayed when ImageJ opens it.
-  // macro "AutoRunAndHide" {}
-
+  macro "Command Finder Built-in Tool" {}
   macro "Developer Menu Built-in Tool" {}
-  macro "Stacks Menu Built-in Tool" {}
   macro "Brush Built-in Tool" {}
   macro "Flood Filler Built-in Tool" {}
   macro "Arrow Built-in Tool" {}

@@ -7,7 +7,7 @@ The plugins contained in Input-Output>QuickTime_Plugins.jar
 File>Import>Video, File>Import>QuickTime Player and
 File>Save As>QuickTime Movie commands.
 
-The following third party plugins are included with ImageJ 1.45:
+The following third party plugins are included with ImageJ 1.49:
 
 Analyze Reader/Writer (Guy Williams)
    File>Import>NIfTI-Analyze, File>Save As>Analyze 7.5...
@@ -25,10 +25,6 @@ Biorad Reader
    Plugins>Input-Output>Biorad Reader
    http://imagej.nih.gov/ij/plugins/biorad.html
 
-Cell Counter (Kurt De Vos)
-   Plugins>Analyze>Cell Counter    
-   http://imagej.nih.gov/ij/plugins/cell-counter.html
-
 Deltavision Opener
    Analyze>Input-Output>Deltavision Opener   
    http://imagej.nih.gov/ij/plugins/track/delta.html
@@ -44,6 +40,10 @@ Exif Reader (Gali Baler)
 Fast Filters (Michael Schmid)
    Plugins>Filters>Fast Filters
    http://imagejdocu.tudor.lu/doku.php?id=plugin:filter:fast_filters:start
+
+Find JAR for Class (Johannes Schindelin)
+   Plugins>Tools>Find JAR for Class
+   plugins/tools/Find_JAR_for_Class.java
 
 Fit Polynomial (Michael Schmid)
    Plugins>Filters>Fit Polynomial

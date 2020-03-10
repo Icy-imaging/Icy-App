@@ -1,8 +1,6 @@
 // This script demonstrates how to display ROIs
 // in different colors using a non-destructive overlay.
 
-  if (IJ.getVersion()<"1.43m")
-     IJ.error("Requires ImageJ 1.43m or later");
   n = 50;
   w = 1000, h = 700;
   imp = IJ.createImage("Demo","8-bit Ramp",w,h,1);

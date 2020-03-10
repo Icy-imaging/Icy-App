@@ -54,7 +54,9 @@ macro "Time-Lapse Color Coder" {
 	calcslices = slices * totalframes;
 	imgID = getImageID();
 
-	setBatchMode(true);
+	calledFromBatchMode = is("Batch Mode");
+	if (!calledFromBatchMode)
+		setBatchMode(true);
 
 	newImage("colored", "RGB White", ww, hh, calcslices);
 	run("Stack to Hyperstack...", "order=xyczt(default) channels=1 slices="
@@ -128,7 +130,8 @@ macro "Time-Lapse Color Coder" {
 	close();
 
 	selectImage(resultImageID);
-	setBatchMode("exit and display");
+	if (!calledFromBatchMode)
+		setBatchMode("exit and display");
 
 	if (GFrameColorScaleCheck)
 		CreateScale(Glut, Gstartf, Gendf);

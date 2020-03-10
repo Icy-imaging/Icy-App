@@ -55,6 +55,9 @@ public class HandleExtraFileTypes extends ImagePlus implements PlugIn {
 		// copy dimensions
 		if (IJ.getVersion().compareTo("1.38s")>=0)
 			setDimensions(imp.getNChannels(), imp.getNSlices(), imp.getNFrames());
+		// copy the image subtitle field ("Label" property) if it exists
+		if (imp.getProperty("Label")!=null)
+			setProperty("Label", imp.getProperty("Label"));
 		if (IJ.getVersion().compareTo("1.41o")>=0)
 			setOpenAsHyperStack(imp.getOpenAsHyperStack());
 	}
@@ -228,6 +231,11 @@ public class HandleExtraFileTypes extends ImagePlus implements PlugIn {
 				return tryPlugIn("org.bonej.io.ISQReader", path);
 			}
 		catch (Exception e) {}
+
+		// Jerome Parent : read .bin from the LynceeTec's software Koala
+		if (name.endsWith(".bin")) {
+			return tryPlugIn("Koala_Bin_Reader", path);
+		}
 
 		// ****************** MODIFY HERE ******************
 		// do what ever you have to do to recognise your own file type
